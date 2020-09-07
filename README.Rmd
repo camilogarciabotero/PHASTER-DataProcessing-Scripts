@@ -2,7 +2,7 @@
 title: "Data procesing on PHASTER output dataset"
 output: github_document
 bibliography: packages.bib
-nocite: '@*'
+#nocite: '@*'
 ---
 
 ```{r setup, include=FALSE}
