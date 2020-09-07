@@ -6,7 +6,7 @@ bibliography: packages.bib
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(cache=TRUE,  comment= " ")
-knitr::write_bib(c(.packages(), "knitr"), "packages.bib")
+knitr::write_bib(c(.packages()), "packages.bib")
 ```
 
 This repo hosts the complete PHASTER dataset from the 59 strains' genomes analysed on PHASTER and several scripts developed for its processing. Analysis of this processed data is published on (paper). The primary packages used here are in the Tidyverse set of libraries, the rmarkdown and knitr packages were used to generate this report [@R-knitr; @R-rmarkdown; @tidyverse2019].
@@ -126,6 +126,6 @@ intact_phages %>%
 ## References
 
 ```{r, include=FALSE}
-knitr::write_bib(file = 'packages.bib')
+#knitr::write_bib(file = 'packages.bib')
 ```
 
