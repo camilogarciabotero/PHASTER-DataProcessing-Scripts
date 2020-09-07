@@ -74,6 +74,7 @@ intact_phages <- df %>%
   filter(completeness %in% c("Intact") & blast_hit %in% str_subset(blast_hit, "^PHAGE")) %>%
   mutate(Candidate = as.factor(str_extract(blast_hit, "[:graph:]+(?=:)")), region = as.factor(region)) %>%
   mutate(Candidate = str_remove(Candidate, "PHAGE_"), Candidate = str_replace(Candidate, "_", " ")) %>%
+  mutate(species = str_replace(species,"Bacillus", "B.")) %>% 
   separate(Candidate, c("Candidate", "Phage_NC_ID"), sep = "_NC_") %>%
   mutate(Candidate = str_remove(Candidate, "_")) %>% 
   select(species, score, region, Candidate, Phage_NC_ID) %>% 
