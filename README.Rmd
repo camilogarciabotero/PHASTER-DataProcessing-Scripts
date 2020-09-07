@@ -32,5 +32,5 @@ df <- read_excel("Data/07-09-2020_PHASTER-raw.xlsx")
 df %<>% mutate_at(vars(e_value), ~ as.numeric(as.character(.)))
 df %<>% mutate_at(vars(species,completeness, genome), ~ as_factor(.))
 
-kable(df[1:5])
+kable(df[1:5,])
 ```
