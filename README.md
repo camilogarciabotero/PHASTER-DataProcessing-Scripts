@@ -50,6 +50,8 @@ by_completeness <- df %>%
     Intact = sum(str_count(completeness, "Intact"))
   )
 
+#write_tsv(x = by_completeness, path = "Data/completeness_raw-01.tsv")
+
 kable(by_completeness[1:5,])
 ```
 
@@ -60,3 +62,29 @@ kable(by_completeness[1:5,])
 | Bacillus amyloliquefaciens K2             | MOEA01000001.1 |          4 |            1 |      3 |
 | Bacillus anthracis Rock3-42               | CM000732.1     |          2 |            0 |      0 |
 | Bacillus subtilis subsp. stercoris D7XPN1 | JHCA01000001.1 |          0 |            0 |      1 |
+
+## Generating the total number of prophage proteins per bacteria species
+
+``` r
+by_species_total <- df %>%
+  group_by(species, genome) %>%
+  summarise("Total prophage proteins" = sum(str_count(blast_hit, "PHAGE")))
+```
+
+``` 
+  `summarise()` regrouping output by 'species' (override with `.groups` argument)
+```
+
+``` r
+#write_tsv(x = by_species_total, path = "Data/total-proteins_raw-01.tsv")
+
+kable(by_species_total[1:5,])
+```
+
+| species                                   | genome         | Total prophage proteins |
+| :---------------------------------------- | :------------- | ----------------------: |
+| Bacillus amyloliquefaciens ATCC 13952     | CP009748.1     |                     268 |
+| Bacillus mycoides ATCC 6462               | CP009692.1     |                     121 |
+| Bacillus amyloliquefaciens K2             | MOEA01000001.1 |                     189 |
+| Bacillus anthracis Rock3-42               | CM000732.1     |                      49 |
+| Bacillus subtilis subsp. stercoris D7XPN1 | JHCA01000001.1 |                      36 |
