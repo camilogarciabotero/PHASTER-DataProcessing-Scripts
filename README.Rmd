@@ -1,15 +1,12 @@
 ---
-title: "Data procesing on PHASTER outputs dataset"
-date: "`r format(Sys.time(), '%d %B %Y')`"
-author: "Camilo García-Botero"
+title: "Data procesing on PHASTER output dataset"
 output: github_document
+bibliography: packages.bib
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(cache=TRUE,  comment= " ")
 ```
-
-# Introduction
 
 This repo hosts the complete PHASTER dataset from the 59 strains' genomes analysed on PHASTER and several scripts developed for its processing. Analysis of this processed data is published on (paper).
 
@@ -21,6 +18,8 @@ library(magrittr)
 library(readxl) 
 library(rmarkdown)
 library(knitr)
+
+knitr::write_bib(c(.packages(), "tidyverse"), "packages.bib")
 ```
 
 
@@ -118,5 +117,15 @@ intact_phages %>%
        y = "Bacterial species"
   )
 
+```
+
+## License
+
+[Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/legalcode)
+
+## References
+
+```{r, include=FALSE}
+knitr::write_bib(file = 'packages.bib')
 ```
 

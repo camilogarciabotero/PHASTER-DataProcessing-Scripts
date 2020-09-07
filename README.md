@@ -1,9 +1,5 @@
-Data procesing on PHASTER outputs dataset
+Data procesing on PHASTER output dataset
 ================
-Camilo García-Botero
-07 September 2020
-
-# Introduction
 
 This repo hosts the complete PHASTER dataset from the 59 strains’
 genomes analysed on PHASTER and several scripts developed for its
@@ -17,6 +13,8 @@ library(magrittr)
 library(readxl) 
 library(rmarkdown)
 library(knitr)
+
+knitr::write_bib(c(.packages(), "tidyverse"), "packages.bib")
 ```
 
 ## Data importing and processing
@@ -145,3 +143,10 @@ intact_phages %>%
 ```
 
 <img src="README_files/figure-gfm/bubble-plot-1.png" style="display: block; margin: auto;" />
+
+## License
+
+[Creative Commons Attribution 4.0
+International](https://creativecommons.org/licenses/by/4.0/legalcode)
+
+## References
