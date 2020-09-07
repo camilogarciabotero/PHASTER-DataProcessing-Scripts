@@ -5,10 +5,8 @@ This repo hosts the complete PHASTER dataset from the 59 strains’
 genomes analysed on PHASTER and several scripts developed for its
 processing. Analysis of this processed data is published on (paper). The
 primary packages used here are in the Tidyverse set of libraries, the
-rmarkdown and knitr packages were used to generate this report
-(<span class="citeproc-not-found" data-reference-id="R-knitr">**???**</span>;
-<span class="citeproc-not-found" data-reference-id="R-rmarkdown">**???**</span>;
-<span class="citeproc-not-found" data-reference-id="tidyverse2019">**???**</span>).
+rmarkdown and knitr packages were used to generate this report (Xie
+2020; Allaire et al. 2020; Wickham et al. 2019).
 
 ## Libraries
 
@@ -153,3 +151,32 @@ intact_phages %>%
 International](https://creativecommons.org/licenses/by/4.0/legalcode)
 
 ## References
+
+<div id="refs" class="references">
+
+<div id="ref-R-rmarkdown">
+
+Allaire, JJ, Yihui Xie, Jonathan McPherson, Javier Luraschi, Kevin
+Ushey, Aron Atkins, Hadley Wickham, Joe Cheng, Winston Chang, and
+Richard Iannone. 2020. *Rmarkdown: Dynamic Documents for R*.
+<https://CRAN.R-project.org/package=rmarkdown>.
+
+</div>
+
+<div id="ref-tidyverse2019">
+
+Wickham, Hadley, Mara Averick, Jennifer Bryan, Winston Chang, Lucy
+D’Agostino McGowan, Romain François, Garrett Grolemund, et al. 2019.
+“Welcome to the tidyverse.” *Journal of Open Source Software* 4 (43):
+1686. <https://doi.org/10.21105/joss.01686>.
+
+</div>
+
+<div id="ref-R-knitr">
+
+Xie, Yihui. 2020. *Knitr: A General-Purpose Package for Dynamic Report
+Generation in R*. <https://CRAN.R-project.org/package=knitr>.
+
+</div>
+
+</div>
