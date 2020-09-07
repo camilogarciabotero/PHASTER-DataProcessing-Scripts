@@ -3,12 +3,14 @@ Data procesing on PHASTER output dataset
 
 This repo hosts the complete PHASTER dataset from the 59 strains’
 genomes analysed on PHASTER and several scripts developed for its
-processing. Analysis of this processed data is published on (paper).
+processing. Analysis of this processed data is published on (paper). The
+primary package used here are in the Tidyverse set of libraries (Wickham
+2019).
 
 ## Libraries
 
 ``` r
-library(tidyverse)
+library(tidyverse) 
 library(magrittr)
 library(readxl) 
 library(rmarkdown)
@@ -150,3 +152,14 @@ intact_phages %>%
 International](https://creativecommons.org/licenses/by/4.0/legalcode)
 
 ## References
+
+<div id="refs" class="references">
+
+<div id="ref-R-tidyverse">
+
+Wickham, Hadley. 2019. *Tidyverse: Easily Install and Load the
+’Tidyverse’*. <https://CRAN.R-project.org/package=tidyverse>.
+
+</div>
+
+</div>

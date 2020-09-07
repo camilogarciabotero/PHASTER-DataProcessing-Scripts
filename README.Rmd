@@ -8,12 +8,12 @@ bibliography: packages.bib
 knitr::opts_chunk$set(cache=TRUE,  comment= " ")
 ```
 
-This repo hosts the complete PHASTER dataset from the 59 strains' genomes analysed on PHASTER and several scripts developed for its processing. Analysis of this processed data is published on (paper).
+This repo hosts the complete PHASTER dataset from the 59 strains' genomes analysed on PHASTER and several scripts developed for its processing. Analysis of this processed data is published on (paper). The primary package used here are in the Tidyverse set of libraries [@R-tidyverse].
 
 ## Libraries
 
 ```{r libraries, include=T, warning=FALSE, message=FALSE}
-library(tidyverse)
+library(tidyverse) 
 library(magrittr)
 library(readxl) 
 library(rmarkdown)
