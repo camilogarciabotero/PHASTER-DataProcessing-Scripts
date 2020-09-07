@@ -4,9 +4,11 @@ Data procesing on PHASTER output dataset
 This repo hosts the complete PHASTER dataset from the 59 strains’
 genomes analysed on PHASTER and several scripts developed for its
 processing. Analysis of this processed data is published on (paper). The
-primary package used here are in the Tidyverse set of libraries, the
-rmarkdown and knitr packages to generate this report (Xie 2020; Allaire
-et al. 2020; Wickham et al. 2019).
+primary packages used here are in the Tidyverse set of libraries, the
+rmarkdown and knitr packages were used to generate this report
+(<span class="citeproc-not-found" data-reference-id="R-knitr">**???**</span>;
+<span class="citeproc-not-found" data-reference-id="R-rmarkdown">**???**</span>;
+Wickham et al. 2019).
 
 ## Libraries
 
@@ -16,8 +18,6 @@ library(magrittr)
 library(readxl) 
 library(rmarkdown)
 library(knitr)
-
-knitr::write_bib(c(.packages(), "tidyverse"), "packages.bib")
 ```
 
 ## Data importing and processing
@@ -147,23 +147,14 @@ intact_phages %>%
 
 <img src="README_files/figure-gfm/bubble-plot-1.png" style="display: block; margin: auto;" />
 
-## References
-
 ## License
 
 [Creative Commons Attribution 4.0
 International](https://creativecommons.org/licenses/by/4.0/legalcode)
 
+## References
+
 <div id="refs" class="references">
-
-<div id="ref-R-rmarkdown">
-
-Allaire, JJ, Yihui Xie, Jonathan McPherson, Javier Luraschi, Kevin
-Ushey, Aron Atkins, Hadley Wickham, Joe Cheng, Winston Chang, and
-Richard Iannone. 2020. *Rmarkdown: Dynamic Documents for R*.
-<https://CRAN.R-project.org/package=rmarkdown>.
-
-</div>
 
 <div id="ref-tidyverse2019">
 
@@ -171,13 +162,6 @@ Wickham, Hadley, Mara Averick, Jennifer Bryan, Winston Chang, Lucy
 D’Agostino McGowan, Romain François, Garrett Grolemund, et al. 2019.
 “Welcome to the tidyverse.” *Journal of Open Source Software* 4 (43):
 1686. <https://doi.org/10.21105/joss.01686>.
-
-</div>
-
-<div id="ref-R-knitr">
-
-Xie, Yihui. 2020. *Knitr: A General-Purpose Package for Dynamic Report
-Generation in R*. <https://CRAN.R-project.org/package=knitr>.
 
 </div>
 
