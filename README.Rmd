@@ -34,6 +34,7 @@ df %<>% mutate_at(vars(species,completeness, genome), ~ as_factor(.))
 
 kable(df[1:5,])
 ```
+
 ## Generating candiadates prophage organized by completeness (Incomplete, Questionable, Intact)
 
 ```{r prophage-candidates, message=FALSE}
@@ -46,7 +47,23 @@ by_completeness <- df %>%
     Intact = sum(str_count(completeness, "Intact"))
   )
 
+#write_tsv(x = by_completeness, path = "Data/completeness_raw-01.tsv")
+
 kable(by_completeness[1:5,])
+```
+
+
+## Generating the total number of prophage proteins per bacteria species
+
+```{r}
+by_species_total <- df %>%
+  group_by(species, genome) %>%
+  summarise("Total prophage proteins" = sum(str_count(blast_hit, "PHAGE")))
+
+#write_tsv(x = by_species_total, path = "Data/total-proteins_raw-01.tsv")
+
+kable(by_species_total[1:5,])
+
 ```
 
 
