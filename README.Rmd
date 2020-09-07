@@ -55,7 +55,7 @@ kable(by_completeness[1:5,])
 
 ## Generating the total number of prophage proteins per bacteria species
 
-```{r}
+```{r total-proteins, message=FALSE}
 by_species_total <- df %>%
   group_by(species, genome) %>%
   summarise("Total prophage proteins" = sum(str_count(blast_hit, "PHAGE")))

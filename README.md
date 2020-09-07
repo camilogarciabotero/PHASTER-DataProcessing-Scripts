@@ -69,13 +69,7 @@ kable(by_completeness[1:5,])
 by_species_total <- df %>%
   group_by(species, genome) %>%
   summarise("Total prophage proteins" = sum(str_count(blast_hit, "PHAGE")))
-```
 
-``` 
-  `summarise()` regrouping output by 'species' (override with `.groups` argument)
-```
-
-``` r
 #write_tsv(x = by_species_total, path = "Data/total-proteins_raw-01.tsv")
 
 kable(by_species_total[1:5,])
