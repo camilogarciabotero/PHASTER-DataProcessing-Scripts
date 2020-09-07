@@ -7,7 +7,7 @@ This repo hosts the complete PHASTER dataset from the 59 strains’
 genomes analysed on PHASTER and several scripts developed for its
 processing. Analysis of this processed data is published on (paper).
 
-# Libraries
+## Libraries
 
 ``` r
 library(tidyverse)
@@ -17,10 +17,10 @@ library(rmarkdown)
 library(knitr)
 ```
 
-# Data importing and processing
+## Data importing and processing
 
 The first step in this analysis is transforming the XSLSX file into a
-friendly data frame for
+friendly data frame for R.
 
 ``` r
 df <- read_excel("Data/07-09-2020_PHASTER-raw.xlsx")
@@ -37,3 +37,26 @@ kable(df[1:5,])
 | Bacillus amyloliquefaciens ATCC 13952 | CP009748.1 | Questionable |    70 |      1 |           3 | complement(1115775..1116257) | spore coat protein; KS08\_05615 |       NA | Genomic |
 | Bacillus amyloliquefaciens ATCC 13952 | CP009748.1 | Questionable |    70 |      1 |           4 | complement(1116407..1116907) | spore coat protein; KS08\_05620 |       NA | Genomic |
 | Bacillus amyloliquefaciens ATCC 13952 | CP009748.1 | Questionable |    70 |      1 |           5 | complement(1117000..1117314) | spore coat protein; KS08\_05625 |       NA | Genomic |
+
+## Generating candiadates prophage organized by completeness (Incomplete, Questionable, Intact)
+
+``` r
+by_completeness <- df %>%
+  filter(hit_number == 1) %>% 
+  group_by(species,genome) %>%
+  summarise(
+    Incomplete = sum(str_count(completeness, "Incomplete")),
+    Questionable = sum(str_count(completeness, "Questionable")),
+    Intact = sum(str_count(completeness, "Intact"))
+  )
+
+kable(by_completeness[1:5,])
+```
+
+| species                                   | genome         | Incomplete | Questionable | Intact |
+| :---------------------------------------- | :------------- | ---------: | -----------: | -----: |
+| Bacillus amyloliquefaciens ATCC 13952     | CP009748.1     |          3 |            4 |      2 |
+| Bacillus mycoides ATCC 6462               | CP009692.1     |          3 |            5 |      0 |
+| Bacillus amyloliquefaciens K2             | MOEA01000001.1 |          4 |            1 |      3 |
+| Bacillus anthracis Rock3-42               | CM000732.1     |          2 |            0 |      0 |
+| Bacillus subtilis subsp. stercoris D7XPN1 | JHCA01000001.1 |          0 |            0 |      1 |

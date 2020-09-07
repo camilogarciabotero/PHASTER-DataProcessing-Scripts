@@ -12,7 +12,7 @@ knitr::opts_chunk$set(cache=TRUE,  comment= " ")
 This repo hosts the complete PHASTER dataset from the 59 strains' genomes analysed on PHASTER and several scripts developed for its processing. Analysis of this processed data is published on (paper).
 
 
-# Libraries
+## Libraries
 
 ```{r libraries, include=T, warning=FALSE, message=FALSE}
 library(tidyverse)
@@ -23,9 +23,9 @@ library(knitr)
 ```
 
 
-# Data importing and processing
+## Data importing and processing
 
-The first step in this analysis is transforming the XSLSX file into a friendly data frame for 
+The first step in this analysis is transforming the XSLSX file into a friendly data frame for R.
 
 ```{r Phaster-df, warning=FALSE}
 df <- read_excel("Data/07-09-2020_PHASTER-raw.xlsx")
@@ -34,3 +34,19 @@ df %<>% mutate_at(vars(species,completeness, genome), ~ as_factor(.))
 
 kable(df[1:5,])
 ```
+## Generating candiadates prophage organized by completeness (Incomplete, Questionable, Intact)
+
+```{r prophage-candidates, message=FALSE}
+by_completeness <- df %>%
+  filter(hit_number == 1) %>% 
+  group_by(species,genome) %>%
+  summarise(
+    Incomplete = sum(str_count(completeness, "Incomplete")),
+    Questionable = sum(str_count(completeness, "Questionable")),
+    Intact = sum(str_count(completeness, "Intact"))
+  )
+
+kable(by_completeness[1:5,])
+```
+
+
