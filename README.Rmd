@@ -127,6 +127,6 @@ intact_phages %>%
 ## References
 
 ```{r, include=FALSE}
-knitr::write_bib(file = 'packages.bib')
+knitr::write_bib(c("knitr", "rmarkdown", "tidyverse"), width = 60)
 ```
 
