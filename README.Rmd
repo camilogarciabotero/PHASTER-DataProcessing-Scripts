@@ -91,11 +91,10 @@ intact_phages <- df %>%
 kable(intact_phages[1:5,])
 ```
 
-
+***
 
 ```{r bubble-plot, message=FALSE, fig.width=12, fig.height=15, dpi= 300, fig.align="center"}
 
-mycolors <- colorRampPalette(brewer.pal(8, "Dark2"))(26)
 
 intact_phages %>%
   as_tibble() %>%
@@ -108,12 +107,11 @@ intact_phages %>%
   geom_point() +
   facet_grid(rows = vars(Epithet), scales = "free", space = "free") +
   theme_bw() +
-  scale_color_manual(values = mycolors) +
   theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1, size = 14, face = "italic"),
         axis.text.y = element_text(size = 14, face = "italic"),
         axis.title.x = element_text(size = 17, face = "bold"),
         axis.title.y = element_text(size = 17, face = "bold"),
-        strip.background = element_blank(),#element_rect(fill = "#EEEEEE", color = "#FFFFFF"),
+        strip.background = element_blank(),
         strip.text = element_blank(),
         legend.position = "right"
         ) +

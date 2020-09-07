@@ -116,9 +116,9 @@ kable(intact_phages[1:5,])
 | B. amyloliquefaciens DSM 7      | Bacill phi105  | 6      |   140 | 004167        |         6 | amyloliquefaciens |
 | B. amyloliquefaciens DSM 7      | Bacill phi105  | 7      |   130 | 004167        |         9 | amyloliquefaciens |
 
-``` r
-mycolors <- colorRampPalette(brewer.pal(8, "Dark2"))(26)
+-----
 
+``` r
 intact_phages %>%
   as_tibble() %>%
   mutate(Species = species) %>%
@@ -130,12 +130,11 @@ intact_phages %>%
   geom_point() +
   facet_grid(rows = vars(Epithet), scales = "free", space = "free") +
   theme_bw() +
-  scale_color_manual(values = mycolors) +
   theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1, size = 14, face = "italic"),
         axis.text.y = element_text(size = 14, face = "italic"),
         axis.title.x = element_text(size = 17, face = "bold"),
         axis.title.y = element_text(size = 17, face = "bold"),
-        strip.background = element_blank(),#element_rect(fill = "#EEEEEE", color = "#FFFFFF"),
+        strip.background = element_blank(),
         strip.text = element_blank(),
         legend.position = "right"
         ) +
