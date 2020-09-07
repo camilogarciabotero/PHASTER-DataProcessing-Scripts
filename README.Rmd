@@ -20,6 +20,7 @@ library(magrittr)
 library(readxl) 
 library(rmarkdown)
 library(knitr)
+library(RColorBrewer)
 ```
 
 
@@ -35,7 +36,7 @@ df %<>% mutate_at(vars(species,completeness, genome), ~ as_factor(.))
 kable(df[1:5,])
 ```
 
-## Generating candiadates prophage organized by completeness (Incomplete, Questionable, Intact)
+## Fig 1. Generating candiadates prophage organized by completeness (Incomplete, Questionable, Intact)
 
 ```{r prophage-candidates, message=FALSE}
 by_completeness <- df %>%
@@ -53,7 +54,7 @@ kable(by_completeness[1:5,])
 ```
 
 
-## Generating the total number of prophage proteins per bacteria species
+## Fig 1. Generating the total number of prophage proteins per bacteria species
 
 ```{r total-proteins, message=FALSE}
 by_species_total <- df %>%
@@ -65,4 +66,59 @@ by_species_total <- df %>%
 kable(by_species_total[1:5,])
 ```
 
+## Fig S1. Generating the dataset of the intact prophages in each bacterial species.
+
+```{r intac_phages, message=FALSE}
+
+intact_phages <- df %>%
+  filter(completeness %in% c("Intact") & blast_hit %in% str_subset(blast_hit, "^PHAGE")) %>%
+  mutate(Candidate = as.factor(str_extract(blast_hit, "[:graph:]+(?=:)")), region = as.factor(region)) %>%
+  mutate(Candidate = str_remove(Candidate, "PHAGE_"), Candidate = str_replace(Candidate, "_", " ")) %>%
+  separate(Candidate, c("Candidate", "Phage_NC_ID"), sep = "_NC_") %>%
+  mutate(Candidate = str_remove(Candidate, "_")) %>% 
+  select(species, score, region, Candidate, Phage_NC_ID) %>% 
+  group_by(species, Candidate, region, score, Phage_NC_ID) %>% 
+  summarise(
+    CDS_hits = length(Candidate)
+  ) %>% 
+  group_by(species, region) %>% 
+  filter(CDS_hits == max(CDS_hits)) %>% 
+  mutate(Epithet = as_factor(word(species,2)))
+
+#write_tsv(x = intact_phages, path = "Data/intact-phages_raw-01.tsv")
+
+kable(intact_phages[1:5,])
+```
+
+
+
+```{r bubble-plot, message=FALSE, fig.width=12, fig.height=15, dpi= 300, fig.align="center"}
+
+mycolors <- colorRampPalette(brewer.pal(8, "Dark2"))(26)
+
+intact_phages %>%
+  as_tibble() %>%
+  mutate(Species = species) %>%
+  select(Species, Candidate, CDS_hits, Epithet) %>%
+  pivot_wider(names_from = "Candidate", values_from = "CDS_hits", values_fill = 0, values_fn = sum) %>%
+  pivot_longer(cols = -c(Species, Epithet), names_to = "Candidates", values_to = "CDS hits") %>%
+  filter(`CDS hits`>1) %>% 
+  ggplot(aes(Candidates, Species, size = `CDS hits`)) +
+  geom_point() +
+  facet_grid(rows = vars(Epithet), scales = "free", space = "free") +
+  theme_bw() +
+  scale_color_manual(values = mycolors) +
+  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1, size = 14, face = "italic"),
+        axis.text.y = element_text(size = 14, face = "italic"),
+        axis.title.x = element_text(size = 17, face = "bold"),
+        axis.title.y = element_text(size = 17, face = "bold"),
+        strip.background = element_blank(),#element_rect(fill = "#EEEEEE", color = "#FFFFFF"),
+        strip.text = element_blank(),
+        legend.position = "right"
+        ) +
+  labs(x = "Prophage candidates",
+       y = "Bacterial species"
+  )
+
+```
 

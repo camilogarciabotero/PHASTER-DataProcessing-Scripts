@@ -15,6 +15,7 @@ library(magrittr)
 library(readxl) 
 library(rmarkdown)
 library(knitr)
+library(RColorBrewer)
 ```
 
 ## Data importing and processing
@@ -38,7 +39,7 @@ kable(df[1:5,])
 | Bacillus amyloliquefaciens ATCC 13952 | CP009748.1 | Questionable |    70 |      1 |           4 | complement(1116407..1116907) | spore coat protein; KS08\_05620 |       NA | Genomic |
 | Bacillus amyloliquefaciens ATCC 13952 | CP009748.1 | Questionable |    70 |      1 |           5 | complement(1117000..1117314) | spore coat protein; KS08\_05625 |       NA | Genomic |
 
-## Generating candiadates prophage organized by completeness (Incomplete, Questionable, Intact)
+## Fig 1. Generating candiadates prophage organized by completeness (Incomplete, Questionable, Intact)
 
 ``` r
 by_completeness <- df %>%
@@ -63,7 +64,7 @@ kable(by_completeness[1:5,])
 | Bacillus anthracis Rock3-42               | CM000732.1     |          2 |            0 |      0 |
 | Bacillus subtilis subsp. stercoris D7XPN1 | JHCA01000001.1 |          0 |            0 |      1 |
 
-## Generating the total number of prophage proteins per bacteria species
+## Fig 1. Generating the total number of prophage proteins per bacteria species
 
 ``` r
 by_species_total <- df %>%
@@ -82,3 +83,64 @@ kable(by_species_total[1:5,])
 | Bacillus amyloliquefaciens K2             | MOEA01000001.1 |                     189 |
 | Bacillus anthracis Rock3-42               | CM000732.1     |                      49 |
 | Bacillus subtilis subsp. stercoris D7XPN1 | JHCA01000001.1 |                      36 |
+
+## Fig S1. Generating the dataset of the intact prophages in each bacterial species.
+
+``` r
+intact_phages <- df %>%
+  filter(completeness %in% c("Intact") & blast_hit %in% str_subset(blast_hit, "^PHAGE")) %>%
+  mutate(Candidate = as.factor(str_extract(blast_hit, "[:graph:]+(?=:)")), region = as.factor(region)) %>%
+  mutate(Candidate = str_remove(Candidate, "PHAGE_"), Candidate = str_replace(Candidate, "_", " ")) %>%
+  separate(Candidate, c("Candidate", "Phage_NC_ID"), sep = "_NC_") %>%
+  mutate(Candidate = str_remove(Candidate, "_")) %>% 
+  select(species, score, region, Candidate, Phage_NC_ID) %>% 
+  group_by(species, Candidate, region, score, Phage_NC_ID) %>% 
+  summarise(
+    CDS_hits = length(Candidate)
+  ) %>% 
+  group_by(species, region) %>% 
+  filter(CDS_hits == max(CDS_hits)) %>% 
+  mutate(Epithet = as_factor(word(species,2)))
+
+#write_tsv(x = intact_phages, path = "Data/intact-phages_raw-01.tsv")
+
+kable(intact_phages[1:5,])
+```
+
+| species                               | Candidate      | region | score | Phage\_NC\_ID | CDS\_hits | Epithet           |
+| :------------------------------------ | :------------- | :----- | ----: | :------------ | --------: | :---------------- |
+| Bacillus amyloliquefaciens ATCC 13952 | Bacill phi105  | 7      |   150 | 004167        |         6 | amyloliquefaciens |
+| Bacillus amyloliquefaciens ATCC 13952 | Brevib Jimmer1 | 4      |   150 | 029104        |         9 | amyloliquefaciens |
+| Bacillus amyloliquefaciens K2         | Bacill SPP1    | 8      |   110 | 004166        |        17 | amyloliquefaciens |
+| Bacillus amyloliquefaciens K2         | Brevib Jimmer1 | 4      |   100 | 029104        |         9 | amyloliquefaciens |
+| Bacillus amyloliquefaciens K2         | Deep sD6E      | 7      |   110 | 019544        |        12 | amyloliquefaciens |
+
+``` r
+mycolors <- colorRampPalette(brewer.pal(8, "Dark2"))(26)
+
+intact_phages %>%
+  as_tibble() %>%
+  mutate(Species = species) %>%
+  select(Species, Candidate, CDS_hits, Epithet) %>%
+  pivot_wider(names_from = "Candidate", values_from = "CDS_hits", values_fill = 0, values_fn = sum) %>%
+  pivot_longer(cols = -c(Species, Epithet), names_to = "Candidates", values_to = "CDS hits") %>%
+  filter(`CDS hits`>1) %>% 
+  ggplot(aes(Candidates, Species, size = `CDS hits`)) +
+  geom_point() +
+  facet_grid(rows = vars(Epithet), scales = "free", space = "free") +
+  theme_bw() +
+  scale_color_manual(values = mycolors) +
+  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1, size = 14, face = "italic"),
+        axis.text.y = element_text(size = 14, face = "italic"),
+        axis.title.x = element_text(size = 17, face = "bold"),
+        axis.title.y = element_text(size = 17, face = "bold"),
+        strip.background = element_blank(),#element_rect(fill = "#EEEEEE", color = "#FFFFFF"),
+        strip.text = element_blank(),
+        legend.position = "right"
+        ) +
+  labs(x = "Prophage candidates",
+       y = "Bacterial species"
+  )
+```
+
+<img src="README_files/figure-gfm/bubble-plot-1.png" style="display: block; margin: auto;" />
