@@ -1,5 +1,7 @@
 Data procesing on PHASTER outputs dataset
 ================
+Camilo García-Botero
+07 September 2020
 
 # Introduction
 
@@ -15,7 +17,6 @@ library(magrittr)
 library(readxl) 
 library(rmarkdown)
 library(knitr)
-library(RColorBrewer)
 ```
 
 ## Data importing and processing
@@ -84,7 +85,7 @@ kable(by_species_total[1:5,])
 | Bacillus anthracis Rock3-42               | CM000732.1     |                      49 |
 | Bacillus subtilis subsp. stercoris D7XPN1 | JHCA01000001.1 |                      36 |
 
-## Fig S1. Generating the dataset of the intact prophages in each bacterial species.
+## Fig S1. Generating the dataset of the intact prophages in each bacterial species and vizualizing on a bubble-plot.
 
 ``` r
 intact_phages <- df %>%

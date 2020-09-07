@@ -1,5 +1,7 @@
 ---
 title: "Data procesing on PHASTER outputs dataset"
+date: "`r format(Sys.time(), '%d %B %Y')`"
+author: "Camilo García-Botero"
 output: github_document
 ---
 
@@ -11,7 +13,6 @@ knitr::opts_chunk$set(cache=TRUE,  comment= " ")
 
 This repo hosts the complete PHASTER dataset from the 59 strains' genomes analysed on PHASTER and several scripts developed for its processing. Analysis of this processed data is published on (paper).
 
-
 ## Libraries
 
 ```{r libraries, include=T, warning=FALSE, message=FALSE}
@@ -20,7 +21,6 @@ library(magrittr)
 library(readxl) 
 library(rmarkdown)
 library(knitr)
-library(RColorBrewer)
 ```
 
 
@@ -66,7 +66,7 @@ by_species_total <- df %>%
 kable(by_species_total[1:5,])
 ```
 
-## Fig S1. Generating the dataset of the intact prophages in each bacterial species.
+## Fig S1. Generating the dataset of the intact prophages in each bacterial species and vizualizing on a bubble-plot.
 
 ```{r intac_phages, message=FALSE}
 
@@ -94,7 +94,6 @@ kable(intact_phages[1:5,])
 ***
 
 ```{r bubble-plot, message=FALSE, fig.width=12, fig.height=15, dpi= 300, fig.align="center"}
-
 
 intact_phages %>%
   as_tibble() %>%
