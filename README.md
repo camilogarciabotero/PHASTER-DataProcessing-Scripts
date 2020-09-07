@@ -5,10 +5,8 @@ This repo hosts the complete PHASTER dataset from the 59 strains’
 genomes analysed on PHASTER and several scripts developed for its
 processing. Analysis of this processed data is published on (paper). The
 primary packages used here are in the Tidyverse set of libraries, the
-rmarkdown and knitr packages were used to generate this report
-(<span class="citeproc-not-found" data-reference-id="R-knitr">**???**</span>;
-<span class="citeproc-not-found" data-reference-id="R-rmarkdown">**???**</span>;
-<span class="citeproc-not-found" data-reference-id="tidyverse2019">**???**</span>).
+rmarkdown and knitr packages were used to generate this report (Xie
+2020; Allaire et al. 2020; Wickham, Averick, et al. 2019).
 
 ## Libraries
 
@@ -153,3 +151,159 @@ intact_phages %>%
 International](https://creativecommons.org/licenses/by/4.0/legalcode)
 
 ## References
+
+<div id="refs" class="references">
+
+<div id="ref-R-rmarkdown">
+
+Allaire, JJ, Yihui Xie, Jonathan McPherson, Javier Luraschi, Kevin
+Ushey, Aron Atkins, Hadley Wickham, Joe Cheng, Winston Chang, and
+Richard Iannone. 2020. *Rmarkdown: Dynamic Documents for R*.
+<https://CRAN.R-project.org/package=rmarkdown>.
+
+</div>
+
+<div id="ref-R-magrittr">
+
+Bache, Stefan Milton, and Hadley Wickham. 2014. *Magrittr: A
+Forward-Pipe Operator for R*.
+<https://CRAN.R-project.org/package=magrittr>.
+
+</div>
+
+<div id="ref-R-purrr">
+
+Henry, Lionel, and Hadley Wickham. 2020. *Purrr: Functional Programming
+Tools*. <https://CRAN.R-project.org/package=purrr>.
+
+</div>
+
+<div id="ref-R-tibble">
+
+Müller, Kirill, and Hadley Wickham. 2020. *Tibble: Simple Data Frames*.
+<https://CRAN.R-project.org/package=tibble>.
+
+</div>
+
+<div id="ref-R-RColorBrewer">
+
+Neuwirth, Erich. 2014. *RColorBrewer: ColorBrewer Palettes*.
+<https://CRAN.R-project.org/package=RColorBrewer>.
+
+</div>
+
+<div id="ref-R-base">
+
+R Core Team. 2020. *R: A Language and Environment for Statistical
+Computing*. Vienna, Austria: R Foundation for Statistical Computing.
+<https://www.R-project.org/>.
+
+</div>
+
+<div id="ref-ggplot22016">
+
+Wickham, Hadley. 2016. *Ggplot2: Elegant Graphics for Data Analysis*.
+Springer-Verlag New York. <https://ggplot2.tidyverse.org>.
+
+</div>
+
+<div id="ref-R-stringr">
+
+———. 2019a. *Stringr: Simple, Consistent Wrappers for Common String
+Operations*. <https://CRAN.R-project.org/package=stringr>.
+
+</div>
+
+<div id="ref-R-tidyverse">
+
+———. 2019b. *Tidyverse: Easily Install and Load the ’Tidyverse’*.
+<https://CRAN.R-project.org/package=tidyverse>.
+
+</div>
+
+<div id="ref-R-forcats">
+
+———. 2020. *Forcats: Tools for Working with Categorical Variables
+(Factors)*. <https://CRAN.R-project.org/package=forcats>.
+
+</div>
+
+<div id="ref-tidyverse2019">
+
+Wickham, Hadley, Mara Averick, Jennifer Bryan, Winston Chang, Lucy
+D’Agostino McGowan, Romain François, Garrett Grolemund, et al. 2019.
+“Welcome to the tidyverse.” *Journal of Open Source Software* 4 (43):
+1686. <https://doi.org/10.21105/joss.01686>.
+
+</div>
+
+<div id="ref-R-readxl">
+
+Wickham, Hadley, and Jennifer Bryan. 2019. *Readxl: Read Excel Files*.
+<https://CRAN.R-project.org/package=readxl>.
+
+</div>
+
+<div id="ref-R-ggplot2">
+
+Wickham, Hadley, Winston Chang, Lionel Henry, Thomas Lin Pedersen,
+Kohske Takahashi, Claus Wilke, Kara Woo, Hiroaki Yutani, and Dewey
+Dunnington. 2020. *Ggplot2: Create Elegant Data Visualisations Using the
+Grammar of Graphics*. <https://CRAN.R-project.org/package=ggplot2>.
+
+</div>
+
+<div id="ref-R-dplyr">
+
+Wickham, Hadley, Romain François, Lionel Henry, and Kirill Müller. 2020.
+*Dplyr: A Grammar of Data Manipulation*.
+<https://CRAN.R-project.org/package=dplyr>.
+
+</div>
+
+<div id="ref-R-tidyr">
+
+Wickham, Hadley, and Lionel Henry. 2020. *Tidyr: Tidy Messy Data*.
+<https://CRAN.R-project.org/package=tidyr>.
+
+</div>
+
+<div id="ref-R-readr">
+
+Wickham, Hadley, Jim Hester, and Romain Francois. 2018. *Readr: Read
+Rectangular Text Data*. <https://CRAN.R-project.org/package=readr>.
+
+</div>
+
+<div id="ref-knitr2014">
+
+Xie, Yihui. 2014. “Knitr: A Comprehensive Tool for Reproducible Research
+in R.” In *Implementing Reproducible Computational Research*, edited by
+Victoria Stodden, Friedrich Leisch, and Roger D. Peng. Chapman;
+Hall/CRC. <http://www.crcpress.com/product/isbn/9781466561595>.
+
+</div>
+
+<div id="ref-knitr2015">
+
+———. 2015. *Dynamic Documents with R and Knitr*. 2nd ed. Boca Raton,
+Florida: Chapman; Hall/CRC. <https://yihui.org/knitr/>.
+
+</div>
+
+<div id="ref-R-knitr">
+
+———. 2020. *Knitr: A General-Purpose Package for Dynamic Report
+Generation in R*. <https://CRAN.R-project.org/package=knitr>.
+
+</div>
+
+<div id="ref-rmarkdown2018">
+
+Xie, Yihui, J. J. Allaire, and Garrett Grolemund. 2018. *R Markdown: The
+Definitive Guide*. Boca Raton, Florida: Chapman; Hall/CRC.
+<https://bookdown.org/yihui/rmarkdown>.
+
+</div>
+
+</div>

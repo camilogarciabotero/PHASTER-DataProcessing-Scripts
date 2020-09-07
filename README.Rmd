@@ -2,6 +2,7 @@
 title: "Data procesing on PHASTER output dataset"
 output: github_document
 bibliography: packages.bib
+nocite: '@*'
 ---
 
 ```{r setup, include=FALSE}
@@ -126,6 +127,6 @@ intact_phages %>%
 ## References
 
 ```{r, include=FALSE}
-#knitr::write_bib(file = 'packages.bib')
+knitr::write_bib(file = 'packages.bib')
 ```
 
