@@ -1,0 +1,36 @@
+---
+title: "Data procesing on PHASTER outputs dataset"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(cache=TRUE,  comment= " ")
+```
+
+# Introduction
+
+This repo hosts the complete PHASTER dataset from the 59 strains' genomes analysed on PHASTER and several scripts developed for its processing. Analysis of this processed data is published on (paper).
+
+
+# Libraries
+
+```{r libraries, include=T, warning=FALSE, message=FALSE}
+library(tidyverse)
+library(magrittr)
+library(readxl) 
+library(rmarkdown)
+library(knitr)
+```
+
+
+# Data importing and processing
+
+The first step in this analysis is transforming the XSLSX file into a friendly data frame for 
+
+```{r Phaster-df, warning=FALSE}
+df <- read_excel("Data/07-09-2020_PHASTER-raw.xlsx")
+df %<>% mutate_at(vars(e_value), ~ as.numeric(as.character(.)))
+df %<>% mutate_at(vars(species,completeness, genome), ~ as_factor(.))
+
+kable(df[1:5])
+```
