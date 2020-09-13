@@ -90,7 +90,18 @@ kable(by_species_total[1:5,])
 intact_phages <- df %>%
   filter(completeness %in% c("Intact") & blast_hit %in% str_subset(blast_hit, "^PHAGE")) %>%
   mutate(Candidate = as.factor(str_extract(blast_hit, "[:graph:]+(?=:)")), region = as.factor(region)) %>%
-  mutate(Candidate = str_remove(Candidate, "PHAGE_"), Candidate = str_replace(Candidate, "_", " ")) %>%
+  mutate(Candidate = str_remove(Candidate, "PHAGE_"),
+         Candidate = str_replace(Candidate, "_", " "),
+         Candidate = str_replace(Candidate, "Bacill", "Bacillus"),
+         Candidate = str_replace(Candidate, "Brevib", "Brevibacillus"),
+         Candidate = str_replace(Candidate, "Clostr", "Clostridium"),
+         Candidate = str_replace(Candidate, "Thermu", "Thermus phi"),
+         Candidate = str_replace(Candidate, "Paenib", "Paenibacillus"),
+         Candidate = str_replace(Candidate, "Bacillus 1", "Bacillus virus 1"),
+         Candidate = str_replace(Candidate, "Lister", "Listeria"),
+         Candidate = str_replace(Candidate, "Geobac", "Geobacillus"),
+         Candidate = str_replace(Candidate, "Staphy", "Staphylococcus"),
+         ) %>%
   mutate(species = str_replace(species,"Bacillus", "B.")) %>% 
   separate(Candidate, c("Candidate", "Phage_NC_ID"), sep = "_NC_") %>%
   mutate(Candidate = str_remove(Candidate, "_")) %>% 
@@ -103,18 +114,18 @@ intact_phages <- df %>%
   filter(CDS_hits == max(CDS_hits)) %>% 
   mutate(Epithet = as_factor(word(species,2)))
 
-#write_tsv(x = intact_phages, path = "Data/intact-phages_raw-01.tsv")
+write_tsv(x = intact_phages, path = "Data/intact-phages_raw-01.tsv")
 
 kable(intact_phages[1:5,])
 ```
 
-| species                         | Candidate      | region | score | Phage\_NC\_ID | CDS\_hits | Epithet           |
-| :------------------------------ | :------------- | :----- | ----: | :------------ | --------: | :---------------- |
-| B. amyloliquefaciens ATCC 13952 | Bacill phi105  | 7      |   150 | 004167        |         6 | amyloliquefaciens |
-| B. amyloliquefaciens ATCC 13952 | Brevib Jimmer1 | 4      |   150 | 029104        |         9 | amyloliquefaciens |
-| B. amyloliquefaciens DSM 7      | Bacill phi105  | 2      |   150 | 004167        |         3 | amyloliquefaciens |
-| B. amyloliquefaciens DSM 7      | Bacill phi105  | 6      |   140 | 004167        |         6 | amyloliquefaciens |
-| B. amyloliquefaciens DSM 7      | Bacill phi105  | 7      |   130 | 004167        |         9 | amyloliquefaciens |
+| species                         | Candidate             | region | score | Phage\_NC\_ID | CDS\_hits | Epithet           |
+| :------------------------------ | :-------------------- | :----- | ----: | :------------ | --------: | :---------------- |
+| B. amyloliquefaciens ATCC 13952 | Bacillus phi105       | 7      |   150 | 004167        |         6 | amyloliquefaciens |
+| B. amyloliquefaciens ATCC 13952 | Brevibacillus Jimmer1 | 4      |   150 | 029104        |         9 | amyloliquefaciens |
+| B. amyloliquefaciens DSM 7      | Bacillus phi105       | 2      |   150 | 004167        |         3 | amyloliquefaciens |
+| B. amyloliquefaciens DSM 7      | Bacillus phi105       | 6      |   140 | 004167        |         6 | amyloliquefaciens |
+| B. amyloliquefaciens DSM 7      | Bacillus phi105       | 7      |   130 | 004167        |         9 | amyloliquefaciens |
 
 -----
 

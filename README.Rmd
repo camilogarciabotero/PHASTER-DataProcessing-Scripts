@@ -67,12 +67,23 @@ kable(by_species_total[1:5,])
 
 ## Fig S1. Generating the dataset of the intact prophages in each bacterial species and vizualizing on a bubble-plot.
 
-```{r intac_phages, message=FALSE}
+```{r intact_phages, message=FALSE}
 
 intact_phages <- df %>%
   filter(completeness %in% c("Intact") & blast_hit %in% str_subset(blast_hit, "^PHAGE")) %>%
   mutate(Candidate = as.factor(str_extract(blast_hit, "[:graph:]+(?=:)")), region = as.factor(region)) %>%
-  mutate(Candidate = str_remove(Candidate, "PHAGE_"), Candidate = str_replace(Candidate, "_", " ")) %>%
+  mutate(Candidate = str_remove(Candidate, "PHAGE_"),
+         Candidate = str_replace(Candidate, "_", " "),
+         Candidate = str_replace(Candidate, "Bacill", "Bacillus"),
+         Candidate = str_replace(Candidate, "Brevib", "Brevibacillus"),
+         Candidate = str_replace(Candidate, "Clostr", "Clostridium"),
+         Candidate = str_replace(Candidate, "Thermu", "Thermus phi"),
+         Candidate = str_replace(Candidate, "Paenib", "Paenibacillus"),
+         Candidate = str_replace(Candidate, "Bacillus 1", "Bacillus virus 1"),
+         Candidate = str_replace(Candidate, "Lister", "Listeria"),
+         Candidate = str_replace(Candidate, "Geobac", "Geobacillus"),
+         Candidate = str_replace(Candidate, "Staphy", "Staphylococcus"),
+         ) %>%
   mutate(species = str_replace(species,"Bacillus", "B.")) %>% 
   separate(Candidate, c("Candidate", "Phage_NC_ID"), sep = "_NC_") %>%
   mutate(Candidate = str_remove(Candidate, "_")) %>% 
@@ -85,7 +96,7 @@ intact_phages <- df %>%
   filter(CDS_hits == max(CDS_hits)) %>% 
   mutate(Epithet = as_factor(word(species,2)))
 
-#write_tsv(x = intact_phages, path = "Data/intact-phages_raw-01.tsv")
+write_tsv(x = intact_phages, path = "Data/intact-phages_raw-01.tsv")
 
 kable(intact_phages[1:5,])
 ```
@@ -121,7 +132,6 @@ intact_phages %>%
 
 
 ## License
-
 
 <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
 
