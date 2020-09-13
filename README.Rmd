@@ -35,7 +35,7 @@ df %<>% mutate_at(vars(species,completeness, genome), ~ as_factor(.))
 kable(df[1:5,])
 ```
 
-## Fig 1. Generating candiadates prophage organized by completeness (Incomplete, Questionable, Intact)
+## Fig 1C. Generating candiadate prophages organized by completeness (Incomplete, Questionable, Intact)
 
 ```{r prophage-candidates, message=FALSE}
 by_completeness <- df %>%
@@ -53,7 +53,7 @@ kable(by_completeness[1:5,])
 ```
 
 
-## Fig 1. Generating the total number of prophage proteins per bacteria species
+## Fig 1D. Generating the total number of prophage proteins per bacteria species
 
 ```{r total-proteins, message=FALSE}
 by_species_total <- df %>%

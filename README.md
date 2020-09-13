@@ -39,7 +39,7 @@ kable(df[1:5,])
 | Bacillus amyloliquefaciens ATCC 13952 | CP009748.1 | Questionable |    70 |      1 |           4 | complement(1116407..1116907) | spore coat protein; KS08\_05620 |       NA | Genomic |
 | Bacillus amyloliquefaciens ATCC 13952 | CP009748.1 | Questionable |    70 |      1 |           5 | complement(1117000..1117314) | spore coat protein; KS08\_05625 |       NA | Genomic |
 
-## Fig 1. Generating candiadates prophage organized by completeness (Incomplete, Questionable, Intact)
+## Fig 1C. Generating candiadate prophages organized by completeness (Incomplete, Questionable, Intact)
 
 ``` r
 by_completeness <- df %>%
@@ -64,7 +64,7 @@ kable(by_completeness[1:5,])
 | Bacillus anthracis Rock3-42               | CM000732.1     |          2 |            0 |      0 |
 | Bacillus subtilis subsp. stercoris D7XPN1 | JHCA01000001.1 |          0 |            0 |      1 |
 
-## Fig 1. Generating the total number of prophage proteins per bacteria species
+## Fig 1D. Generating the total number of prophage proteins per bacteria species
 
 ``` r
 by_species_total <- df %>%
