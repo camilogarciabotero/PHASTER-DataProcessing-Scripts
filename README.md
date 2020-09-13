@@ -24,7 +24,7 @@ The first step in this analysis is transforming the XSLSX file into a
 friendly data frame for R.
 
 ``` r
-df <- read_excel("Data/2020-09-07_PHASTER-raw.xlsx")
+df <- read_excel("Data/2020-09-13_PHASTER-raw.xlsx")
 df %<>% mutate_at(vars(e_value), ~ as.numeric(as.character(.)))
 df %<>% mutate_at(vars(species,completeness, genome), ~ as_factor(.))
 
