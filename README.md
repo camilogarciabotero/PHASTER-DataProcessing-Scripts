@@ -114,7 +114,7 @@ intact_phages <- df %>%
   filter(CDS_hits == max(CDS_hits)) %>% 
   mutate(Epithet = as_factor(word(species,2)))
 
-write_tsv(x = intact_phages, path = "Data/intact-phages_raw-01.tsv")
+#write_tsv(x = intact_phages, path = "Data/intact-phages_raw-01.tsv")
 
 kable(intact_phages[1:5,])
 ```
