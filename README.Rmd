@@ -6,7 +6,7 @@ bibliography: packages.bib
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(cache=TRUE,  comment= " ")
+knitr::opts_chunk$set(cache=FALSE,  comment= " ")
 knitr::write_bib(c(.packages(), "knitr", "rmarkdown", "tidyverse"), "packages.bib")
 ```
 
@@ -96,6 +96,7 @@ intact_phages <- df %>%
   filter(CDS_hits == max(CDS_hits)) %>% 
   mutate(Epithet = as_factor(word(species,2)))
 
+
 #write_tsv(x = intact_phages, path = "Data/intact-phages_raw-01.tsv")
 
 kable(intact_phages[1:5,])
@@ -111,11 +112,12 @@ intact_phages %>%
   select(Species, Candidate, CDS_hits, Epithet) %>%
   pivot_wider(names_from = "Candidate", values_from = "CDS_hits", values_fill = 0, values_fn = sum) %>%
   pivot_longer(cols = -c(Species, Epithet), names_to = "Candidates", values_to = "CDS hits") %>%
-  filter(`CDS hits`>1) %>% 
+  filter(`CDS hits` > 0) %>% 
   ggplot(aes(Candidates, Species, size = `CDS hits`)) +
   geom_point() +
   facet_grid(rows = vars(Epithet), scales = "free", space = "free") +
   theme_bw() +
+  scale_size_area(max_size = 8) +
   theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1, size = 14, face = "italic"),
         axis.text.y = element_text(size = 14, face = "italic"),
         axis.title.x = element_text(size = 17, face = "bold"),
@@ -126,9 +128,11 @@ intact_phages %>%
         ) +
   labs(x = "Prophage candidates",
        y = "Bacterial species"
-  )
+  ) +
+  ggsave("Figs/bubble-plot-02.pdf", width = 12, height = 15)
 
 ```
+
 
 
 ## License
