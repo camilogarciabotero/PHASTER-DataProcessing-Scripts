@@ -51,7 +51,7 @@ by_completeness <- df %>%
     Intact = sum(str_count(completeness, "Intact"))
   )
 
-#write_tsv(x = by_completeness, path = "Data/completeness_raw-01.tsv")
+write_tsv(x = by_completeness, path = "Data/completeness_raw-01.tsv")
 
 kable(by_completeness[1:5,])
 ```
@@ -69,20 +69,23 @@ kable(by_completeness[1:5,])
 ``` r
 by_species_total <- df %>%
   group_by(species, genome) %>%
-  summarise("Total prophage proteins" = sum(str_count(blast_hit, "PHAGE")))
+  summarise("Total prophage proteins" = sum(str_count(blast_hit, "PHAGE"))) %>% 
+  summarize(
+    across("Total prophage proteins", mean)
+  )
 
-#write_tsv(x = by_species_total, path = "Data/total-proteins_raw-01.tsv")
+write_tsv(x = by_species_total, path = "Data/total-proteins_raw-01.tsv")
 
 kable(by_species_total[1:5,])
 ```
 
-| species                                   | genome         | Total prophage proteins |
-| :---------------------------------------- | :------------- | ----------------------: |
-| Bacillus amyloliquefaciens ATCC 13952     | CP009748.1     |                     268 |
-| Bacillus mycoides ATCC 6462               | CP009692.1     |                     121 |
-| Bacillus amyloliquefaciens K2             | MOEA01000001.1 |                     189 |
-| Bacillus anthracis Rock3-42               | CM000732.1     |                      49 |
-| Bacillus subtilis subsp. stercoris D7XPN1 | JHCA01000001.1 |                      36 |
+| species                                   | Total prophage proteins |
+| :---------------------------------------- | ----------------------: |
+| Bacillus amyloliquefaciens ATCC 13952     |                     268 |
+| Bacillus mycoides ATCC 6462               |                     121 |
+| Bacillus amyloliquefaciens K2             |                     189 |
+| Bacillus anthracis Rock3-42               |                      49 |
+| Bacillus subtilis subsp. stercoris D7XPN1 |                      36 |
 
 ## Fig S1. Generating the dataset of the intact prophages in each bacterial species and vizualizing on a bubble-plot.
 
@@ -115,7 +118,7 @@ intact_phages <- df %>%
   mutate(Epithet = as_factor(word(species,2)))
 
 
-#write_tsv(x = intact_phages, path = "Data/intact-phages_raw-01.tsv")
+write_tsv(x = intact_phages, path = "Data/intact-phages_raw-01.tsv")
 
 kable(intact_phages[1:5,])
 ```
@@ -137,22 +140,24 @@ intact_phages %>%
   select(Species, Candidate, CDS_hits, Epithet) %>%
   pivot_wider(names_from = "Candidate", values_from = "CDS_hits", values_fill = 0, values_fn = sum) %>%
   pivot_longer(cols = -c(Species, Epithet), names_to = "Candidates", values_to = "CDS hits") %>%
-  filter(`CDS hits` > 0) %>% 
+  filter(`CDS hits` > 0) %>%
   ggplot(aes(Candidates, Species, size = `CDS hits`)) +
   geom_point() +
   facet_grid(rows = vars(Epithet), scales = "free", space = "free") +
   theme_bw() +
   scale_size_area(max_size = 8) +
-  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1, size = 14, face = "italic"),
-        axis.text.y = element_text(size = 14, face = "italic"),
-        axis.title.x = element_text(size = 17, face = "bold"),
-        axis.title.y = element_text(size = 17, face = "bold"),
-        strip.background = element_blank(),
-        strip.text = element_blank(),
-        legend.position = "right"
-        ) +
-  labs(x = "Prophage candidates",
-       y = "Bacterial species"
+  theme(
+    axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1, size = 14, face = "italic"),
+    axis.text.y = element_text(size = 14, face = "italic"),
+    axis.title.x = element_text(size = 17, face = "bold"),
+    axis.title.y = element_text(size = 17, face = "bold"),
+    strip.background = element_blank(),
+    strip.text = element_blank(),
+    legend.position = "right"
+  ) +
+  labs(
+    x = "Prophage candidates",
+    y = "Bacterial species"
   ) +
   ggsave("Figs/bubble-plot-02.pdf", width = 12, height = 15)
 ```

@@ -28,6 +28,7 @@ library(knitr)
 The first step in this analysis is transforming the XSLSX file into a friendly data frame for R.
 
 ```{r Phaster-df, warning=FALSE}
+
 df <- read_excel("Data/2020-09-13_PHASTER-raw.xlsx")
 df %<>% mutate_at(vars(e_value), ~ as.numeric(as.character(.)))
 df %<>% mutate_at(vars(species,completeness, genome), ~ as_factor(.))
@@ -38,6 +39,7 @@ kable(df[1:5,])
 ## Fig 1C. Generating candiadate prophages organized by completeness (Incomplete, Questionable, Intact)
 
 ```{r prophage-candidates, message=FALSE}
+
 by_completeness <- df %>%
   filter(hit_number == 1) %>% 
   group_by(species,genome) %>%
@@ -47,7 +49,7 @@ by_completeness <- df %>%
     Intact = sum(str_count(completeness, "Intact"))
   )
 
-#write_tsv(x = by_completeness, path = "Data/completeness_raw-01.tsv")
+write_tsv(x = by_completeness, path = "Data/completeness_raw-01.tsv")
 
 kable(by_completeness[1:5,])
 ```
@@ -56,11 +58,15 @@ kable(by_completeness[1:5,])
 ## Fig 1D. Generating the total number of prophage proteins per bacteria species
 
 ```{r total-proteins, message=FALSE}
+
 by_species_total <- df %>%
   group_by(species, genome) %>%
-  summarise("Total prophage proteins" = sum(str_count(blast_hit, "PHAGE")))
+  summarise("Total prophage proteins" = sum(str_count(blast_hit, "PHAGE"))) %>% 
+  summarize(
+    across("Total prophage proteins", mean)
+  )
 
-#write_tsv(x = by_species_total, path = "Data/total-proteins_raw-01.tsv")
+write_tsv(x = by_species_total, path = "Data/total-proteins_raw-01.tsv")
 
 kable(by_species_total[1:5,])
 ```
@@ -97,7 +103,7 @@ intact_phages <- df %>%
   mutate(Epithet = as_factor(word(species,2)))
 
 
-#write_tsv(x = intact_phages, path = "Data/intact-phages_raw-01.tsv")
+write_tsv(x = intact_phages, path = "Data/intact-phages_raw-01.tsv")
 
 kable(intact_phages[1:5,])
 ```
@@ -112,28 +118,28 @@ intact_phages %>%
   select(Species, Candidate, CDS_hits, Epithet) %>%
   pivot_wider(names_from = "Candidate", values_from = "CDS_hits", values_fill = 0, values_fn = sum) %>%
   pivot_longer(cols = -c(Species, Epithet), names_to = "Candidates", values_to = "CDS hits") %>%
-  filter(`CDS hits` > 0) %>% 
+  filter(`CDS hits` > 0) %>%
   ggplot(aes(Candidates, Species, size = `CDS hits`)) +
   geom_point() +
   facet_grid(rows = vars(Epithet), scales = "free", space = "free") +
   theme_bw() +
   scale_size_area(max_size = 8) +
-  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1, size = 14, face = "italic"),
-        axis.text.y = element_text(size = 14, face = "italic"),
-        axis.title.x = element_text(size = 17, face = "bold"),
-        axis.title.y = element_text(size = 17, face = "bold"),
-        strip.background = element_blank(),
-        strip.text = element_blank(),
-        legend.position = "right"
-        ) +
-  labs(x = "Prophage candidates",
-       y = "Bacterial species"
+  theme(
+    axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1, size = 14, face = "italic"),
+    axis.text.y = element_text(size = 14, face = "italic"),
+    axis.title.x = element_text(size = 17, face = "bold"),
+    axis.title.y = element_text(size = 17, face = "bold"),
+    strip.background = element_blank(),
+    strip.text = element_blank(),
+    legend.position = "right"
+  ) +
+  labs(
+    x = "Prophage candidates",
+    y = "Bacterial species"
   ) +
   ggsave("Figs/bubble-plot-02.pdf", width = 12, height = 15)
 
 ```
-
-
 
 ## License
 
