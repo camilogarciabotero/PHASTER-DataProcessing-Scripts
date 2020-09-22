@@ -20,6 +20,7 @@ library(magrittr)
 library(readxl) 
 library(rmarkdown)
 library(knitr)
+library(DT)
 ```
 
 
@@ -29,11 +30,11 @@ The first step in this analysis is transforming the XSLSX file into a friendly d
 
 ```{r Phaster-df, warning=FALSE}
 
-df <- read_excel("Data/2020-09-13_PHASTER-raw.xlsx")
+df <- read_excel("Data/2020-09-14_PHASTER-raw.xlsx")
 df %<>% mutate_at(vars(e_value), ~ as.numeric(as.character(.)))
 df %<>% mutate_at(vars(species,completeness, genome), ~ as_factor(.))
 
-kable(df[1:5,])
+glimpse(df)
 ```
 
 ## Fig 1C. Generating candiadate prophages organized by completeness (Incomplete, Questionable, Intact)

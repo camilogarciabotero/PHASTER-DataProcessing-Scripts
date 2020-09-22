@@ -16,6 +16,7 @@ library(magrittr)
 library(readxl) 
 library(rmarkdown)
 library(knitr)
+library(DT)
 ```
 
 ## Data importing and processing
@@ -24,20 +25,27 @@ The first step in this analysis is transforming the XSLSX file into a
 friendly data frame for R.
 
 ``` r
-df <- read_excel("Data/2020-09-13_PHASTER-raw.xlsx")
+df <- read_excel("Data/2020-09-14_PHASTER-raw.xlsx")
 df %<>% mutate_at(vars(e_value), ~ as.numeric(as.character(.)))
 df %<>% mutate_at(vars(species,completeness, genome), ~ as_factor(.))
 
-kable(df[1:5,])
+glimpse(df)
 ```
 
-| species                               | genome     | completeness | score | region | hit\_number | cds\_position                | blast\_hit                      | e\_value | Source  |
-| :------------------------------------ | :--------- | :----------- | ----: | -----: | ----------: | :--------------------------- | :------------------------------ | -------: | :------ |
-| Bacillus amyloliquefaciens ATCC 13952 | CP009748.1 | Questionable |    70 |      1 |           1 | 1114538..1115125             | spore coat protein; KS08\_05605 |       NA | Genomic |
-| Bacillus amyloliquefaciens ATCC 13952 | CP009748.1 | Questionable |    70 |      1 |           2 | complement(1115183..1115626) | spore coat protein; KS08\_05610 |       NA | Genomic |
-| Bacillus amyloliquefaciens ATCC 13952 | CP009748.1 | Questionable |    70 |      1 |           3 | complement(1115775..1116257) | spore coat protein; KS08\_05615 |       NA | Genomic |
-| Bacillus amyloliquefaciens ATCC 13952 | CP009748.1 | Questionable |    70 |      1 |           4 | complement(1116407..1116907) | spore coat protein; KS08\_05620 |       NA | Genomic |
-| Bacillus amyloliquefaciens ATCC 13952 | CP009748.1 | Questionable |    70 |      1 |           5 | complement(1117000..1117314) | spore coat protein; KS08\_05625 |       NA | Genomic |
+``` 
+  Rows: 12,046
+  Columns: 10
+  $ species      <fct> Bacillus amyloliquefaciens ATCC 13952, Bacillus amyloliq…
+  $ genome       <fct> CP009748.1, CP009748.1, CP009748.1, CP009748.1, CP009748…
+  $ completeness <fct> Questionable, Questionable, Questionable, Questionable, …
+  $ score        <dbl> 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, …
+  $ region       <dbl> 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2,…
+  $ hit_number   <dbl> 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 1…
+  $ cds_position <chr> "1114538..1115125", "complement(1115183..1115626)", "com…
+  $ blast_hit    <chr> "spore coat protein; KS08_05605", "spore coat protein; K…
+  $ e_value      <dbl> NA, NA, NA, NA, NA, NA, 3.77e-05, NA, NA, NA, NA, 1.86e-…
+  $ source       <chr> "Genomic", "Genomic", "Genomic", "Genomic", "Genomic", "…
+```
 
 ## Fig 1C. Generating candiadate prophages organized by completeness (Incomplete, Questionable, Intact)
 
