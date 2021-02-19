@@ -11,16 +11,21 @@ CP009748.1 <- tibble::tribble(
   "CP009748.1", 9L, "14.7", "questionable", 70L, 17L, "3640744-3655532", "PHAGE_Entero_phi92_NC_023693(4)", "50.03","Bacillus amyloliquefaciens ATCC 13952"
 )
 
-
 CP009692.1 <- tibble::tribble(
-  ~V0, ~V1, ~V2, ~V3, ~V4, ~V5, ~V6, ~V7, ~V8, ~V9,
-  "CP009692.1", 1L, "41.3", "questionable", 90L, 39L, "50591-91969", "PHAGE_Bacill_IEBH_NC_011167(4)", "32.87", "Bacillus mycoides ATCC 6462",
-  "CP009692.1", 2L, "26.7", "questionable", 70L, 43L, "97956-124715", "PHAGE_Bacill_phBC6A52_NC_004821(4)", "33.75", "Bacillus mycoides ATCC 6462",
-  "CP009692.1", 3L, "44.8", "questionable", 70L, 37L, "190310-235138", "PHAGE_Escher_RCS47_NC_042128(2)", "33.53", "Bacillus mycoides ATCC 6462",
-  "CP009692.1", 4L, "8.9", "incomplete", 30L, 14L, "293121-302054", "PHAGE_Bacill_BtCS33_NC_018085(4)", "34.20",  "Bacillus mycoides ATCC 6462"
-) # 8 regions on details data
-
-
+  ~V0,~V1, ~V2, ~V3, ~V4, ~V5, ~V6, ~V7, ~V8, ~V9,
+  "CP009692.1",  1L, "9.9", "incomplete", 10L, 9L, "185005-194935 ", "PHAGE_Prochl_P_SSM2_NC_006883(4)", "38.42", "Bacillus mycoides ATCC 6462",
+  "CP009692.1", 2L, "8.6", "incomplete", 10L, 10L, "226578-235222 ", "PHAGE_Bacill_G_NC_023719(2)", "36.89","Bacillus mycoides ATCC 6462",
+  "CP009692.1", 3L, "10.1", "incomplete", 10L, 10L, "464406-474562 ", "PHAGE_Bacill_G_NC_023719(2)", "37.92","Bacillus mycoides ATCC 6462",
+  "CP009692.1", 4L, "6.9", "incomplete", 20L, 7L, "765537-772502 ", "PHAGE_Staphy_phiN315_NC_004740(1)", "33.95","Bacillus mycoides ATCC 6462",
+  "CP009692.1", 5L, "9.7", "incomplete", 20L, 7L, "2313139-2322898 ", "PHAGE_Clostr_phiCD211_NC_029048(2)", "37.14","Bacillus mycoides ATCC 6462",
+  "CP009692.1", 6L, "23.3", "incomplete", 10L, 10L, "3715128-3738447 ", "PHAGE_Bacill_phBC6A52_NC_004821(5)", "34.61","Bacillus mycoides ATCC 6462",
+  "CP009692.1", 7L, "7.8", "incomplete", 20L, 7L, "3887163-3894984 ", "PHAGE_Serrat_MyoSmar_NC_048800(1)", "35.35","Bacillus mycoides ATCC 6462",
+  "CP009692.1", 8L, "11", "incomplete", 20L, 14L, "4525996-4537009 ", "PHAGE_Escher_ESCO13_NC_047770(4)", "36.53","Bacillus mycoides ATCC 6462",
+  "CP009692.1", 9L, "8", "incomplete", 10L, 8L, "5060703-5068794 ", "PHAGE_Bacill_G_NC_023719(1)", "37.85","Bacillus mycoides ATCC 6462",
+  "CP009692.1", 10L, "37", "questionable", 90L, 31L, "52295-89324 ", "PHAGE_Bacill_IEBH_NC_011167(3)", "32.99","Bacillus mycoides ATCC 6462",
+  "CP009692.1", 11L, "26.7", "incomplete", 60L, 37L, "97956-124715 ", "PHAGE_Bacill_BtCS33_NC_018085(4)", "33.75","Bacillus mycoides ATCC 6462",
+  "CP009692.1", 12L, "44.8", "questionable", 80L, 32L, "190310-235138 ", "PHAGE_Staphy_SPbeta_like_NC_029119(2)", "33.53","Bacillus mycoides ATCC 6462"
+)
 
 MOEA01000001.1 <- tibble::tribble(
   ~V0, ~V1, ~V2, ~V3, ~V4, ~V5, ~V6, ~V7, ~V8, ~V9,
@@ -34,41 +39,38 @@ MOEA01000001.1 <- tibble::tribble(
   "MOEA01000001.1", 8L, "47.5", "incomplete", 50L, 67L, "9689-57276", "PHAGE_Bacill_SPP1_NC_004166(15)", "42.91", "Bacillus amyloliquefaciens K2"
 )
 
-
 CM000732.1 <- tibble::tribble(
   ~V0, ~V1, ~V2, ~V3, ~V4, ~V5, ~V6, ~V7, ~V8, ~V9,
   "CM000732.1", 1L, "26.4", "incomplete", 10L, 36L, "3311944-3338391", "PHAGE_Bacill_vB_BhaS_171_NC_030904(8)", "35.07", "Bacillus anthracis Rock3-42",
   "CM000732.1", 2L, "37.2", "incomplete", 40L, 25L, "3362523-3399761", "PHAGE_Bacill_PfEFR_5_NC_031055(9)", "34.63", "Bacillus anthracis Rock3-42"
 )
 
-
 JHCA01000001.1 <- tibble::tribble(
   ~V0, ~V1, ~V2, ~V3, ~V4, ~V5, ~V6, ~V7, ~V8,  ~V9,
   "JHCA01000001.1",  1L,	"33.6",	"intact",	110L,	53L,	"50192-83807",	"PHAGE_Brevib_Jimmer1_NC_029104(8)",	"44.91", "Bacillus subtilis subsp. stercoris D7XPN1"
 )
 
-
 AYTO01000001.1 <- tibble::tribble(
- ~V0, ~V1, ~V2, ~V3, ~V4, ~V5, ~V6, ~V7, ~V8, ~V9,
- "AYTO01000001.1", 1L, "167.3", "intact", 150L, 217L, "1190592-1357943", "PHAGE_Brevib_Jenst_NC_028805(66)", "40.63", "Bacillus tequilensis ATCC BAA 819",
- "AYTO01000001.1", 2L, "32.1", "questionable", 90L, 48L, "1397607-1429744", "PHAGE_Brevib_Jimmer2_NC_041976(8)", "45.08", "Bacillus tequilensis ATCC BAA 819",
- "AYTO01000001.1", 3L, "10.9", "incomplete", 20L, 9L, "1906696-1917596", "PHAGE_Bacill_SPbeta_NC_001884(2)", "39.07", "Bacillus tequilensis ATCC BAA 819"
+  ~V0,~V1, ~V2, ~V3, ~V4, ~V5, ~V6, ~V7, ~V8, ~V9,
+  "AYTO01000001.1", 1L, "19.3", "incomplete", 30L, 20L, "166071-185391", "PHAGE_Bacill_vB_BtS_BMBtp14_NC_048640(4)", "43.53", "Bacillus tequilensis ATCC BAA 819",
+  "AYTO01000001.1", 2L, "167.3", "intact", 150L, 217L, "1190592-1357943", "PHAGE_Brevib_Jenst_NC_028805(66)", "40.63", "Bacillus tequilensis ATCC BAA 819",
+  "AYTO01000001.1", 3L, "32.1", "intact", 110L, 48L, "1397607-1429744", "PHAGE_Brevib_Jimmer2_NC_041976(8)", "45.08", "Bacillus tequilensis ATCC BAA 819",
+  "AYTO01000001.1", 4L, "21.3", "incomplete", 40L, 15L, "1875054-1896408", "PHAGE_Bacill_vB_BsuM_Goe3_NC_048652(2)", "40.33", "Bacillus tequilensis ATCC BAA 819",
+  "AYTO01000001.1", 5L, "7.7", "incomplete", 10L, 18L, "2110921-2118694", "PHAGE_Bacill_SPbeta_NC_001884(4)", "33.80", "Bacillus tequilensis ATCC BAA 819",
+  "AYTO01000001.1", 6L, "12", "incomplete", 20L, 18L, "3271248-3283282", "PHAGE_Thermu_OH2_NC_021784(2)", "42.43", "Bacillus tequilensis ATCC BAA 819"
 )
 
 JHUD02000001.1 <- tibble::tribble(
  ~V0, ~V1, ~V2, ~V3, ~V4, ~V5, ~V6, ~V7, ~V8, ~V9,
  "JHUD02000001.1", 1L, "48.8", "intact", 91L, 50L, "1005556-1054406", "PHAGE_Bacill_phi105_NC_004167(31)", "38.46", "Bacillus pumilus SH-B9", 
  "JHUD02000001.1", 2L, "28.2", "incomplete", 40L, 37L, "17344-45633", "PHAGE_Brevib_Jimmer1_NC_029104(6)", "41.22", "Bacillus pumilus SH-B9"
-) # 3 regions on details data
-
-
+)
 
 AFWM01000001.1 <- tibble::tribble(
   ~V0, ~V1, ~V2, ~V3, ~V4, ~V5, ~V6, ~V7, ~V8,  ~V9,
   "AFWM01000001.1", 1L, "8.2", "incomplete", 10L, 8L, "83502-91791", "PHAGE_Synech_S_SKS1_NC_020851(4)", "52.71", "Bacillus coagulans XZL4",
   "AFWM01000001.1", 2L, "7.2", "incomplete", 10L, 14L, "12625-19840", "PHAGE_Bacill_Bobb_NC_024792(1)", "47.67", "Bacillus coagulans XZL4"
 )
-
 
 CM000725.1 <- tibble::tribble(
   ~V0, ~V1, ~V2, ~V3, ~V4, ~V5, ~V6, ~V7, ~V8, ~V9,
@@ -77,7 +79,6 @@ CM000725.1 <- tibble::tribble(
   "CM000725.1", 3L, "46", "intact", 150L, 42L, "5337911-5384008", "PHAGE_Bacill_PfEFR_5_NC_031055(8)", "33.57", "Bacillus mycoides BDRD-ST196",
   "CM000725.1", 4L, "17.7", "questionable", 80L, 18L, "5537133-5554905", "PHAGE_Staphy_SPbeta_like_NC_029119(2)", "30.61","Bacillus mycoides BDRD-ST196"
 )
-
 
 QVEJ01000001.1 <- tibble::tribble(
   ~V0,~V1, ~V2, ~V3, ~V4, ~V5, ~V6, ~V7, ~V8, ~V9,
@@ -88,7 +89,6 @@ QVEJ01000001.1 <- tibble::tribble(
   "QVEJ01000001.1", 5L, "11.3", "incomplete", 20L, 16L, "9-11352", "PHAGE_Thermu_OH2_NC_021784(2)", "41.97", "Bacillus amyloliquefaciens NRRL 942"
 )
 
-
 AYTL01000001.1 <- tibble::tribble(
  ~V0, ~V1, ~V2, ~V3, ~V4, ~V5, ~V6, ~V7, ~V8,  ~V9,
  "AYTL01000001.1", 1L, "24.5", "incomplete", 30L, 13L, "313197-337719", "PHAGE_Bacill_SP_10_NC_019487(2)", "40.93", "Bacillus mojavensis KCTC 3706",
@@ -97,7 +97,6 @@ AYTL01000001.1 <- tibble::tribble(
  "AYTL01000001.1", 4L, "18.1", "incomplete", 20L, 11L, "17562-35697", "PHAGE_Bacill_SPbeta_NC_001884(2)", "39.39",  "Bacillus mojavensis KCTC 3706"
 )
 
-
 CP048852.1 <- tibble::tribble(
  ~V0, ~V1, ~V2, ~V3, ~V4, ~V5, ~V6, ~V7, ~V8,  ~V9,
  "CP048852.1", 1L, "15.7", "incomplete", 40L, 7L, "496547-512284", "PHAGE_Bacill_phi4J1_NC_029008(2)", "39.74", "Bacillus tequilensis EA-CB0015",
@@ -105,7 +104,6 @@ CP048852.1 <- tibble::tribble(
  "CP048852.1", 3L, "122.6", "questionable", 70L, 166L, "1728714-1851340", "PHAGE_Bacill_SPbeta_NC_001884(89)", "35.06", "Bacillus tequilensis EA-CB0015",
  "CP048852.1", 4L, "22", "incomplete", 30L, 10L, "1864421-1886494", "PHAGE_Staphy_SPbeta_like_NC_029119(2)", "38.41", "Bacillus tequilensis EA-CB0015"
 )
-
  
 CM000729.1 <- tibble::tribble(
   ~V0, ~V1, ~V2, ~V3, ~V4, ~V5, ~V6, ~V7, ~V8,  ~V9,
@@ -122,8 +120,6 @@ CM000747.1 <- tibble::tribble(
   "CM000747.1", 5L, "12.1", "incomplete", 10L, 29L, "5841084-5853264", "PHAGE_Bacill_G_NC_023719(3)", "31.14","Bacillus thuringiensis Bt407"
 )
 
-
-
 LQYG01000001.1 <- tibble::tribble(
   ~V0, ~V1, ~V2, ~V3, ~V4, ~V5, ~V6, ~V7, ~V8,  ~V9,
   "LQYG01000001.1", 1L, "27.5", "intact", 120L, 43L, "14058-41613", "PHAGE_Paenib_HB10c2_NC_028758(6)", "41.97", "Bacillus coagulans B4098"
@@ -139,13 +135,11 @@ AEFM01000028.1 <- tibble::tribble(
   "AEFM01000028.1", 6L, "7.5", "incomplete", 20L, 16L, "32005-39578", "PHAGE_Clostr_phiCD505_NC_028764(2)", "35.83", "Bacillus atrophaeus ATCC 9372-1"
 )
 
-
 CM000722.1 <- tibble::tribble(
  ~V0, ~V1, ~V2, ~V3, ~V4, ~V5, ~V6, ~V7, ~V8,  ~V9,
  "CM000722.1", 1L, "22", "questionable", 70L, 23L, "2386091-2408173", "PHAGE_Bacill_vB_BhaS_171_NC_030904(6)", "36.34", "Bacillus cereus m1550",
  "CM000722.1", 2L, "23.7", "incomplete", 10L, 24L, "2410751-2434503", "PHAGE_Bacill_phBC6A52_NC_004821(8)", "32.22", "Bacillus cereus m1550"
-) # 1 region on details data
-
+)
 
 CP000673.1 <- tibble::tribble(
   ~V0, ~V1, ~V2, ~V3, ~V4, ~V5, ~V6, ~V7, ~V8,  ~V9,
@@ -164,7 +158,6 @@ CP00560.2 <- tibble::tribble(
  "CP00560.2" ,1L, "12", "incomplete", 10L, 25L, "1215912-1228000", "PHAGE_Bacill_SPbeta_NC_001884(7)", "46.09", "Bacillus velezensis FZB42",
  "CP00560.2" , 2L, "25.1", "incomplete", 20L, 11L, "1807798-1832992", "PHAGE_Bacill_PBS1_NC_043027(4)", "41.31", "Bacillus velezensis FZB42"
 )
-
 
 KB976672.1 <- tibble::tribble(
   ~V0, ~V1, ~V2, ~V3, ~V4, ~V5, ~V6, ~V7, ~V8,  ~V9,
@@ -201,7 +194,7 @@ CM000758.1 <- tibble::tribble(
   "CM000758.1", 8L, "36.9", "incomplete", 60L, 44L, "6169806-6206801", "PHAGE_Bacill_phBC6A52_NC_004821(17)", "33.84","Bacillus thuringiensis IBL 200",
   "CM000758.1", 9L, "7.9", "incomplete", 50L, 10L, "6478759-6486730", "PHAGE_Bacill_phiNIT1_NC_021856(1)", "30.61","Bacillus thuringiensis IBL 200",
   "CM000758.1", 10L, "11.7", "incomplete", 20L, 17L, "6719918-6731650", "PHAGE_Bacill_WBeta_NC_007734(8)", "34.73","Bacillus thuringiensis IBL 200"
-) # 7 regions on details data
+)
 
 CM000719.1 <- tibble::tribble(
   ~V0, ~V1, ~V2, ~V3, ~V4, ~V5, ~V6, ~V7, ~V8,  ~V9,
@@ -219,7 +212,6 @@ LLZC01000001.1 <- tibble::tribble(
   "LLZC01000001.1", 5L, "32.3", "questionable", 90L, 42L, "523706-556036", "PHAGE_Brevib_Jimmer1_NC_029104(8)", "47.07", "Bacillus velezensis NRRL B-41580",
   "LLZC01000001.1", 6L, "26.4", "incomplete", 20L, 9L, "111437-137851", "PHAGE_Bacill_PBS1_NC_043027(3)", "42.40", "Bacillus velezensis NRRL B-41580"
 )
-
 
 LSBB01000001.1 <-tibble::tribble(
   ~V0, ~V1, ~V2, ~V3, ~V4, ~V5, ~V6, ~V7, ~V8,  ~V9,
@@ -254,8 +246,6 @@ AE016877.1 <- tibble::tribble(
   "AE016877.1", 6L, "14.8", "intact", 98L, 24L, "360-15179", "PHAGE_Bacill_Bam35c_NC_005258(21)", "38.21", "Bacillus cereus ATCC 14579"
 )
 
-
-
 PVRE01000010.1 <- tibble::tribble(
   ~V0, ~V1, ~V2, ~V3, ~V4, ~V5, ~V6, ~V7, ~V8,  ~V9,
   "PVRE01000010.1", 1L, "30.7", "incomplete", 50L, 36L, "43-30775", "PHAGE_Bacill_phi105_NC_004167(20)", "39.08", "Bacillus pumilus MZGC1",
@@ -265,7 +255,6 @@ PVRE01000010.1 <- tibble::tribble(
   "PVRE01000010.1", 5L, "14.2", "incomplete", 10L, 29L, "271524-285744", "PHAGE_Bacill_SPbeta_NC_001884(5)", "33.69", "Bacillus pumilus MZGC1",
   "PVRE01000010.1", 6L, "112.6", "questionable", 90L, 161L, "3-112679", "PHAGE_Bacill_SPbeta_NC_001884(50)", "34.44",  "Bacillus pumilus MZGC1"
 )
-
 
 FN597644.1 <- tibble::tribble(
   ~V0, ~V1, ~V2, ~V3, ~V4, ~V5, ~V6, ~V7, ~V8, ~V9,
@@ -278,7 +267,6 @@ FN597644.1 <- tibble::tribble(
   "FN597644.1", 7L, "40.1", "intact", 130L, 49L, "3128282-3168441", "PHAGE_Bacill_phi105_NC_004167(11)", "44.48",  "Bacillus amyloliquefaciens DSM 7"
 )
 
-
 CP002927.1 <- tibble::tribble(
   ~V0, ~V1, ~V2, ~V3, ~V4, ~V5, ~V6, ~V7, ~V8,  ~V9,
   "CP002927.1", 1L, "145.7", "incomplete", 60L, 187L, "1170280-1315979", "PHAGE_Bacill_SPbeta_NC_001884(87)", "36.34", "Bacillus amyloliquefaciens XH7",
@@ -289,7 +277,6 @@ CP002927.1 <- tibble::tribble(
   "CP002927.1", 6L, "37.7", "intact", 140L, 46L, "2906108-2943875", "PHAGE_Bacill_PM1_NC_020883(7)", "37.06", "Bacillus amyloliquefaciens XH7",
   "CP002927.1", 7L, "42", "intact", 110L, 50L, "3052737-3094763", "PHAGE_Paenib_Tripp_NC_028930(15)", "47.00",  "Bacillus amyloliquefaciens XH7"
 )
-
 
 AE016879.1 <- tibble::tribble(
   ~V0,~V1, ~V2, ~V3, ~V4, ~V5, ~V6, ~V7, ~V8,  ~V9,
@@ -302,17 +289,15 @@ AE016879.1 <- tibble::tribble(
 
 CP017247.1 <- tibble::tribble(
   ~V0, ~V1, ~V2, ~V3, ~V4, ~V5, ~V6, ~V7, ~V8, ~V9,
-  "CP017247.1", 1L, "54.4", "intact", 140L, 62L, "632020-686462", "PHAGE_Bacill_phBC6A52_NC_004821(8)", "42.04", "Bacillus licheniformis BL1202",
-  "CP017247.1", 2L, "40.6", "incomplete", 50L, 53L, "974743-1015425", "PHAGE_Paenib_Tripp_NC_028930(17)", "47.14", "Bacillus licheniformis BL1202",
-  "CP017247.1", 3L, "24.7", "intact", 150L, 30L, "1015105-1039831", "PHAGE_Paenib_Harrison_NC_028746(5)", "45.25", "Bacillus licheniformis BL1202",
-  "CP017247.1", 4L, "12.8", "incomplete", 30L, 17L, "1043426-1056269", "PHAGE_Bacill_WBeta_NC_007734(2)", "39.46", "Bacillus licheniformis BL1202",
-  "CP017247.1", 5L, "33.1", "intact", 110L, 42L, "1439424-1472539", "PHAGE_Brevib_Jimmer1_NC_029104(7)", "47.39", "Bacillus licheniformis BL1202",
-  "CP017247.1", 6L, "42.6", "questionable", 90L, 64L, "1544311-1586939", "PHAGE_Bacill_SPP1_NC_004166(11)", "43.33",  "Bacillus licheniformis BL1202",
-  "CP017247.1", 7L, "43.7", "intact", 110L, 51L, "2035073-2078840", "PHAGE_Bacill_phi105_NC_004167(13)", "41.80", "Bacillus licheniformis BL1202",
-  "CP017247.1", 8L, "41.5", "intact", 108L, 48L, "2966053-3007609", "PHAGE_Bacill_phi105_NC_004167(37)", "41.94", "Bacillus licheniformis BL1202",
-  "CP017247.1", 9L, "55.1", "intact", 100L, 69L, "3639892-3695069", "PHAGE_Bacill_phi105_NC_004167(23)", "42.18",  "Bacillus licheniformis BL1202"
-) # 8 regions on details data
-
+  "CP017247.1", 1L, "45.6", "intact", 150L, 62L, "640436-686045", "PHAGE_Bacill_phBC6A52_NC_004821(8)", "41.32", "Bacillus licheniformis BL1202",
+  "CP017247.1", 2L, "40.6", "incomplete", 50L, 56L, "974743-1015425", "PHAGE_Paenib_Tripp_NC_028930(18)", "47.14", "Bacillus licheniformis BL1202",
+  "CP017247.1", 3L, "24.8", "intact", 120L, 24L, "1015528-1040343", "PHAGE_Paenib_Harrison_NC_028746(5)", "45.05", "Bacillus licheniformis BL1202",
+  "CP017247.1", 4L, "35.3", "intact", 110L, 46L, "1437154-1472539", "PHAGE_Brevib_Jimmer2_NC_041976(7)", "46.91", "Bacillus licheniformis BL1202", 
+  "CP017247.1", 5L, "42.6", "intact", 150L, 60L, "1544311-1586939", "PHAGE_Bacill_SPP1_NC_004166(11)", "43.33", "Bacillus licheniformis BL1202",
+  "CP017247.1", 6L, "43.7", "intact", 110L, 51L, "2035073-2078840", "PHAGE_Bacill_phi105_NC_004167(13)", "41.80", "Bacillus licheniformis BL1202",
+  "CP017247.1", 7L, "41.5", "intact", 108L, 50L, "2966053-3007609", "PHAGE_Bacill_phi105_NC_004167(37)", "41.94", "Bacillus licheniformis BL1202",
+  "CP017247.1", 8L, "53", "intact", 100L, 65L, "3641986-3695069", "PHAGE_Bacill_phi105_NC_004167(22)", "42.18", "Bacillus licheniformis BL1202"
+)
 
 CP023729.1 <- tibble::tribble(
   ~V0, ~V1, ~V2, ~V3, ~V4, ~V5, ~V6, ~V7, ~V8,  ~V9,
@@ -323,43 +308,38 @@ CP023729.1 <- tibble::tribble(
   "CP023729.1", 5L, "42.4", "intact", 97L, 57L, "3223617-3266066", "PHAGE_Bacill_phi105_NC_004167(33)", "41.88","Bacillus licheniformis ATCC 9789"
 )
 
-CP006881.1 <- tibble::tribble(
-  ~V0, ~V1, ~V2, ~V3, ~V4, ~V5, ~V6, ~V7, ~V8,  ~V9,
-  "CP006881.1", 1L, "33.1", "incomplete", 50L, 10L, "601126-634245", "PHAGE_Entero_vB_KleM_RaK2_NC_019526(1)", "41.48", "Bacillus subtilis subsp. subtilis PY79",
-  "CP006881.1", 2L, "33.7", "intact", 100L, 45L, "1277487-1311219", "PHAGE_Brevib_Jimmer1_NC_029104(8)", "44.84", "Bacillus subtilis subsp. subtilis PY79",
-  "CP006881.1", 3L, "9.5", "incomplete", 10L, 20L, "2008123-2017632", "PHAGE_Bacill_SPbeta_NC_001884(8)", "33.61", "Bacillus subtilis subsp. subtilis PY79",
-  "CP006881.1", 4L, "48", "questionable", 90L, 49L, "2470916-2518952", "PHAGE_Clostr_phiCT9441A_NC_029022(7)", "38.86",  "Bacillus subtilis subsp. subtilis PY79"
-) # 2 regions on details data
 
+CP006881.1 <- tibble::tribble(
+  ~V0, ~V1, ~V2, ~V3, ~V4, ~V5, ~V6, ~V7, ~V8, ~V9,
+  "CP006881.1", 1L, "33.7", "intact", 110L, 46L, "1277487-1311219", "PHAGE_Brevib_Jimmer2_NC_041976(8)", "44.84", "Bacillus subtilis subsp. subtilis PY79",
+  "CP006881.1", 2L, "29.2", "incomplete", 30L, 37L, "2478956-2508167", "PHAGE_Clostr_phiCT9441A_NC_029022(7)", "40.33", "Bacillus subtilis subsp. subtilis PY79"
+)
 
 CP009749.1 <- tibble::tribble(
   ~V0, ~V1, ~V2, ~V3, ~V4, ~V5, ~V6, ~V7, ~V8, ~V9,
- "CP009749.1", 1L, "11.9", "incomplete", 10L, 22L, "1251584-1263541", "PHAGE_Bacill_SPbeta_NC_001884(7)", "46.04", "Bacillus velezensis ATCC 19217",
- "CP009749.1", 2L, "19.3", "incomplete", 20L, 9L, "1849003-1868352", "PHAGE_Bacill_PBS1_NC_043027(3)", "42.50","Bacillus velezensis ATCC 19217",
- "CP009749.1", 3L, "42.9", "questionable", 90L, 49L, "2143829-2186733", "PHAGE_Bacill_phi105_NC_004167(15)", "40.47","Bacillus velezensis ATCC 19217"
-) # 4 regions on detail data
-
+  "CP009749.1", 1L, "11.9", "incomplete", 10L, 25L, "1251584-1263541", "PHAGE_Bacill_SPbeta_NC_001884(7)", "46.04", "Bacillus velezensis ATCC 19217",
+  "CP009749.1", 2L, "25.8", "incomplete", 20L, 10L, "1841297-1867154", "PHAGE_Bacill_PBS1_NC_043027(4)", "41.13", "Bacillus velezensis ATCC 19217",
+  "CP009749.1", 3L, "25.9", "incomplete", 50L, 22L, "2149009-2174921", "PHAGE_Bacill_phi105_NC_004167(15)", "42.18","Bacillus velezensis ATCC 19217",
+  "CP009749.1", 4L, "22", "incomplete", 30L, 20L, "2164628-2186694", "PHAGE_Clostr_phiCT453B_NC_029004(3)", "39.84","Bacillus velezensis ATCC 19217"
+)
 
 CP002905.1 <- tibble::tribble(
-  ~V0, ~V1, ~V2, ~V3, ~V4, ~V5, ~V6, ~V7, ~V8,  ~V9,
-  "CP002905.1", 1L, "42.7", "incomplete", 40L, 28L, "154816-197571", "PHAGE_Bacill_Pony_NC_022770(3)", "41.24", "Bacillus subtilis subsp. spizizenii TU-B-10",
-  "CP002905.1", 2L, "34.6", "incomplete", 40L, 42L, "184254-218854", "PHAGE_Clostr_phiCT9441A_NC_029022(8)", "41.93", "Bacillus subtilis subsp. spizizenii TU-B-10",
-  "CP002905.1", 3L, "33.8", "incomplete", 40L, 28L, "215836-249734", "PHAGE_Bacill_Pony_NC_022770(3)", "40.85", "Bacillus subtilis subsp. spizizenii TU-B-10",
-  "CP002905.1", 4L, "34.6", "incomplete", 40L, 42L, "244731-279331", "PHAGE_Clostr_phiCT9441A_NC_029022(8)", "41.93","Bacillus subtilis subsp. spizizenii TU-B-10",
-  "CP002905.1", 5L, "35.2", "intact", 100L, 47L, "1419525-1454818", "PHAGE_Brevib_Jimmer1_NC_029104(8)", "44.76","Bacillus subtilis subsp. spizizenii TU-B-10",
-  "CP002905.1", 6L, "11.4", "incomplete", 20L, 17L, "1544372-1555827", "PHAGE_Cellul_phiSM_NC_020860(2)", "40.97","Bacillus subtilis subsp. spizizenii TU-B-10",
-  "CP002905.1", 7L, "24.6", "incomplete", 20L, 10L, "2010202-2034805", "PHAGE_Bacill_SPbeta_NC_001884(2)", "40.73","Bacillus subtilis subsp. spizizenii TU-B-10"
-) # 6 regions on detail data
+  ~V0, ~V1, ~V2, ~V3, ~V4, ~V5, ~V6, ~V7, ~V8, ~V9,
+ "CP002905.1", 1L, "24.2", "incomplete", 30L, 23L, "156042-180336", "PHAGE_Bacill_Pony_NC_022770(3)", "41.69", "Bacillus subtilis subsp. spizizenii TU-B-10",
+ "CP002905.1", 2L, "34.6", "incomplete", 40L, 42L, "184254-218854", "PHAGE_Clostr_phiCT453A_NC_028991(7)", "41.93", "Bacillus subtilis subsp. spizizenii TU-B-10",
+ "CP002905.1", 3L, "33.8", "incomplete", 40L, 23L, "215836-249734", "PHAGE_Bacill_Pony_NC_022770(3)", "40.85", "Bacillus subtilis subsp. spizizenii TU-B-10",
+ "CP002905.1", 4L, "34.6", "incomplete", 40L, 42L, "244731-279331", "PHAGE_Clostr_phiCT453A_NC_028991(7)", "41.93", "Bacillus subtilis subsp. spizizenii TU-B-10",
+ "CP002905.1", 5L, "35.2", "intact", 100L, 47L, "1419525-1454818", "PHAGE_Brevib_Jimmer2_NC_041976(8)", "44.76", "Bacillus subtilis subsp. spizizenii TU-B-10",
+ "CP002905.1", 6L, "21.5", "incomplete", 20L, 9L, "2007226-2028763", "PHAGE_Bacill_SPbeta_NC_001884(2)", "40.51", "Bacillus subtilis subsp. spizizenii TU-B-10"
+)
 
 CP002183.1 <- tibble::tribble(
   ~V0, ~V1, ~V2, ~V3, ~V4, ~V5, ~V6, ~V7, ~V8,  ~V9,
   "CP002183.1", 1L, "35.1", "intact", 100L, 46L, "1271618-1306739", "PHAGE_Brevib_Jimmer2_NC_041976(8)", "44.62","Bacillus subtilis subsp. spizizenii W23",
-  "CP002183.1", 2L, "8.9", "incomplete", 20L, 16L, "1396013-1404975", "PHAGE_Cellul_phiSM_NC_020860(2)", "42.14","Bacillus subtilis subsp. spizizenii W23",
-  "CP002183.1", 3L, "19.9", "incomplete", 20L, 11L, "1851994-1871992", "PHAGE_Bacill_SPbeta_NC_001884(2)", "38.95","Bacillus subtilis subsp. spizizenii W23",
-  "CP002183.1", 4L, "39.8", "incomplete", 60L, 61L, "1955050-1994948", "PHAGE_Bacill_phi105_NC_004167(25)", "39.64","Bacillus subtilis subsp. spizizenii W23",
-  "CP002183.1", 5L, "19.9", "incomplete", 20L, 12L, "2045781-2065693", "PHAGE_Bacill_SPbeta_NC_001884(2)", "37.28","Bacillus subtilis subsp. spizizenii W23",
-  "CP002183.1", 6L, "29.5", "incomplete", 20L, 9L, "2903965-2933553", "PHAGE_Staphy_SPbeta_like_NC_029119(2)", "44.16","Bacillus subtilis subsp. spizizenii W23"
-) # 4 regions on details data
+  "CP002183.1", 2L, "19.9", "incomplete", 20L, 8L, "1851994-1871992", "PHAGE_Bacill_SPbeta_NC_001884(2)", "38.95", "Bacillus subtilis subsp. spizizenii W23",
+  "CP002183.1", 3L, "39.8", "incomplete", 60L, 59L, "1955050-1994948", "PHAGE_Bacill_phi105_NC_004167(25)", "39.64", "Bacillus subtilis subsp. spizizenii W23",
+  "CP002183.1", 4L, "29.5", "incomplete", 20L, 12L, "2903965-2933553", "PHAGE_Staphy_SPbeta_like_NC_029119(2)", "44.16","Bacillus subtilis subsp. spizizenii W23"
+)
 
 CP001176.1 <- tibble::tribble(
   ~V0, ~V1, ~V2, ~V3, ~V4, ~V5, ~V6, ~V7, ~V8,  ~V9,
@@ -375,8 +355,6 @@ CP009709.1 <- tibble::tribble(
   "CP009709.1", 4L, "20.9", "incomplete", 30L, 37L, "2445687-2466633", "PHAGE_Lister_A006_NC_009815(5)", "41.18", "Bacillus coagulans ATCC 7050",
   "CP009709.1", 5L, "23.8", "intact", 130L, 26L, "2468857-2492727", "PHAGE_Bacill_IEBH_NC_011167(11)", "41.16", "Bacillus coagulans ATCC 7050"
 )
-
-
 
 CP011007.1 <- tibble::tribble(
   ~V0,~V1, ~V2, ~V3, ~V4, ~V5, ~V6, ~V7, ~V8, ~V9,
@@ -396,67 +374,69 @@ CP001907.1 <- tibble::tribble(
   "CP001907.1", 6L, "41.6", "questionable", 70L, 61L, "4904766-4946374", "PHAGE_Bacill_phBC6A52_NC_004821(19)", "35.19","Bacillus thuringiensis CT-43",
   "CP001907.1", 7L, "8.1", "incomplete", 20L, 10L, "20121-28232", "PHAGE_Bacill_G_NC_023719(2)", "34.16","Bacillus thuringiensis CT-43",
   "CP001907.1", 8L, "19.5", "incomplete", 30L, 38L, "31945-51465", "PHAGE_Bacill_Waukesha92_NC_025424(13)", "33.97","Bacillus thuringiensis CT-43"
-) # 12 regions on details data
-
+)
 
 CP001283.1 <- tibble::tribble(
-  ~V0, ~V1, ~V2, ~V3, ~V4, ~V5, ~V6, ~V7, ~V8,  ~V9,
-  "CP001283.1", 1L, "59.1", "intact", 110L, 63L, "514877-574015", "PHAGE_Lister_2389_NC_003291(15)", "34.93", "Bacillus anthracis AH820",
-  "CP001283.1", 2L, "5.8", "incomplete", 20L, 9L, "1290814-1296627", "PHAGE_Bacill_Finn_NC_020480(4)", "40.94",  "Bacillus anthracis AH820",
-  "CP001283.1", 3L, "8.6", "incomplete", 30L, 13L, "2218620-2227308", "PHAGE_Bacill_WBeta_NC_007734(5)", "34.12",  "Bacillus anthracis AH820",
-  "CP001283.1", 4L, "63.2", "questionable", 70L, 60L, "4130036-4193280", "PHAGE_Bacill_PfEFR_5_NC_031055(11)", "35.15",  "Bacillus anthracis AH820"
-) # 6 regions on details data
+  ~V0,~V1, ~V2, ~V3, ~V4, ~V5, ~V6, ~V7, ~V8, ~V9,
+  "CP001283.1", 1L, "54.9", "intact", 140L, 63L, "514264-569181", "PHAGE_Lister_2389_NC_003291(15)", "35.14", "Bacillus anthracis AH820",
+  "CP001283.1", 2L, "5.8", "incomplete", 20L, 7L, "1290814-1296627", "PHAGE_Bacill_Finn_NC_020480(4)", "40.94", "Bacillus anthracis AH820",
+  "CP001283.1", 3L, "48", "questionable", 70L, 58L, "4140140-4188182", "PHAGE_Bacill_vB_BceS_MY192_NC_048633(17)", "34.98","Bacillus anthracis AH820",
+  "CP001283.1", 4L,	"28.3",	"incomplete",	20L,	13L,	"157038-185423", "PHAGE_Bacill_BalMu_1_NC_030945(3)",	"35.58", "Bacillus anthracis AH820"
+)
 
 CP001186.1 <- tibble::tribble(
-  ~V0, ~V1, ~V2, ~V3, ~V4, ~V5, ~V6, ~V7, ~V8,  ~V9,
-  "CP001186.1", 1L, "57.8", "intact", 130L, 59L, "2466479-2524298", "PHAGE_Bacill_phBC6A52_NC_004821(11)", "33.95", "Bacillus cereus G9842",
-  "CP001186.1", 2L, "46.8", "incomplete", 50L, 57L, "2753573-2800411", "PHAGE_Bacill_phBC6A51_NC_004820(37)", "36.01", "Bacillus cereus G9842",
-  "CP001186.1", 3L, "24.8", "questionable", 90L, 31L, "3746740-3771540", "PHAGE_Bacill_vB_BhaS_171_NC_030904(7)", "34.93", "Bacillus cereus G9842"
-) # 5 regions on details data
-
-AP011541.2 <- tibble::tribble(
   ~V0, ~V1, ~V2, ~V3, ~V4, ~V5, ~V6, ~V7, ~V8, ~V9,
-  "AP011541.2", 1L, "22.7", "incomplete", 40L, 8L, "306078-328833", "PHAGE_Bacill_JL_NC_028982(2)", "45.42", "Bacillus subtilis subsp. natto BEST195",
-  "AP011541.2", 2L, "22.9", "incomplete", 60L, 38L, "1250318-1273222", "PHAGE_Bacill_SPbeta_NC_001884(4)", "39.04", "Bacillus subtilis subsp. natto BEST195",
-  "AP011541.2", 3L, "45.3", "intact", 110L, 49L, "1325270-1370661", "PHAGE_Brevib_Jimmer2_NC_041976(8)", "44.48", "Bacillus subtilis subsp. natto BEST195",
-  "AP011541.2", 4L, "37.3", "intact", 110L, 49L, "1822947-1860322", "PHAGE_Bacill_phi105_NC_004167(16)", "40.75", "Bacillus subtilis subsp. natto BEST195",
-  "AP011541.2", 5L, "6.4", "incomplete", 50L, 13L, "2470485-2476939", "PHAGE_Brevib_Jimmer1_NC_029104(2)", "36.90", "Bacillus subtilis subsp. natto BEST195",
-  "AP011541.2", 6L, "24", "incomplete", 10L, 29L, "3242892-3266967", "PHAGE_Bacill_phi105_NC_004167(24)", "41.59", "Bacillus subtilis subsp. natto BEST195",
-  "AP011541.2", 7L, "40.7", "incomplete", 50L, 40L, "3260241-3301026", "PHAGE_Bacill_phiCM3_NC_023599(5)", "42.08", "Bacillus subtilis subsp. natto BEST195",
-  "AP011541.2", 8L, "36.3", "questionable", 80L, 31L, "3360579-3396962", "PHAGE_Paenib_Tripp_NC_028930(13)", "45.47", "Bacillus subtilis subsp. natto BEST195",
-  "AP011541.2", 9L, "14.4", "questionable", 80L, 15L, "4011807-4026277", "PHAGE_Lactob_phiAT3_NC_005893(2)", "34.03","Bacillus subtilis subsp. natto BEST195"
-) # 7 regions on details dta
+  "CP001186.1", 1L, "48.1", "intact", 130L, 54L, "2470121-2518231", "PHAGE_Bacill_phBC6A52_NC_004821(12)", "34.10", "Bacillus cereus G9842",
+  "CP001186.1", 2L, "46.8", "incomplete", 50L, 51L, "2753573-2800411", "PHAGE_Bacill_phBC6A51_NC_004820(36)", "36.01", "Bacillus cereus G9842",
+  "CP001186.1", 3L, "20.8", "incomplete", 20L, 15L, "3622980-3643862", "PHAGE_Bacill_phi4J1_NC_029008(3)", "36.47", "Bacillus cereus G9842",
+  "CP001186.1", 4L, "23.7", "intact", 120L, 27L, "3747762-3771540", "PHAGE_Bacill_vB_BhaS_171_NC_030904(7)", "35.11", "Bacillus cereus G9842",
+  "CP001186.1", 5L, "10.4", "incomplete", 40L, 17L, "3775146-3785591", "PHAGE_Deep_s_D6E_NC_019544(2)", "34.24", "Bacillus cereus G9842",
+  "CP001186.1", 6L, "9.2", "questionable", 90L, 9L, "24595-33813", "PHAGE_Bacill_0305phi8_36_NC_009760(8)", "33.72", "Bacillus cereus G9842",
+  "CP001186.1", 7L, "8.1", "incomplete", 40L, 7L, "51054-59229", "PHAGE_Bacill_G_NC_023719(2)", "35.79", "Bacillus cereus G9842"
+)
 
-  
+AP011541.2 <-tibble::tribble(
+  ~V0, ~V1, ~V2, ~V3, ~V4, ~V5, ~V6, ~V7, ~V8, ~V9,
+  "AP011541.2",  1L, "22.7", "incomplete", 30L, 8L, "306078-328833", "PHAGE_Bacill_CP_51_NC_025423(2)", "45.42", "Bacillus subtilis subsp. natto BEST195",
+  "AP011541.2", 2L, "18.8", "incomplete", 30L, 11L, "518758-537594", "PHAGE_Lister_vB_LmoS_188_NC_028871(2)", "37.52", "Bacillus subtilis subsp. natto BEST195",
+  "AP011541.2", 3L, "45.3", "incomplete", 60L, 50L, "1325270-1370661", "PHAGE_Brevib_Jimmer2_NC_041976(9)", "44.48", "Bacillus subtilis subsp. natto BEST195",
+  "AP011541.2", 4L, "14.2", "incomplete", 40L, 14L, "1791838-1806068", "PHAGE_Bacill_phi105_NC_048631(4)", "39.99", "Bacillus subtilis subsp. natto BEST195",
+  "AP011541.2", 5L, "37.3", "intact", 140L, 45L, "1822947-1860322", "PHAGE_Bacill_phi105_NC_004167(16)", "40.75", "Bacillus subtilis subsp. natto BEST195",
+  "AP011541.2", 6L, "15.6", "incomplete", 10L, 9L, "2657076-2672738", "PHAGE_Staphy_SPbeta_like_NC_029119(2)", "38.17", "Bacillus subtilis subsp. natto BEST195",
+  "AP011541.2", 7L, "26.2", "incomplete", 10L, 33L, "3240205-3266407", "PHAGE_Bacill_phi105_NC_004167(23)", "41.38", "Bacillus subtilis subsp. natto BEST195",
+  "AP011541.2", 8L, "40.7", "incomplete", 40L, 39L, "3260241-3301026", "PHAGE_Bacill_BtCS33_NC_018085(4)", "42.08", "Bacillus subtilis subsp. natto BEST195",
+  "AP011541.2", 9L, "36.3", "questionable", 80L, 28L, "3360579-3396962", "PHAGE_Paenib_Tripp_NC_028930(12)", "45.47", "Bacillus subtilis subsp. natto BEST195",
+  "AP011541.2", 10L, "14.6", "questionable", 70L, 14L, "4011807-4026430", "PHAGE_Lactob_phiAT3_NC_005893(2)", "34.02","Bacillus subtilis subsp. natto BEST195"
+)
+
 CP020102.1 <- tibble::tribble(
-  ~V0, ~V1, ~V2, ~V3, ~V4, ~V5, ~V6, ~V7, ~V8,  ~V9,
-  "CP020102.1", 1L, "21.7", "incomplete", 30L, 16L, "528169-549913", "PHAGE_Clostr_phiCD505_NC_028764(2)", "36.28", "Bacillus subtilis subsp subtilis NCIB 3610",
-  "CP020102.1", 2L, "33.1", "incomplete", 50L, 10L, "638134-671253", "PHAGE_Entero_vB_KleM_RaK2_NC_019526(1)", "41.48", "Bacillus subtilis subsp subtilis NCIB 3610",
-  "CP020102.1", 3L, "33.7", "questionable", 90L, 46L, "1314483-1348214", "PHAGE_Brevib_Jimmer1_NC_029104(8)", "44.84", "Bacillus subtilis subsp subtilis NCIB 3610",
-  "CP020102.1", 4L, "9.5", "incomplete", 10L, 20L, "2055900-2065409", "PHAGE_Bacill_SPbeta_NC_001884(8)", "33.61","Bacillus subtilis subsp subtilis NCIB 3610",
-  "CP020102.1", 5L, "136.4", "intact", 144L, 208L, "2151659-2288122", "PHAGE_Bacill_SPbeta_NC_001884(178)", "34.78","Bacillus subtilis subsp subtilis NCIB 3610",
-  "CP020102.1", 6L, "48", "questionable", 90L, 49L, "2653083-2701118", "PHAGE_Clostr_phiCT9441A_NC_029022(7)", "38.86","Bacillus subtilis subsp subtilis NCIB 3610",
-  "CP020102.1", 7L, "45.9", "intact", 150L, 43L, "2196-48132", "PHAGE_Staphy_vB_SepS_SEP9_NC_023582(11)", "36.00","Bacillus subtilis subsp subtilis NCIB 3610"
-) # 4 regions on details data
+  ~V0,~V1, ~V2, ~V3, ~V4, ~V5, ~V6, ~V7, ~V8, ~V9,
+  "CP020102.1", 1L, "21.7", "incomplete", 30L, 11L, "528169-549913", "PHAGE_Clostr_phi3626_NC_003524(2)", "36.28", "Bacillus subtilis subsp subtilis NCIB 3610",
+  "CP020102.1", 2L, "33.7", "intact", 130L, 48L, "1314483-1348214", "PHAGE_Brevib_Jimmer2_NC_041976(8)", "44.84", "Bacillus subtilis subsp subtilis NCIB 3610",
+  "CP020102.1", 3L, "136.4", "intact", 140L, 193L, "2151659-2288094", "PHAGE_Bacill_SPbeta_NC_001884(173)", "34.78", "Bacillus subtilis subsp subtilis NCIB 3610",
+  "CP020102.1", 4L, "40.6", "incomplete", 40L, 57L, "2661123-2701774", "PHAGE_Bacill_vB_BtS_BMBtp14_NC_048640(7)", "39.50", "Bacillus subtilis subsp subtilis NCIB 3610",
+  "CP020102.1", 5L, "69.6", "intact", 150L, 80L, "1158-70810", "PHAGE_Staphy_vB_SepS_SEP9_NC_023582(22)", "35.46", "Bacillus subtilis subsp subtilis NCIB 3610"
+)
 
 CP000903.1 <- tibble::tribble(
- ~V0,  ~V1, ~V2, ~V3, ~V4, ~V5, ~V6, ~V7, ~V8, ~V9,
-  "CP000903.1", 1L, "56.5", "questionable", 80L, 79L, "3462572-3519149", "PHAGE_Bacill_1_NC_009737(11)", "34.71","Bacillus mycoides KBAB4",
- "CP000903.1", 2L, "52.4", "intact", 110L, 50L, "3619791-3672243", "PHAGE_Bacill_vB_BhaS_171_NC_030904(9)", "35.69","Bacillus mycoides KBAB4",
- "CP000903.1", 3L, "8.3", "incomplete", 20L, 18L, "4779154-4787496", "PHAGE_Bacill_G_NC_023719(2)", "34.64","Bacillus mycoides KBAB4",
- "CP000903.1", 4L, "46.4", "incomplete", 50L, 37L, "96957-143401", "PHAGE_Bacill_phBC6A52_NC_004821(3)", "33.41","Bacillus mycoides KBAB4",
- "CP000903.1", 5L, "56.5", "intact", 100L, 70L, "60-56565", "PHAGE_Paenib_Tripp_NC_028930(28)", "43.59","Bacillus mycoides KBAB4",
- "CP000903.1", 6L, "46.9", "questionable", 70L, 67L, "152-47085", "PHAGE_Bacill_IEBH_NC_011167(11)", "35.69", "Bacillus mycoides KBAB4"
-) # 7 regions on details data
+  ~V0, ~V1, ~V2, ~V3, ~V4, ~V5, ~V6, ~V7, ~V8, ~V9,
+"CP000903.1", 1L, "56.6", "questionable", 80L, 66L, "3462572-3519240 ", "PHAGE_Bacill_1_NC_009737(11)", "34.71","Bacillus mycoides KBAB4",
+"CP000903.1", 2L, "52.4", "intact", 120L, 51L, "3619791-3672243 ", "PHAGE_Bacill_vB_BhaS_171_NC_030904(9)", "35.69","Bacillus mycoides KBAB4",
+"CP000903.1", 3L, "11.6", "incomplete", 30L, 13L, "123128-134814 ", "PHAGE_Bacill_IEBH_NC_011167(2)", "31.56","Bacillus mycoides KBAB4",
+"CP000903.1", 4L, "5.4", "incomplete", 30L, 8L, "300589-306067 ", "PHAGE_Bacill_BceA1_NC_048628(4)", "34.92","Bacillus mycoides KBAB4",
+"CP000903.1", 5L,	"59.6",	"intact",	130L,	76L,	"60-59716",	"PHAGE_Paenib_Tripp_NC_028930(28)",	"43.38","Bacillus mycoides KBAB4",
+"CP000903.1", 6L,	"43.7",	"intact",	110L,	58L,	"3344-47085",	"PHAGE_Bacill_IEBH_NC_011167(13)",	"36.09","Bacillus mycoides KBAB4"
+) 
 
 CP001598.1 <- tibble::tribble(
   ~V0, ~V1, ~V2, ~V3, ~V4, ~V5, ~V6, ~V7, ~V8, ~V9,
-  "CP001598.1", 1L, "45.4", "intact", 110L, 57L, "441949-487396", "PHAGE_Bacill_phBC6A52_NC_004821(10)", "35.27","Bacillus anthracis A0248",
-  "CP001598.1", 2L, "8.7", "incomplete", 30L, 13L, "2154724-2163449", "PHAGE_Bacill_WBeta_NC_007734(5)", "34.16","Bacillus anthracis A0248",
-  "CP001598.1", 3L, "65.1", "questionable", 90L, 86L, "3453728-3518876", "PHAGE_Bacill_1_NC_009737(11)", "34.66","Bacillus anthracis A0248",
-  "CP001598.1", 4L, "51.9", "incomplete", 50L, 78L, "3743608-3795516", "PHAGE_Bacill_PfEFR_5_NC_031055(31)", "35.14","Bacillus anthracis A0248",
-  "CP001598.1", 5L, "14.6", "questionable", 70L, 16L, "4845061-4859705", "PHAGE_Staphy_vB_SepS_SEP9_NC_023582(5)", "36.03","Bacillus anthracis A0248"
-) # 7 regions on details data
+  "CP001598.1", 1L, "45.4", "questionable", 90L, 48L, "441949-487396 ", "PHAGE_Bacill_1_NC_009737(9)", "35.27", "Bacillus anthracis A0248",
+  "CP001598.1", 2L, "65.1", "intact", 140L, 74L, "3453728-3518876 ", "PHAGE_Bacill_1_NC_009737(10)", "34.66", "Bacillus anthracis A0248",
+  "CP001598.1", 3L, "51.9", "incomplete", 60L, 73L, "3743608-3795516 ", "PHAGE_Bacill_PfEFR_4_NC_048641(33)", "35.14", "Bacillus anthracis A0248",
+  "CP001598.1", 4L, "14.6", "incomplete", 60L, 9L, "4845061-4859705 ", "PHAGE_Staphy_vB_SepS_SEP9_NC_023582(4)", "36.03", "Bacillus anthracis A0248",
+  "CP001598.1", 6L, "5.3", "incomplete", 50L, 8L, "112831-118163", "PHAGE_Bacill_SP_15_NC_031245(2)", "31.01", "Bacillus anthracis A0248",
+  "CP001598.1", 7L, "7.8", "incomplete", 10L, 8L, "76666-84505", "PHAGE_Staphy_phiRS7_NC_022914(1)", "32.02", "Bacillus anthracis A0248"
+)
 
 CP001903.1 <- tibble::tribble(
   ~V0, ~V1, ~V2, ~V3, ~V4, ~V5, ~V6, ~V7, ~V8,  ~V9,
@@ -468,12 +448,12 @@ CP001903.1 <- tibble::tribble(
 
 CP009611.1 <- tibble::tribble(
   ~V0, ~V1, ~V2, ~V3, ~V4, ~V5, ~V6, ~V7, ~V8, ~V9,
-  "CP009611.1", 1L, "31.8", "intact", 110L, 42L, "1216793-1248683", "PHAGE_Brevib_Jimmer1_NC_029104(8)", "46.99", "Bacillus velezensis Bs-916",
-  "CP009611.1", 2L, "24.2", "incomplete", 20L, 9L, "1834541-1858827", "PHAGE_Bacill_PBS1_NC_043027(3)", "40.80", "Bacillus velezensis Bs-916",
-  "CP009611.1", 3L, "26.1", "incomplete", 50L, 32L, "2950522-2976659", "PHAGE_Bacill_SPP1_NC_004166(11)", "43.61","Bacillus velezensis Bs-916",
-  "CP009611.1", 4L, "17.2", "incomplete", 30L, 18L, "2980302-2997572", "PHAGE_Brevib_Abouo_NC_029029(3)", "44.34","Bacillus velezensis Bs-916"
-) # 5 regions on details data
-
+  "CP009611.1", 1L, "31.8", "intact", 100L, 45L, "1216793-1248683", "PHAGE_Brevib_Osiris_NC_028969(8)", "46.99", "Bacillus velezensis Bs-916",
+  "CP009611.1", 2L, "23.3", "incomplete", 30L, 22L, "1797951-1821314", "PHAGE_Bacill_SP_10_NC_019487(4)", "44.34","Bacillus velezensis Bs-916",
+  "CP009611.1", 3L, "24.2", "incomplete", 20L, 12L, "1834541-1858827", "PHAGE_Bacill_PBS1_NC_043027(4)", "40.80", "Bacillus velezensis Bs-916",
+  "CP009611.1", 4L, "25.8", "incomplete", 50L, 28L, "2950851-2976659", "PHAGE_Bacill_SPP1_NC_004166(11)", "43.72","Bacillus velezensis Bs-916",
+  "CP009611.1", 5L, "17", "incomplete", 30L, 17L, "2980556-2997572", "PHAGE_Brevib_Abouo_NC_029029(4)", "44.21", "Bacillus velezensis Bs-916"
+)
 
 CP006890.1 <- tibble::tribble(
   ~V0, ~V1, ~V2, ~V3, ~V4, ~V5, ~V6, ~V7, ~V8, ~V9,
@@ -485,21 +465,19 @@ CP006890.1 <- tibble::tribble(
   "CP006890.1", 6L, "42.9", "questionable", 90L, 49L, "2315133-2358036", "PHAGE_Bacill_phi105_NC_004167(15)", "40.47","Bacillus velezensis SQR9"
 )
 
-
 CP029465.1 <- tibble::tribble(
   ~V0, ~V1, ~V2, ~V3, ~V4, ~V5, ~V6, ~V7, ~V8, ~V9,
-  "CP029465.1", 1L, "30.8", "questionable", 80L, 45L, "1377386-1408264", "PHAGE_Brevib_Jimmer1_NC_029104(8)", "45.00","Bacillus subtilis subsp. inaquosorum KCTC 13429",
-  "CP029465.1", 2L, "18.3", "incomplete", 20L, 9L, "2054688-2073035", "PHAGE_Deep_s_D6E_NC_019544(2)", "40.88","Bacillus subtilis subsp. inaquosorum KCTC 13429",
-  "CP029465.1", 3L, "18.1", "incomplete", 20L, 22L, "2269492-2287611", "PHAGE_Bacill_SPbeta_NC_001884(9)", "34.10","Bacillus subtilis subsp. inaquosorum KCTC 13429",
-  "CP029465.1", 4L, "9", "incomplete", 10L, 16L, "2755374-2764466", "PHAGE_Bacill_SPbeta_NC_001884(3)", "36.10","Bacillus subtilis subsp. inaquosorum KCTC 13429",
-  "CP029465.1", 5L, "56", "intact", 130L, 60L, "2828156-2884159", "PHAGE_Bacill_phi105_NC_004167(9)", "42.20","Bacillus subtilis subsp. inaquosorum KCTC 13429"
-) # 4 regions on details data
+  "CP029465.1", 1L, "26.9", "incomplete", 30L, 12L, "524547-551466", "PHAGE_Bacill_phi4J1_NC_029008(2)", "36.04", "Bacillus subtilis subsp. inaquosorum KCTC 13429",
+  "CP029465.1", 2L, "30.8", "intact", 100L, 45L, "1377386-1408264", "PHAGE_Brevib_Jimmer2_NC_041976(8)", "45.00", "Bacillus subtilis subsp. inaquosorum KCTC 13429",
+  "CP029465.1", 3L, "18.3", "incomplete", 20L, 8L, "2054688-2073035", "PHAGE_Bacill_PBS1_NC_043027(2)", "40.88", "Bacillus subtilis subsp. inaquosorum KCTC 13429",
+  "CP029465.1", 4L, "18.1", "incomplete", 20L, 15L, "2269492-2287611", "PHAGE_Bacill_SPbeta_NC_001884(7)", "34.10", "Bacillus subtilis subsp. inaquosorum KCTC 13429",
+  "CP029465.1", 5L, "36.7", "intact", 150L, 52L, "2842721-2879443", "PHAGE_Bacill_phi105_NC_004167(8)", "41.63", "Bacillus subtilis subsp. inaquosorum KCTC 13429"
+)
 
 CP004405.1 <- tibble::tribble(
-  ~V0, ~V1, ~V2, ~V3, ~V4, ~V5, ~V6, ~V7, ~V8,  ~V9,
-  "CP004405.1", 1L, "33.7", "intact", 100L, 46L, "1277676-1311433", "PHAGE_Brevib_Jimmer1_NC_029104(8)", "44.86","Bacillus subtilis subsp. subtilis BAB-1",
-  "CP004405.1", 2L, "11.5", "incomplete", 20L, 17L, "1399606-1411120", "PHAGE_Cellul_phiSM_NC_020860(2)", "40.91", "Bacillus subtilis subsp. subtilis BAB-1",
-) # 1 region on details data
+  ~V0, ~V1, ~V2, ~V3, ~V4, ~V5, ~V6, ~V7, ~V8, ~V9,
+  "CP004405.1", 1L, "33.7", "intact", 110L, 46L, "1277676-1311433", "PHAGE_Brevib_Jimmer2_NC_041976(8)", "44.86", "Bacillus subtilis subsp. subtilis BAB-1"
+)
 
 LT906438.1 <- tibble::tribble(
   ~V0, ~V1, ~V2, ~V3, ~V4, ~V5, ~V6, ~V7, ~V8, ~V9,
@@ -510,22 +488,28 @@ LT906438.1 <- tibble::tribble(
 
 CP002468.1 <- tibble::tribble(
   ~V0, ~V1, ~V2, ~V3, ~V4, ~V5, ~V6, ~V7, ~V8, ~V9,
-  "CP002468.1", 1L, "14", "incomplete", 10L, 24L, "176035-190114", "PHAGE_Bacill_SPbeta_NC_001884(4)", "37.68", "Bacillus subtilis subsp. subtilis Bsn5",
-  "CP002468.1", 2L, "29.3", "incomplete", 60L, 37L, "645912-675245", "PHAGE_Clostr_phiCT9441A_NC_029022(7)", "40.22", "Bacillus subtilis subsp. subtilis Bsn5",
-  "CP002468.1", 3L, "43.9", "intact", 140L, 69L, "2840100-2884005", "PHAGE_Lister_B054_NC_009813(13)", "42.17","Bacillus subtilis subsp. subtilis Bsn5",
-  "CP002468.1", 4L, "35.1", "intact", 110L, 47L, "3526995-3562109", "PHAGE_Brevib_Jimmer2_NC_041976(8)", "44.96","Bacillus subtilis subsp. subtilis Bsn5"
-) # 3 regions on details data
+ "CP002468.1", 1L, "29.3", "incomplete", 30L, 36L, "645918-675245 ", "PHAGE_Clostr_phiCT9441A_NC_029022(7)", "40.22", "Bacillus subtilis subsp. subtilis Bsn5",
+ "CP002468.1", 2L, "43.8", "intact", 140L, 69L, "2840142-2884005 ", "PHAGE_Lister_B054_NC_009813(14)", "42.19", "Bacillus subtilis subsp. subtilis Bsn5",
+ "CP002468.1", 3L, "35.1", "incomplete", 50L, 47L, "3526995-3562109 ", "PHAGE_Brevib_Jimmer2_NC_041976(9)", "44.96","Bacillus subtilis subsp. subtilis Bsn5"
+)
+
+# AL009126.3 <- tibble::tribble(
+#   ~V0, ~V1, ~V2, ~V3, ~V4, ~V5, ~V6, ~V7, ~V8, ~V9,
+#   "AL009126.3", 1L, "21.7", "incomplete", 30L, 16L, "528129-549873", "PHAGE_Clostr_phiCD505_NC_028764(2)", "36.28","Bacillus subtilis subsp. subtilis 168",
+#   "AL009126.3", 2L, "33.1", "incomplete", 50L, 10L, "638092-671211", "PHAGE_Entero_vB_KleM_RaK2_NC_019526(1)", "41.48","Bacillus subtilis subsp. subtilis 168",
+#   "AL009126.3", 3L, "33.7", "intact", 100L, 45L, "1314453-1348182", "PHAGE_Brevib_Jimmer1_NC_029104(8)", "44.84","Bacillus subtilis subsp. subtilis 168",
+#   "AL009126.3", 4L, "9.5", "incomplete", 10L, 20L, "2055868-2065377", "PHAGE_Bacill_SPbeta_NC_001884(8)", "33.61","Bacillus subtilis subsp. subtilis 168",
+#   "AL009126.3", 5L, "136.4", "intact", 144L, 208L, "2151626-2288090", "PHAGE_Bacill_SPbeta_NC_001884(178)", "34.78","Bacillus subtilis subsp. subtilis 168",
+#   "AL009126.3", 6L, "48", "questionable", 90L, 49L, "2653062-2701098", "PHAGE_Clostr_phiCT9441A_NC_029022(7)", "38.86","Bacillus subtilis subsp. subtilis 168"
+# ) # 3 regiones on detail data - on PH
 
 AL009126.3 <- tibble::tribble(
   ~V0, ~V1, ~V2, ~V3, ~V4, ~V5, ~V6, ~V7, ~V8, ~V9,
-  "AL009126.3", 1L, "21.7", "incomplete", 30L, 16L, "528129-549873", "PHAGE_Clostr_phiCD505_NC_028764(2)", "36.28","Bacillus subtilis subsp. subtilis 168",
-  "AL009126.3", 2L, "33.1", "incomplete", 50L, 10L, "638092-671211", "PHAGE_Entero_vB_KleM_RaK2_NC_019526(1)", "41.48","Bacillus subtilis subsp. subtilis 168",
-  "AL009126.3", 3L, "33.7", "intact", 100L, 45L, "1314453-1348182", "PHAGE_Brevib_Jimmer1_NC_029104(8)", "44.84","Bacillus subtilis subsp. subtilis 168",
-  "AL009126.3", 4L, "9.5", "incomplete", 10L, 20L, "2055868-2065377", "PHAGE_Bacill_SPbeta_NC_001884(8)", "33.61","Bacillus subtilis subsp. subtilis 168",
-  "AL009126.3", 5L, "136.4", "intact", 144L, 208L, "2151626-2288090", "PHAGE_Bacill_SPbeta_NC_001884(178)", "34.78","Bacillus subtilis subsp. subtilis 168",
-  "AL009126.3", 6L, "48", "questionable", 90L, 49L, "2653062-2701098", "PHAGE_Clostr_phiCT9441A_NC_029022(7)", "38.86","Bacillus subtilis subsp. subtilis 168"
-) # 3 regiones on detail data
-
+  "AL009126.3", 1L, "21.7", "incomplete", 30L, 10L, "528129-549873", "PHAGE_Clostr_phi3626_NC_003524(2)", "36.28", "Bacillus subtilis subsp. subtilis 168",
+  "AL009126.3", 2L, "33.7", "intact", 120L, 47L, "1314453-1348182", "PHAGE_Brevib_Jimmer2_NC_041976(8)", "44.84", "Bacillus subtilis subsp. subtilis 168",
+  "AL009126.3", 3L, "136.4", "intact", 139L, 192L, "2151626-2288090", "PHAGE_Bacill_SPbeta_NC_001884(172)", "34.78", "Bacillus subtilis subsp. subtilis 168",
+  "AL009126.3", 4L, "40.6", "incomplete", 40L, 57L, "2661102-2701754", "PHAGE_Bacill_vB_BtS_BMBtp14_NC_048640(7)", "39.50","Bacillus subtilis subsp. subtilis 168"
+)
 
 AE017333.1 <- tibble::tribble(
   ~V0, ~V1, ~V2, ~V3, ~V4, ~V5, ~V6, ~V7, ~V8, ~V9,
@@ -535,17 +519,12 @@ AE017333.1 <- tibble::tribble(
   "AE017333.1", 4L, "58.8", "intact", 120L, 81L, "3421796-3480600", "PHAGE_Bacill_phi105_NC_004167(19)", "42.29","Bacillus licheniformis DSM 13"
 )
 
-
 CP007640.1 <- tibble::tribble(
   ~V0, ~V1, ~V2, ~V3, ~V4, ~V5, ~V6, ~V7, ~V8, ~V9,
-  "CP007640.1", 1L, "32", "intact", 100L, 45L, "695969-727988", "PHAGE_Brevib_Jimmer1_NC_029104(9)", "44.31", "Bacillus atrophaeus BSS",
-  "CP007640.1", 2L, "15.2", "incomplete", 20L, 24L, "1481571-1496779", "PHAGE_Bacill_SPbeta_NC_001884(6)", "34.38","Bacillus atrophaeus BSS",
-  "CP007640.1", 3L, "87.7", "incomplete", 30L, 144L, "1499342-1587100", "PHAGE_Bacill_SPbeta_NC_001884(47)", "35.01","Bacillus atrophaeus BSS",
-  "CP007640.1", 4L, "28.7", "incomplete", 10L, 23L, "1658621-1687343", "PHAGE_Bacill_SPbeta_NC_001884(4)", "40.63","Bacillus atrophaeus BSS",
-  "CP007640.1", 5L, "29.2", "incomplete", 20L, 24L, "1819820-1849058", "PHAGE_Bacill_Bobb_NC_024792(1)", "38.77","Bacillus atrophaeus BSS",
-  "CP007640.1", 6L, "7.5", "incomplete", 20L, 14L, "4094485-4102058", "PHAGE_Clostr_phiCD505_NC_028764(2)", "35.83", "Bacillus atrophaeus BSS"
-) # 3 regions on details data
-
+  "CP007640.1", 1L, "32", "incomplete", 50L, 46L, "695969-727988", "PHAGE_Brevib_Jimmer1_NC_029104(8)", "44.31", "Bacillus atrophaeus BSS",
+  "CP007640.1", 2L, "87.2", "incomplete", 30L, 119L, "1500018-1587271", "PHAGE_Bacill_SPbeta_NC_001884(45)", "35.02", "Bacillus atrophaeus BSS",
+  "CP007640.1", 3L, "28.8", "incomplete", 20L, 33L, "1826335-1855177", "PHAGE_Lactob_Lb338_1_NC_012530(2)", "39.64", "Bacillus atrophaeus BSS"
+)
 
 CP014795.1 <- tibble::tribble(
   ~V0, ~V1, ~V2, ~V3, ~V4, ~V5, ~V6, ~V7, ~V8, ~V9,
@@ -555,7 +534,6 @@ CP014795.1 <- tibble::tribble(
   "CP014795.1", 4L, "35.3", "intact", 100L, 42L, "3708337-3743712", "PHAGE_Brevib_Jimmer1_NC_029104(7)", "46.90","Bacillus licheniformis SCK B11",
   "CP014795.1", 5L, "41.5", "questionable", 80L, 65L, "3816193-3857701", "PHAGE_Bacill_SPP1_NC_004166(12)", "42.64","Bacillus licheniformis SCK B11"
 )
-
 
 summaries <- rbind(CP009748.1,CP009692.1,MOEA01000001.1,CM000732.1,JHCA01000001.1,AYTO01000001.1,JHUD02000001.1,AFWM01000001.1,CM000725.1,QVEJ01000001.1,AYTL01000001.1,CP048852.1,CM000729.1,CM000747.1,LQYG01000001.1,AEFM01000028.1,CM000722.1,CP000673.1,CP00560.2,KB976672.1,CM000753.1,CM000758.1,CM000719.1,LLZC01000001.1,LSBB01000001.1,ANAQ01000001.1,CP007666.1,AE016877.1,PVRE01000010.1,FN597644.1,CP002927.1,AE016879.1,CP017247.1,CP023729.1,CP006881.1,CP009749.1,CP002905.1,CP002183.1,CP001176.1,CP009709.1,CP011007.1,CP001907.1,CP001283.1,CP001186.1,AP011541.2,CP020102.1,CP000903.1,CP001598.1,CP001903.1,CP009611.1,CP006890.1,CP029465.1,CP004405.1,LT906438.1,CP002468.1,AL009126.3,AE017333.1,CP007640.1,CP014795.1,CP014795.1)
 
@@ -571,7 +549,7 @@ summaries %>%
         region_position = V6,
         most_common_phage = V7, 
         gc_percentage = V8,
-        species = V9 
+        species = V9
   ) %>% 
   mutate(
     genome = as.factor(genome),
@@ -579,10 +557,10 @@ summaries %>%
     region = as.factor(region),
     completeness = as.factor(completeness),
     gc_percentage = as.numeric(gc_percentage),
-    region_length_kb = as.numeric(region_length_kb),
+    region_length_kb = as.numeric(region_length_kb)
   ) %>% 
   as_tibble() %>% 
-  write_tsv('Data/2020-10-24_PHASTER-summaries.tsv')
+  write_tsv('Data/2021-02-19_PHASTER-summaries.tsv')
 
 
 

@@ -1,0 +1,83 @@
+species	most_common_phage	region	score	phage_nc_id	cds_hits	epithet	phage_family
+B. amyloliquefaciens ATCC 13952	Bacillus phi105	7	150	004167	6	amyloliquefaciens	Siphoviridae
+B. amyloliquefaciens ATCC 13952	Brevibacillus Jimmer1	4	150	029104	9	amyloliquefaciens	Myoviridae
+B. amyloliquefaciens DSM 7	Bacillus phi105	2	150	004167	3	amyloliquefaciens	Siphoviridae
+B. amyloliquefaciens DSM 7	Bacillus phi105	6	140	004167	6	amyloliquefaciens	Siphoviridae
+B. amyloliquefaciens DSM 7	Bacillus phi105	7	130	004167	9	amyloliquefaciens	Siphoviridae
+B. amyloliquefaciens DSM 7	Brevibacillus Jimmer1	4	100	029104	9	amyloliquefaciens	Myoviridae
+B. amyloliquefaciens DSM 7	Paenibacillus HB10c2	2	150	028758	3	amyloliquefaciens	Siphoviridae
+B. amyloliquefaciens DSM 7	Paenibacillus Tripp	3	120	028930	28	amyloliquefaciens	Siphoviridae
+B. amyloliquefaciens K2	Bacillus SPP1	8	110	004166	17	amyloliquefaciens	Siphoviridae
+B. amyloliquefaciens K2	Brevibacillus Jimmer1	4	100	029104	9	amyloliquefaciens	Myoviridae
+B. amyloliquefaciens XH7	Bacillus phi105	6	110	004167	5	amyloliquefaciens	Siphoviridae
+B. amyloliquefaciens XH7	Paenibacillus Tripp	7	110	028930	15	amyloliquefaciens	Siphoviridae
+B. anthracis A0248	Bacillus virus 1	2	140	009737	11	anthracis	Myoviridae
+B. anthracis AH820	Listeria 2389	1	140	003291	13	anthracis	Siphoviridae
+B. anthracis Ames	Bacillus virus 1	1	100	009737	10	anthracis	Myoviridae
+B. anthracis Ames	Bacillus virus 1	3	100	009737	13	anthracis	Myoviridae
+B. anthracis Vollum	Bacillus phBC6A52	5	11	004821	11	anthracis	Siphoviridae
+B. atrophaeus ATCC 9372-1	Brevibacillus Jimmer1	5	120	029104	9	atrophaeus	Myoviridae
+B. cereus ATCC 14579	Bacillus Bam35c	6	98	005258	21	cereus	Tectiviridae
+B. cereus ATCC 14579	Bacillus Bam35c	6	98	005258	21	cereus	Tectiviridae
+B. cereus ATCC 14579	Bacillus phBC6A51	2	146	004820	73	cereus	Siphoviridae
+B. cereus ATCC 14579	Bacillus phBC6A52	3	140	004821	46	cereus	Siphoviridae
+B. cereus B4264	Bacillus phBC6A52	2	140	004821	20	cereus	Siphoviridae
+B. cereus G9842	Bacillus phBC6A52	1	130	004821	12	cereus	Siphoviridae
+B. cereus G9842	Geobacillus GBSV1	4	120	008376	7	cereus	Myoviridae
+B. cereus Rock1-15	Bacillus phBC6A52	1	110	004821	12	cereus	Siphoviridae
+B. coagulans B4098	Paenibacillus HB10c2	1	120	028758	5	coagulans	Siphoviridae
+B. licheniformis ATCC 9789	Bacillus phi105	4	100	004167	22	licheniformis	Siphoviridae
+B. licheniformis ATCC 9789	Bacillus phi105	5	91	004167	28	licheniformis	Siphoviridae
+B. licheniformis ATCC 9789	Thermus phi OH2	1	100	021784	6	licheniformis	Myoviridae
+B. licheniformis BL1202	Bacillus phBC6A52	1	150	004821	8	licheniformis	Siphoviridae
+B. licheniformis BL1202	Bacillus phi105	6	110	004167	12	licheniformis	Siphoviridae
+B. licheniformis BL1202	Bacillus phi105	7	108	004167	34	licheniformis	Siphoviridae
+B. licheniformis BL1202	Bacillus phi105	8	100	004167	20	licheniformis	Siphoviridae
+B. licheniformis BL1202	Bacillus PM1	3	120	020883	4	licheniformis	Siphoviridae
+B. licheniformis BL1202	Geobacillus GBSV1	5	150	008376	6	licheniformis	Myoviridae
+B. licheniformis BL1202	Paenibacillus HB10c2	3	120	028758	4	licheniformis	Siphoviridae
+B. licheniformis BL1202	Thermus phi OH2	4	110	021784	6	licheniformis	Myoviridae
+B. licheniformis DSM 13	Bacillus phi105	4	120	004167	18	licheniformis	Siphoviridae
+B. licheniformis DSM 13	Bacillus WBeta	3	150	007734	4	licheniformis	Siphoviridae
+B. licheniformis DSM 13	Thermus phi OH2	1	100	021784	6	licheniformis	Myoviridae
+B. licheniformis SCK B11	Bacillus phi105	3	100	004167	18	licheniformis	Siphoviridae
+B. licheniformis SCK B11	Thermus phi OH2	4	100	021784	6	licheniformis	Myoviridae
+B. mycoides AH621	Bacillus phBC6A52	1	100	004821	10	mycoides	Siphoviridae
+B. mycoides BDRD-ST196	Bacillus phIS3501	3	150	019502	5	mycoides	Siphoviridae
+B. mycoides KBAB4	Bacillus IEBH	6	110	011167	13	mycoides	Siphoviridae
+B. mycoides KBAB4	Bacillus phBC6A52	2	120	004821	7	mycoides	Siphoviridae
+B. mycoides KBAB4	Paenibacillus Tripp	5	130	028930	28	mycoides	Siphoviridae
+B. mycoides VD146	Bacillus BtCS33	2	120	018085	6	mycoides	Siphoviridae
+B. mycoides VD146	Bacillus BtCS33	2	120	018085	6	mycoides	Siphoviridae
+B. mycoides VD146	Bacillus WBeta	1	140	007734	9	mycoides	Siphoviridae
+B. pumilus 7P	Bacillus phi105	1	91	004167	30	pumilus	Siphoviridae
+B. pumilus NCTC10337	Paenibacillus Tripp	3	150	028930	26	pumilus	Siphoviridae
+B. pumilus SH-B9	Thermus phi OH2	4	150	021784	5	pumilus	Myoviridae
+B. subtilis subsp subtilis NCIB 3610	Bacillus SPbeta	3	140	001884	175	subtilis	Siphoviridae
+B. subtilis subsp subtilis NCIB 3610	Thermus phi OH2	2	130	021784	5	subtilis	Myoviridae
+B. subtilis subsp. inaquosorum KCTC 13429	Bacillus phi105	5	150	004167	8	subtilis	Siphoviridae
+B. subtilis subsp. inaquosorum KCTC 13429	Thermus phi OH2	2	100	021784	5	subtilis	Myoviridae
+B. subtilis subsp. natto BEST195	Bacillus phi105	5	140	004167	16	subtilis	Siphoviridae
+B. subtilis subsp. spizizenii TU-B-10	Thermus phi OH2	5	100	021784	5	subtilis	Myoviridae
+B. subtilis subsp. spizizenii W23	Thermus phi OH2	1	100	021784	5	subtilis	Myoviridae
+B. subtilis subsp. stercoris D7XPN1	Clostridium phiCT9441A	1	110	029022	8	subtilis	Myoviridae
+B. subtilis subsp. subtilis 168	Bacillus SPbeta	3	139	001884	174	subtilis	Siphoviridae
+B. subtilis subsp. subtilis 168	Thermus phi OH2	2	120	021784	5	subtilis	Myoviridae
+B. subtilis subsp. subtilis BAB-1	Thermus phi OH2	1	110	021784	5	subtilis	Myoviridae
+B. subtilis subsp. subtilis PY79	Thermus phi OH2	1	110	021784	5	subtilis	Myoviridae
+B. tequilensis ATCC BAA 819	Brevibacillus Jenst	2	150	028805	70	tequilensis	Siphoviridae
+B. tequilensis ATCC BAA 819	Clostridium phiCT9441A	3	110	029022	7	tequilensis	Myoviridae
+B. thuringiensis ATCC 10792	Bacillus phBC6A51	3	98	004820	49	thuringiensis	Siphoviridae
+B. thuringiensis ATCC 10792	Bacillus virus 1	5	100	009737	6	thuringiensis	Myoviridae
+B. thuringiensis Bt407	Bacillus phBC6A51	3	150	004820	49	thuringiensis	Siphoviridae
+B. thuringiensis CT-43	Bacillus phBC6A51	2	120	004820	58	thuringiensis	Siphoviridae
+B. thuringiensis CT-43	Bacillus phBC6A52	4	130	004821	18	thuringiensis	Siphoviridae
+B. thuringiensis CT-43	Bacillus phBC6A52	5	120	004821	9	thuringiensis	Siphoviridae
+B. thuringiensis IBL 200	Bacillus phi4J1	7	150	029008	18	thuringiensis	Siphoviridae
+B. thuringiensis IBL 200	Brevibacillus Jenst	2	130	028805	33	thuringiensis	Siphoviridae
+B. velezensis Bs-916	Thermus phi OH2	1	100	021784	5	velezensis	Myoviridae
+Clostridium kluyveri DSM 555	Bacillus BalMu1	3	100	030945	15	kluyveri	Myoviridae
+Clostridium kluyveri DSM 555	Clostridium phiCD27	2	120	011398	21	kluyveri	Myoviridae
+Clostridium kluyveri DSM 555	Clostridium phiMMP02	6	150	019421	15	kluyveri	Myoviridae
+Clostridium kluyveri DSM 555	Clostridium phiSM101	7	150	008265	8	kluyveri	Siphoviridae
+Clostridium kluyveri DSM 555	Clostridium phiSM101	8	150	008265	8	kluyveri	Siphoviridae
