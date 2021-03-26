@@ -1,7 +1,6 @@
 species	genome	Incomplete	Questionable	Intact
 Bacillus amyloliquefaciens ATCC 13952	CP009748.1	3	4	2
-Bacillus mycoides ATCC 6462	CP009692.1	2	0	0
-Bacillus mycoides ATCC 6470	CP009692.9	8	2	0
+Bacillus mycoides ATCC 6462	CP009692.1	10	2	0
 Bacillus amyloliquefaciens K2	MOEA01000001.1	4	1	3
 Bacillus anthracis Rock3-42	CM000732.1	2	0	0
 Bacillus subtilis subsp. stercoris D7XPN1	JHCA01000001.1	0	0	1
@@ -53,8 +52,7 @@ Bacillus velezensis Bs-916	CP009611.1	4	0	1
 Bacillus velezensis SQR9	CP006890.1	3	3	0
 Bacillus subtilis subsp. inaquosorum KCTC 13429	CP029465.1	3	0	2
 Bacillus subtilis subsp. subtilis BAB-1	CP004405.1	0	0	1
-Bacillus pumilus NCTC 10337	LT906438.1	1	0	0
-Bacillus pumilus NCTC10337	LT906438.1	1	0	1
+Bacillus pumilus NCTC 10337	LT906438.1	2	0	1
 Bacillus subtilis subsp. subtilis Bsn5	CP002468.1	2	0	1
 Bacillus subtilis subsp. subtilis 168	AL009126.3	2	0	2
 Bacillus licheniformis DSM 13	AE017333.1	0	1	3

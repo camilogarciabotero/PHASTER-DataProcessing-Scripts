@@ -10,7 +10,7 @@ knitr::opts_chunk$set(cache=FALSE,  comment= " ")
 knitr::write_bib(c(.packages(), "knitr", "rmarkdown", "tidyverse"), "packages.bib")
 ```
 
-This repo hosts the complete PHASTER dataset from the 59 strains' genomes analysed on PHASTER and several scripts developed for its processing. Analysis of this processed data is published on (paper). The primary packages used here are in the Tidyverse set of libraries, the rmarkdown and knitr packages were used to generate this report [@R-knitr; @R-rmarkdown; @tidyverse2019].
+This repo hosts the complete PHASTER dataset from the 59 strains' genomes analysed on PHASTER and several scripts developed for its processing. Analysis of this processed data is published on (paper). The primary packages used here are in the Tidyverse set of libraries, the rmarkdown and knitr packages were used to generate this report [\@R-knitr; \@R-rmarkdown; \@tidyverse2019].
 
 ## Libraries
 
@@ -24,7 +24,6 @@ library(DT)
 library(patchwork)
 ```
 
-
 ## Data importing and processing
 
 The first step in this analysis is transforming the XSLSX file into a friendly data frame for R.
@@ -32,7 +31,7 @@ The first step in this analysis is transforming the XSLSX file into a friendly d
 ```{r dataset_importing, warning=FALSE, message=FALSE}
 
 # Data set from all records from PHASTER detailed data
-df_detailed <- read_excel("Data/2021-02-19_PHASTER-raw.xlsx")
+df_detailed <- read_excel("Data/2021-03-24_PHASTER-detailed.xlsx")
 df_detailed %<>% mutate_at(vars(e_value), ~ as.numeric(as.character(.)))
 df_detailed %<>% mutate_at(vars(species,completeness, genome), ~ as_factor(.))
 
@@ -44,7 +43,6 @@ df_summaries <- read_tsv("Data/2021-02-19_PHASTER-summaries.tsv")
 ## Fig 1C. Generating candiadate prophages organized by completeness (Incomplete, Questionable, Intact)
 
 ```{r prophage-candidates, message=FALSE}
-
 by_completeness <- df_detailed %>%
   filter(hit_number == 1) %>% 
   group_by(species,genome) %>%
@@ -54,24 +52,22 @@ by_completeness <- df_detailed %>%
     Intact = sum(str_count(completeness, "Intact"))
   )
 
-write_tsv(x = by_completeness, path = "Data/completeness_raw-02.tsv")
+write_tsv(x = by_completeness, "Data/completeness_raw-02.tsv")
 
 kable(by_completeness[1:5,])
 ```
 
-
 ## Fig 1D. Generating the total number of prophage proteins per bacteria species
 
 ```{r total-proteins, message=FALSE}
-
-by_species_total <- df_detailed %>%
-  group_by(species, genome) %>%
-  summarise("Total prophage proteins" = sum(str_count(blast_hit, "PHAGE"))) %>% 
-  summarize(
-    across("Total prophage proteins", mean)
-  )
-
-write_tsv(x = by_species_total, path = "Data/total-proteins_raw-02.tsv")
+(
+by_species_total <- df_detailed %>% 
+  group_by(species,genome) %>%
+  filter(blast_hit %in% str_subset(blast_hit, "PHAGE")) %>% 
+  summarise("Total prophage proteins" = n())
+)
+  
+write_tsv(x = by_species_total, "Data/total-proteins_raw-02.tsv")
 
 kable(by_species_total[1:5,])
 ```
@@ -189,7 +185,6 @@ intact_phages_detailed <- df_detailed %>%
 kable(intact_phages_detailed[1:5,])
 ```
 
-
 ```{r bubble_plot_detailed, message=FALSE, fig.width=12, fig.height=15, dpi= 300, fig.align="center"}
 bubbleplot_plot_detailed <- intact_phages_detailed %>%
   as_tibble() %>%
@@ -227,9 +222,9 @@ bubbleplot_plot_detailed
 
 ```
 
-***
+------------------------------------------------------------------------
 
-Another apporach to find the prophage candidates from PHASTER data evaluate the summary information. In this apporach the *most common phage* is directly detected from PHASTER and its criteria is based on adding unidentified prophage proteins to the PHAGE with most proteins already identified using sequence similarity of the non identified proteins. 
+Another apporach to find the prophage candidates from PHASTER data evaluate the summary information. In this apporach the *most common phage* is directly detected from PHASTER and its criteria is based on adding unidentified prophage proteins to the PHAGE with most proteins already identified using sequence similarity of the non identified proteins.
 
 ```{r bubble_plot_summary, fig.height=15, fig.width=12, warning=FALSE, message=FALSE}
 intact_phages_summary_cleaned <- df_summaries %>%
@@ -303,7 +298,6 @@ bubbleplot_plot_summary
 
 ## License
 
-<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img src="https://i.creativecommons.org/l/by/4.0/88x31.png" alt="Creative Commons License" style="border-width:0"/></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
 
 ## References
-

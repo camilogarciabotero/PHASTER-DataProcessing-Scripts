@@ -5,8 +5,8 @@ This repo hosts the complete PHASTER dataset from the 59 strains’
 genomes analysed on PHASTER and several scripts developed for its
 processing. Analysis of this processed data is published on (paper). The
 primary packages used here are in the Tidyverse set of libraries, the
-rmarkdown and knitr packages were used to generate this report (Xie
-2021; Allaire et al. 2020; Wickham et al. 2019).
+rmarkdown and knitr packages were used to generate this report
+\[@R-knitr; @R-rmarkdown; @tidyverse2019\].
 
 ## Libraries
 
@@ -27,7 +27,7 @@ friendly data frame for R.
 
 ``` r
 # Data set from all records from PHASTER detailed data
-df_detailed <- read_excel("Data/2021-02-19_PHASTER-raw.xlsx")
+df_detailed <- read_excel("Data/2021-03-24_PHASTER-detailed.xlsx")
 df_detailed %<>% mutate_at(vars(e_value), ~ as.numeric(as.character(.)))
 df_detailed %<>% mutate_at(vars(species,completeness, genome), ~ as_factor(.))
 
@@ -47,23 +47,18 @@ by_completeness <- df_detailed %>%
     Intact = sum(str_count(completeness, "Intact"))
   )
 
-write_tsv(x = by_completeness, path = "Data/completeness_raw-02.tsv")
-```
+write_tsv(x = by_completeness, "Data/completeness_raw-02.tsv")
 
-      Warning: The `path` argument of `write_tsv()` is deprecated as of readr 1.4.0.
-      Please use the `file` argument instead.
-
-``` r
 kable(by_completeness[1:5,])
 ```
 
-| species                               | genome         | Incomplete | Questionable | Intact |
-|:--------------------------------------|:---------------|-----------:|-------------:|-------:|
-| Bacillus amyloliquefaciens ATCC 13952 | CP009748.1     |          3 |            4 |      2 |
-| Bacillus mycoides ATCC 6462           | CP009692.1     |          2 |            0 |      0 |
-| Bacillus mycoides ATCC 6470           | CP009692.9     |          8 |            2 |      0 |
-| Bacillus amyloliquefaciens K2         | MOEA01000001.1 |          4 |            1 |      3 |
-| Bacillus anthracis Rock3-42           | CM000732.1     |          2 |            0 |      0 |
+| species                                   | genome         | Incomplete | Questionable | Intact |
+|:------------------------------------------|:---------------|-----------:|-------------:|-------:|
+| Bacillus amyloliquefaciens ATCC 13952     | CP009748.1     |          3 |            4 |      2 |
+| Bacillus mycoides ATCC 6462               | CP009692.1     |         10 |            2 |      0 |
+| Bacillus amyloliquefaciens K2             | MOEA01000001.1 |          4 |            1 |      3 |
+| Bacillus anthracis Rock3-42               | CM000732.1     |          2 |            0 |      0 |
+| Bacillus subtilis subsp. stercoris D7XPN1 | JHCA01000001.1 |          0 |            0 |      1 |
 
 ## Fig 1D. Generating the total number of prophage proteins per bacteria species
 
@@ -75,18 +70,18 @@ by_species_total <- df_detailed %>%
     across("Total prophage proteins", mean)
   )
 
-write_tsv(x = by_species_total, path = "Data/total-proteins_raw-02.tsv")
+write_tsv(x = by_species_total, "Data/total-proteins_raw-02.tsv")
 
 kable(by_species_total[1:5,])
 ```
 
-| species                               | Total prophage proteins |
-|:--------------------------------------|------------------------:|
-| Bacillus amyloliquefaciens ATCC 13952 |                     268 |
-| Bacillus mycoides ATCC 6462           |                      10 |
-| Bacillus mycoides ATCC 6463           |                       0 |
-| Bacillus mycoides ATCC 6464           |                       1 |
-| Bacillus mycoides ATCC 6465           |                       0 |
+| species                                   | Total prophage proteins |
+|:------------------------------------------|------------------------:|
+| Bacillus amyloliquefaciens ATCC 13952     |                     268 |
+| Bacillus mycoides ATCC 6462               |                     113 |
+| Bacillus amyloliquefaciens K2             |                     189 |
+| Bacillus anthracis Rock3-42               |                      49 |
+| Bacillus subtilis subsp. stercoris D7XPN1 |                      36 |
 
 ## Fig S1. Generating the dataset of the intact prophages in each bacterial species and vizualizing on a bubble-plot.
 
@@ -330,38 +325,9 @@ bubbleplot_plot_summary
 
 ## License
 
-<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />This
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img src="https://i.creativecommons.org/l/by/4.0/88x31.png" alt="Creative Commons License" style="border-width:0"/></a><br />This
 work is licensed under a
 <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative
 Commons Attribution 4.0 International License</a>.
 
 ## References
-
-<div id="refs" class="references csl-bib-body hanging-indent">
-
-<div id="ref-R-rmarkdown" class="csl-entry">
-
-Allaire, JJ, Yihui Xie, Jonathan McPherson, Javier Luraschi, Kevin
-Ushey, Aron Atkins, Hadley Wickham, Joe Cheng, Winston Chang, and
-Richard Iannone. 2020. *Rmarkdown: Dynamic Documents for r*.
-<https://github.com/rstudio/rmarkdown>.
-
-</div>
-
-<div id="ref-tidyverse2019" class="csl-entry">
-
-Wickham, Hadley, Mara Averick, Jennifer Bryan, Winston Chang, Lucy
-D’Agostino McGowan, Romain François, Garrett Grolemund, et al. 2019.
-“Welcome to the <span class="nocase">tidyverse</span>.” *Journal of Open
-Source Software* 4 (43): 1686. <https://doi.org/10.21105/joss.01686>.
-
-</div>
-
-<div id="ref-R-knitr" class="csl-entry">
-
-Xie, Yihui. 2021. *Knitr: A General-Purpose Package for Dynamic Report
-Generation in r*. <https://yihui.org/knitr/>.
-
-</div>
-
-</div>
