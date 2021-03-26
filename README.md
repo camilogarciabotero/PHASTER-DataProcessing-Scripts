@@ -5,8 +5,8 @@ This repo hosts the complete PHASTER dataset from the 59 strains’
 genomes analysed on PHASTER and several scripts developed for its
 processing. Analysis of this processed data is published on (paper). The
 primary packages used here are in the Tidyverse set of libraries, the
-rmarkdown and knitr packages were used to generate this report
-\[@R-knitr; @R-rmarkdown; @tidyverse2019\].
+rmarkdown and knitr packages were used to generate this report (Xie
+2021; Allaire et al. 2021; Wickham et al. 2019).
 
 ## Libraries
 
@@ -63,25 +63,43 @@ kable(by_completeness[1:5,])
 ## Fig 1D. Generating the total number of prophage proteins per bacteria species
 
 ``` r
-by_species_total <- df_detailed %>%
-  group_by(species, genome) %>%
-  summarise("Total prophage proteins" = sum(str_count(blast_hit, "PHAGE"))) %>% 
-  summarize(
-    across("Total prophage proteins", mean)
-  )
+(
+by_species_total <- df_detailed %>% 
+  group_by(species,genome) %>%
+  filter(blast_hit %in% str_subset(blast_hit, "PHAGE")) %>% 
+  summarise("Total prophage proteins" = n())
+)
+```
 
+      # A tibble: 59 x 3
+      # Groups:   species [59]
+         species                                genome        `Total prophage protein…
+         <fct>                                  <fct>                            <int>
+       1 Bacillus amyloliquefaciens ATCC 13952  CP009748.1                         268
+       2 Bacillus mycoides ATCC 6462            CP009692.1                         113
+       3 Bacillus amyloliquefaciens K2          MOEA01000001…                      189
+       4 Bacillus anthracis Rock3-42            CM000732.1                          49
+       5 Bacillus subtilis subsp. stercoris D7… JHCA01000001…                       36
+       6 Bacillus tequilensis ATCC BAA 819      AYTO01000001…                      207
+       7 Bacillus pumilus 7P                    JHUD02000001…                       68
+       8 Bacillus coagulans XZL4                AFWM01000001…                        8
+       9 Bacillus mycoides BDRD-ST196           CM000725.1                          61
+      10 Bacillus amyloliquefaciens NRRL 942    QVEJ01000001…                      102
+      # … with 49 more rows
+
+``` r
 write_tsv(x = by_species_total, "Data/total-proteins_raw-02.tsv")
 
 kable(by_species_total[1:5,])
 ```
 
-| species                                   | Total prophage proteins |
-|:------------------------------------------|------------------------:|
-| Bacillus amyloliquefaciens ATCC 13952     |                     268 |
-| Bacillus mycoides ATCC 6462               |                     113 |
-| Bacillus amyloliquefaciens K2             |                     189 |
-| Bacillus anthracis Rock3-42               |                      49 |
-| Bacillus subtilis subsp. stercoris D7XPN1 |                      36 |
+| species                                   | genome         | Total prophage proteins |
+|:------------------------------------------|:---------------|------------------------:|
+| Bacillus amyloliquefaciens ATCC 13952     | CP009748.1     |                     268 |
+| Bacillus mycoides ATCC 6462               | CP009692.1     |                     113 |
+| Bacillus amyloliquefaciens K2             | MOEA01000001.1 |                     189 |
+| Bacillus anthracis Rock3-42               | CM000732.1     |                      49 |
+| Bacillus subtilis subsp. stercoris D7XPN1 | JHCA01000001.1 |                      36 |
 
 ## Fig S1. Generating the dataset of the intact prophages in each bacterial species and vizualizing on a bubble-plot.
 
@@ -331,3 +349,32 @@ work is licensed under a
 Commons Attribution 4.0 International License</a>.
 
 ## References
+
+<div id="refs" class="references csl-bib-body hanging-indent">
+
+<div id="ref-R-rmarkdown" class="csl-entry">
+
+Allaire, JJ, Yihui Xie, Jonathan McPherson, Javier Luraschi, Kevin
+Ushey, Aron Atkins, Hadley Wickham, Joe Cheng, Winston Chang, and
+Richard Iannone. 2021. *Rmarkdown: Dynamic Documents for r*.
+<https://CRAN.R-project.org/package=rmarkdown>.
+
+</div>
+
+<div id="ref-tidyverse2019" class="csl-entry">
+
+Wickham, Hadley, Mara Averick, Jennifer Bryan, Winston Chang, Lucy
+D’Agostino McGowan, Romain François, Garrett Grolemund, et al. 2019.
+“Welcome to the <span class="nocase">tidyverse</span>.” *Journal of Open
+Source Software* 4 (43): 1686. <https://doi.org/10.21105/joss.01686>.
+
+</div>
+
+<div id="ref-R-knitr" class="csl-entry">
+
+Xie, Yihui. 2021. *Knitr: A General-Purpose Package for Dynamic Report
+Generation in r*. <https://yihui.org/knitr/>.
+
+</div>
+
+</div>
