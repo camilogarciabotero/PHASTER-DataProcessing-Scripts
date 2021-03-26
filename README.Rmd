@@ -10,7 +10,7 @@ knitr::opts_chunk$set(cache=FALSE,  comment= " ")
 knitr::write_bib(c(.packages(), "knitr", "rmarkdown", "tidyverse"), "packages.bib")
 ```
 
-This repo hosts the complete PHASTER dataset from the 59 strains' genomes analysed on PHASTER and several scripts developed for its processing. Analysis of this processed data is published on (paper). The primary packages used here are in the Tidyverse set of libraries, the rmarkdown and knitr packages were used to generate this report [@R-knitr; @R-rmarkdown; @tidyverse2019].
+This repo hosts the complete PHASTER dataset from the 59 strains' genomes analyzed on PHASTER and several scripts developed for its processing. Analysis of this processed data is published on (paper). The primary packages used here are in the Tidyverse set of libraries, the rmarkdown and knitr packages were used to generate this report [@R-knitr; @R-rmarkdown; @tidyverse2019].
 
 ## Libraries
 
@@ -40,7 +40,7 @@ df_summaries <- read_tsv("Data/2021-02-19_PHASTER-summaries.tsv")
 
 ```
 
-## Fig 1C. Generating candiadate prophages organized by completeness (Incomplete, Questionable, Intact)
+## Fig 1C. Generating candidate prophages organized by completeness (Incomplete, Questionable, Intact)
 
 ```{r prophage-candidates, message=FALSE}
 by_completeness <- df_detailed %>%
@@ -60,21 +60,21 @@ kable(by_completeness[1:5,])
 ## Fig 1D. Generating the total number of prophage proteins per bacteria species
 
 ```{r total-proteins, message=FALSE}
-(
 by_species_total <- df_detailed %>% 
   group_by(species,genome) %>%
   filter(blast_hit %in% str_subset(blast_hit, "PHAGE")) %>% 
   summarise("Total prophage proteins" = n())
-)
   
 write_tsv(x = by_species_total, "Data/total-proteins_raw-02.tsv")
 
 kable(by_species_total[1:5,])
 ```
 
-## Fig S1. Generating the dataset of the intact prophages in each bacterial species and vizualizing on a bubble-plot.
+## Fig S1. Generating the dataset of the intact prophages in each bacterial species and visualizing on a bubble-plot.
 
-```{r phage_families, message=FALSE, message=FALSE}
+For the purpose of wrap viral species into families we created this table assigning the current virus on the data set to its associated family:
+
+```{r phage_families, message=FALSE, echo=FALSE}
 phage_family <- tribble(
   ~most_common_phage, ~phage_family,
   'Brevibacillus Jimmer1' , 'Myoviridae',
@@ -149,7 +149,11 @@ phage_family <- tribble(
   'Synechococcus S_SKS1' , 'Myoviridae',
   'Escherichia RCS47' , 'Myoviridae'
 )
+
+kable(phage_family[1:5,])
 ```
+
+The previous table is then joined to the main dataset and complements it
 
 ```{r intact_phages, message=FALSE}
 intact_phages_detailed <- df_detailed %>%

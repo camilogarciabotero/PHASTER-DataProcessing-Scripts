@@ -63,31 +63,11 @@ kable(by_completeness[1:5,])
 ## Fig 1D. Generating the total number of prophage proteins per bacteria species
 
 ``` r
-(
 by_species_total <- df_detailed %>% 
   group_by(species,genome) %>%
   filter(blast_hit %in% str_subset(blast_hit, "PHAGE")) %>% 
   summarise("Total prophage proteins" = n())
-)
-```
-
-      # A tibble: 59 x 3
-      # Groups:   species [59]
-         species                                genome        `Total prophage protein…
-         <fct>                                  <fct>                            <int>
-       1 Bacillus amyloliquefaciens ATCC 13952  CP009748.1                         268
-       2 Bacillus mycoides ATCC 6462            CP009692.1                         113
-       3 Bacillus amyloliquefaciens K2          MOEA01000001…                      189
-       4 Bacillus anthracis Rock3-42            CM000732.1                          49
-       5 Bacillus subtilis subsp. stercoris D7… JHCA01000001…                       36
-       6 Bacillus tequilensis ATCC BAA 819      AYTO01000001…                      207
-       7 Bacillus pumilus 7P                    JHUD02000001…                       68
-       8 Bacillus coagulans XZL4                AFWM01000001…                        8
-       9 Bacillus mycoides BDRD-ST196           CM000725.1                          61
-      10 Bacillus amyloliquefaciens NRRL 942    QVEJ01000001…                      102
-      # … with 49 more rows
-
-``` r
+  
 write_tsv(x = by_species_total, "Data/total-proteins_raw-02.tsv")
 
 kable(by_species_total[1:5,])
@@ -103,82 +83,17 @@ kable(by_species_total[1:5,])
 
 ## Fig S1. Generating the dataset of the intact prophages in each bacterial species and vizualizing on a bubble-plot.
 
-``` r
-phage_family <- tribble(
-  ~most_common_phage, ~phage_family,
-  'Brevibacillus Jimmer1' , 'Myoviridae',
-  'Brevibacillus Jimmer2' , 'Myoviridae',
-  'Brevibacillus Abouo', 'Myoviridae',
-  'Brevibacillus Jenst' , 'Siphoviridae',
-  'Brevibacillus Osiris', 'Myoviridae',
-  'Paenibacillus HB10c2' , 'Siphoviridae',
-  'Paenibacillus Harrison' , 'Siphoviridae', 
-  'Paenibacillus Tripp' , 'Siphoviridae',
-  'Deep s_D6E' , 'Myoviridae',
-  'Listeria 2389' , 'Siphoviridae',
-  'Listeria A006' , 'Siphoviridae',
-  'Listeria vB_LmoS_188', 'Siphoviridae',
-  'Listeria B054', 'Myoviridae',
-  'Thermus phi OH2' , 'Myoviridae',
-  'Geobacillus E3', 'Siphoviridae',
-  'Geobacillus GBSV1' , 'Myoviridae',
-  'Staphylococcus vB_SepS_SEP9' , 'Siphoviridae',
-  'Staphylococcus SPbeta_like' , 'Siphoviridae',
-  'Clostridium phiCT9441A' , 'Myoviridae',
-  'Clostridium phiCD27' , 'Myoviridae',
-  'Clostridium phiMMP02' , 'Myoviridae',
-  'Clostridium phiCD505', 'Myoviridae',
-  'Clostridium phiCT453A', 'Myoviridae',
-  'Clostridium phiSM101' , 'Siphoviridae',
-  'Clostridium c_st', 'Siphoviridae',
-  'Clostridium phiCD111', 'Siphoviridae',
-  'Clostridium phiCD211', 'Siphoviridae',
-  'Bacillus SPP1' , 'Siphoviridae',
-  'Bacillus phi105' , 'Siphoviridae',
-  'Bacillus virus 1' , 'Myoviridae',
-  'Bacillus Bam35c' , 'Tectiviridae',
-  'Bacillus phBC6A51' , 'Siphoviridae',
-  'Bacillus phBC6A52' , 'Siphoviridae',
-  'Bacillus PM1' , 'Siphoviridae',
-  'Bacillus WBeta' , 'Siphoviridae',
-  'Bacillus phIS3501' , 'Siphoviridae',
-  'Bacillus BtCS33' , 'Siphoviridae',
-  'Bacillus SPbeta' , 'Siphoviridae',
-  'Bacillus phi4J1' , 'Siphoviridae',
-  'Bacillus BalMu1' , 'Myoviridae',
-  'Bacillus AR9', 'Myoviridae',
-  'Bacillus Bam35c', 'Tectiviridae',
-  'Bacillus Bobb' , 'Herelleveridae',
-  'Bacillus BtCS33', 'Siphoviridae',
-  'Bacillus Eyuki' , 'Herelleveridae',
-  'Bacillus G', 'Myoviridae',
-  'Bacillus IEBH', 'Siphoviridae',
-  'Bacillus JBP901', 'Herelleveridae',
-  'Bacillus JL', 'Herelleveridae',
-  'Bacillus Palmer', 'Podoviridae',
-  'Bacillus PBS1', 'Myoviridae',
-  'Bacillus PfEFR_5', 'Siphoviridae',
-  'Bacillus phiCM3', 'Siphoviridae',
-  'Bacillus phiNIT1', 'Herelleveridae',
-  'Bacillus Pony', 'Herelleveridae',
-  'Bacillus SP_10', 'Herelleveridae',
-  'Bacillus vB_BhaS_171', 'Siphoviridae',
-  'Bacillus Waukesha92' , 'Siphoviridae',
-  'Bacillus Finn', 'Siphoviridae',
-  'Bacillus Fah', 'Siphoviridae',
-  'Enterobacteria phi92', 'Myoviridae',
-  'Enterococcus phiEf11', 'Siphoviridae',
-  'Enterobacteria vB_KleM_RaK2', 'Myoviridae',
-  'Lactobacillus JCL1032', 'Siphoviridae',
-  'Lactobacillus phiAT3', 'Siphoviridae',
-  'Planktothrix PaV_LD', 'Siphoviridae',
-  'Sphingomonas PAU', 'Myoviridae',
-  'Cellulophaga phiSM', 'Myoviridae',
-  'Staphylococcus SpaA1' , 'Siphoviridae',
-  'Synechococcus S_SKS1' , 'Myoviridae',
-  'Escherichia RCS47' , 'Myoviridae'
-)
-```
+For the purpose of wrap viral species into families we created this
+table assigning the current virus on the data set to its asociated
+family:
+
+| most\_common\_phage   | phage\_family |
+|:----------------------|:--------------|
+| Brevibacillus Jimmer1 | Myoviridae    |
+| Brevibacillus Jimmer2 | Myoviridae    |
+| Brevibacillus Abouo   | Myoviridae    |
+| Brevibacillus Jenst   | Siphoviridae  |
+| Brevibacillus Osiris  | Myoviridae    |
 
 ``` r
 intact_phages_detailed <- df_detailed %>%
