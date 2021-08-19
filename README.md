@@ -1,7 +1,7 @@
 Data procesing on PHASTER output dataset
 ================
 
-    [![DOI](https://zenodo.org/badge/293570188.svg)](https://zenodo.org/badge/latestdoi/293570188)
+<a href="https://zenodo.org/badge/latestdoi/293570188"><img src="https://zenodo.org/badge/293570188.svg" alt="DOI"></a>
 
 ------------------------------------------------------------------------
 

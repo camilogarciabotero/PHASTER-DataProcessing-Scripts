@@ -11,7 +11,7 @@ knitr::opts_chunk$set(cache=FALSE,  comment= " ", fig.path="Figs/", dev = c("png
 knitr::write_bib(renv::dependencies()$Package, file = "packages.bib")
 ```
 
-[![DOI](https://zenodo.org/badge/293570188.svg)](https://zenodo.org/badge/latestdoi/293570188)
+<a href="https://zenodo.org/badge/latestdoi/293570188"><img src="https://zenodo.org/badge/293570188.svg" alt="DOI"></a>
 
 ------------------------------------------------------------------------
 
