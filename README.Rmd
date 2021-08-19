@@ -3,7 +3,6 @@ title: "Data procesing on PHASTER output dataset"
 output: github_document
 bibliography: packages.bib
 nocite: '@*'
-code_folding: hide
 ---
 
 ```{r setup, include=FALSE}
@@ -82,6 +81,18 @@ rm_raw <- read_csv("Data/Raw/RMsystems-01.csv")
 
 <p>...</p>
 </details> 
+
+Finally all data was processed by adding extra information necessary for applying as an extra layer of phylogenetic information:
+
+```{zsh data-processed, echo = FALSE}
+tree Data/Processed
+```
+For instance the BGCs data layer has the following information:
+
+```{zsh head-processed, echo = FALSE}
+head -11 Data/Processed/BGCs-iTOL-04.txt
+```
+
 
 # Fig S1. Bubbleplot of the intact prophages in each bacterial species.
 
@@ -165,12 +176,14 @@ phage_family <- tribble(
   'Synechococcus S_SKS1' , 'Myoviridae',
   'Escherichia RCS47' , 'Myoviridae'
 )
-
-kable(phage_family[1:5,])
 ```
 
 <p>...</p>
 </details> 
+
+```{r phage-families-02, echo=FALSE}
+kable(phage_family[1:10,])
+```
 
 ***
 

@@ -75,6 +75,30 @@ rm_raw <- read_csv("Data/Raw/RMsystems-01.csv")
 </p>
 </details>
 
+Finally all data was processed by adding extra information necessary for
+applying as an extra layer of phylogenetic information:
+
+      [01;34mData/Processed[00m
+      ├── BGCs-iTOL-04.txt
+      ├── Completeness-iTOL-05.txt
+      └── RM-iTOL-01.txt
+      
+      0 directories, 3 files
+
+For instance the BGCs data layer has the following information:
+
+      DATASET_BINARY                                                                                        
+      SEPARATOR TAB                                                                                     
+      DATASET_LABEL Metabolites-04                                                                                  
+      COLOR #ff0000                                                                                 
+      FIELD_SHAPES  2   2   2   2   2   2   2   2   2   2   2   2   2   2   2   2   2   2   2   2   2   2
+      STRIP_WIDTH   145                                                                                 
+      LABEL_SIZE_FACTOR 1                                                                                   
+      FIELD_LABELS  Fengycins   Iturins Surfactins  Bacillibactin   Bacilysin   Anabaenopeptin  Rhizocticin A   Macrolactin H   Bacillaene  Difficidin  Zwittermicin A  Subtilin    Mersacidin  Sublancin 168   Lichenicidin    Subtilosin A    Plantazolicin   SKF Paeninodin  Subtilomycin    Thiociclin I    Petrobactin
+      COLOR_MIN #a4ffa4                                                                                 
+      COLOR_MID #61b368                                                                                 
+      COLOR_MAX #007500                                                                                 
+
 # Fig S1. Bubbleplot of the intact prophages in each bacterial species.
 
 For the purpose of wrap viral species into families we created this
@@ -161,10 +185,12 @@ phage_family <- tribble(
   'Synechococcus S_SKS1' , 'Myoviridae',
   'Escherichia RCS47' , 'Myoviridae'
 )
-
-kable(phage_family[1:5,])
 ```
 
+<p>
+…
+</p>
+</details>
 <table>
 <thead>
 <tr>
@@ -217,12 +243,48 @@ Brevibacillus Osiris
 Myoviridae
 </td>
 </tr>
+<tr>
+<td style="text-align:left;">
+Paenibacillus HB10c2
+</td>
+<td style="text-align:left;">
+Siphoviridae
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Paenibacillus Harrison
+</td>
+<td style="text-align:left;">
+Siphoviridae
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Paenibacillus Tripp
+</td>
+<td style="text-align:left;">
+Siphoviridae
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Deep s\_D6E
+</td>
+<td style="text-align:left;">
+Myoviridae
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Listeria 2389
+</td>
+<td style="text-align:left;">
+Siphoviridae
+</td>
+</tr>
 </tbody>
 </table>
-<p>
-…
-</p>
-</details>
 
 ------------------------------------------------------------------------
 
@@ -320,8 +382,6 @@ bubbleplot_plot_summary <- intact_phages_summary_cleaned %>%
     size = "CDS hits",
     color = "Phage family"
 )
-
-# ggsave("Figs/bubbleplot-summary-01.pdf", width = 14, height = 16)
 
 # bubbleplot_plot_summary
 ```
