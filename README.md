@@ -321,15 +321,15 @@ bubbleplot_plot_summary <- intact_phages_summary_cleaned %>%
 
 # ggsave("Figs/bubbleplot-summary-01.pdf", width = 14, height = 16)
 
-bubbleplot_plot_summary
+# bubbleplot_plot_summary
 ```
-
-![](Figs/bubbleplot-summary-1.png)<!-- -->
 
 <p>
 …
 </p>
 </details>
+
+![](Figs/bubbleplot-summary-1.png)
 
 ## License
 
