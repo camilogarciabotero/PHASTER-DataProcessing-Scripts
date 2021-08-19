@@ -24,6 +24,7 @@ library(kableExtra)
 library(tidyr)
 library(ggplot2)
 library(forcats)
+library(datapasta)
 ```
 
 # Data layers for the phylogenetic recosntruction (Fig 2.B-D) of **Bacillus** spp.
@@ -31,7 +32,7 @@ library(forcats)
 
 ## Data importing and processing
 
-The first step in this analysis is importing the summarized output that was created using the `populate_script()` after selecting each prophage prediction using de `datapasta` package.
+The first step in this analysis is importing the summarized output that was created using the `populate_script()` after selecting each prophage prediction using de `datapasta` package [@R-datapasta].
 
 <details open>
 <summary>Predicted prophages retrieved on 2021-02-19</summary>

@@ -14,7 +14,7 @@ rmarkdown and knitr packages were used to generate this report (Xie
 
 The first step in this analysis is importing the summarized output that
 was created using the `populate_script()` after selecting each prophage
-prediction using de `datapasta` package.
+prediction using de `datapasta` package (McBain et al. 2021).
 
 <details open>
 <summary>
@@ -356,6 +356,14 @@ Richard Iannone. 2021. *Rmarkdown: Dynamic Documents for r*.
 Bache, Stefan Milton, and Hadley Wickham. 2020. *Magrittr: A
 Forward-Pipe Operator for r*.
 <https://CRAN.R-project.org/package=magrittr>.
+
+</div>
+
+<div id="ref-R-datapasta" class="csl-entry">
+
+McBain, Miles, Jonathan Carroll, Sharla Gelfand, Suthira Owlarn, and
+Garrick Aden-Buie. 2021. *Datapasta: R Tools for Data Copy-Pasta*.
+<https://github.com/milesmcbain/datapasta>.
 
 </div>
 
