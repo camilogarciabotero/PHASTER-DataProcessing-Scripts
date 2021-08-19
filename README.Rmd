@@ -172,6 +172,8 @@ kable(phage_family[1:5,])
 <p>...</p>
 </details> 
 
+***
+
 The previous table is then joined to the main dataset and complements it. To find the prophage candidates from PHASTER data we evaluated the summary information. In this approach the *most common phage* is directly detected from PHASTER and its criteria is based on adding unidentified prophage proteins to the PHAGE with most proteins already identified using sequence similarity of the non identified proteins.
 
 <details close>
@@ -254,8 +256,6 @@ bubbleplot_plot_summary <- intact_phages_summary_cleaned %>%
     size = "CDS hits",
     color = "Phage family"
 )
-
-# ggsave("Figs/bubbleplot-summary-01.pdf", width = 14, height = 16)
 
 # bubbleplot_plot_summary
 ```

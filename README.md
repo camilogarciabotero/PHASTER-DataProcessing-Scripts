@@ -224,6 +224,8 @@ Myoviridae
 </p>
 </details>
 
+------------------------------------------------------------------------
+
 The previous table is then joined to the main dataset and complements
 it. To find the prophage candidates from PHASTER data we evaluated the
 summary information. In this approach the *most common phage* is
