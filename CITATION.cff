@@ -3,15 +3,16 @@ message: "If you find useful this repo, please cite it as below."
 authors:
 - family-names: "García-Botero"
   given-names: "Camilo"
-  orcid: https://orcid.org/0000-0002-0426-7007
+  orcid: "https://orcid.org/0000-0002-0426-7007""
 - family-names: "Cuellar-Gaviria"
   given-names: "Tatiana Z."
 - family-names: "Villegas-Escobar"
   given-names: "Valeska"
 - family-names: "Ju"
   given-names: "Kou-San"
-title: "Supplementary code for some figures of the paper **B. tequilensis** genome analysis"
+title: "Supplementary code for some figures of the paper about B. tequilensis genome analysis"
 version: 1.0.0
 type: article
 doi: 10.5281/zenodo.1234
-date-released: 2021-08-11
+date-released: 2021-08-19
+repository-code: "https://github.com/camilogarciabotero/PHASTER-DataProcessing-scripts"

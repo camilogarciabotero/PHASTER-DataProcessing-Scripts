@@ -3,5 +3,6 @@
 .Ruserdata
 .DS_Store
 .Rproj.user
+.Rprofile
 README_cache
 README_files
