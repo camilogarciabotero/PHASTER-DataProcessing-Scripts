@@ -3,10 +3,11 @@ Data procesing on PHASTER output dataset
 
 This repo hosts the complete PHASTER dataset from the 59 strains’
 genomes analyzed on PHASTER and several scripts developed for its
-processing. Analysis of this processed data is published on (paper). The
-primary packages used here are in the Tidyverse set of libraries, the
-rmarkdown and knitr packages were used to generate this report (Xie
-2021; Allaire et al. 2021; Wickham et al. 2019).
+processing. Analysis of this processed data is provided in an on
+preparation manuscript. The primary packages used here are in the
+Tidyverse set of libraries, the rmarkdown and knitr packages were used
+to generate this report (Xie 2021; Allaire et al. 2021; Wickham et al.
+2019).
 
 # Data layers for the phylogenetic recosntruction (Fig 2.B-D) of **Bacillus** spp.
 
@@ -32,8 +33,9 @@ df_summaries <- read_tsv("Data/Raw/2021-02-19_PHASTER-summaries.tsv")
 
 ## Fig 1B. Generating the number of biosynthetic gene clusters
 
-Data from the the Biosynthetic Gene Clusters were retrieved for eacha
-species from different servers
+Data from the the Biosynthetic Gene Clusters (BGCs) were retrieved for
+each species from different servers including antiSMASH v5.1.2 and a
+manual curation.
 
 ## Fig 1C. Generating candidate prophages organized by completeness (Incomplete, Questionable, Intact)
 

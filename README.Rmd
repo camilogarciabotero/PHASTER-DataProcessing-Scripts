@@ -11,7 +11,7 @@ knitr::opts_chunk$set(cache=FALSE,  comment= " ", fig.path="Figs/", dev = c("png
 knitr::write_bib(renv::dependencies()$Package, file = "packages.bib")
 ```
 
-This repo hosts the complete PHASTER dataset from the 59 strains' genomes analyzed on PHASTER and several scripts developed for its processing. Analysis of this processed data is published on (paper). The primary packages used here are in the Tidyverse set of libraries, the rmarkdown and knitr packages were used to generate this report [@R-knitr; @R-rmarkdown; @tidyverse2019].
+This repo hosts the complete PHASTER dataset from the 59 strains' genomes analyzed on PHASTER and several scripts developed for its processing. Analysis of this processed data is provided in an on preparation manuscript. The primary packages used here are in the Tidyverse set of libraries, the rmarkdown and knitr packages were used to generate this report [@R-knitr; @R-rmarkdown; @tidyverse2019].
 
 ```{r libraries, include=FALSE, warning=FALSE, message=FALSE}
 library(readr)
@@ -43,12 +43,9 @@ df_summaries <- read_tsv("Data/Raw/2021-02-19_PHASTER-summaries.tsv")
 <p>...</p>
 </details> 
 
-
-
-
 ## Fig 1B. Generating the number of biosynthetic gene clusters
 
-Data from the the Biosynthetic Gene Clusters were retrieved for eacha species from different servers
+Data from the the Biosynthetic Gene Clusters (BGCs) were retrieved for each species from different servers including antiSMASH v5.1.2 and a manual curation.
 
 ## Fig 1C. Generating candidate prophages organized by completeness (Incomplete, Questionable, Intact)
 
