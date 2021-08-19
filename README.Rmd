@@ -11,7 +11,11 @@ knitr::opts_chunk$set(cache=FALSE,  comment= " ", fig.path="Figs/", dev = c("png
 knitr::write_bib(renv::dependencies()$Package, file = "packages.bib")
 ```
 
-This repo hosts the complete PHASTER dataset from the 59 strains' genomes analyzed on PHASTER and several scripts developed for its processing. Analysis of this processed data is provided in an on preparation manuscript. The primary packages used here are in the Tidyverse set of libraries, the rmarkdown and knitr packages were used to generate this report [@R-knitr; @R-rmarkdown; @tidyverse2019].
+    [![DOI](https://zenodo.org/badge/293570188.svg)](https://zenodo.org/badge/latestdoi/293570188)
+
+------------------------------------------------------------------------
+
+This repo hosts the complete PHASTER dataset from the 59 strains' genomes analyzed on PHASTER and several scripts developed for its processing. Analysis of this processed data is provided in an on preparation manuscript. The primary packages used here are in the Tidyverse set of libraries, the rmarkdown and knitr packages were used to generate this report [\@R-knitr; \@R-rmarkdown; \@tidyverse2019].
 
 ```{r libraries, include=FALSE, warning=FALSE, message=FALSE}
 library(readr)
@@ -28,10 +32,9 @@ library(datapasta)
 
 # Data layers for the phylogenetic recosntruction (Fig 2.B-D) of **Bacillus** spp.
 
-
 ## Data importing and processing
 
-The first step in this analysis is importing the summarized output that was created using the `populate_script()` after selecting each prophage prediction using de `datapasta` package [@R-datapasta].
+The first step in this analysis is importing the summarized output that was created using the `populate_script()` after selecting each prophage prediction using de `datapasta` package [\@R-datapasta].
 
 <details open>
 <summary>Predicted prophages retrieved on 2021-02-19</summary>
@@ -41,7 +44,7 @@ df_summaries <- read_tsv("Data/Raw/2021-02-19_PHASTER-summaries.tsv")
 ```
 
 <p>...</p>
-</details> 
+</details>
 
 ## Fig 1B. Generating the number of biosynthetic gene clusters
 
@@ -65,7 +68,7 @@ write_tsv(x = by_completeness_raw, "Data/Raw/completeness-01.tsv")
 ```
 
 <p>...</p>
-</details> 
+</details>
 
 ## Fig 1D. Generating the total number of Restriciton modification systems per bacterial species
 
@@ -77,19 +80,19 @@ rm_raw <- read_csv("Data/Raw/RMsystems-01.csv")
 ```
 
 <p>...</p>
-</details> 
+</details>
 
 Finally all data was processed by adding extra information necessary for applying as an extra layer of phylogenetic information:
 
 ```{zsh data-processed, echo = FALSE}
 tree Data/Processed
 ```
+
 For instance the BGCs data layer has the following information:
 
 ```{zsh head-processed, echo = FALSE}
 head -11 Data/Processed/BGCs-iTOL-04.txt
 ```
-
 
 # Fig S1. Bubbleplot of the intact prophages in each bacterial species.
 
@@ -176,13 +179,13 @@ phage_family <- tribble(
 ```
 
 <p>...</p>
-</details> 
+</details>
 
 ```{r phage-families-02, echo=FALSE}
 kable(phage_family[1:10,])
 ```
 
-***
+------------------------------------------------------------------------
 
 The previous table is then joined to the main dataset and complements it. To find the prophage candidates from PHASTER data we evaluated the summary information. In this approach the *most common phage* is directly detected from PHASTER and its criteria is based on adding unidentified prophage proteins to the PHAGE with most proteins already identified using sequence similarity of the non identified proteins.
 
@@ -225,9 +228,9 @@ intact_phages_summary_cleaned <- df_summaries %>%
 ```
 
 <p>...</p>
-</details> 
+</details>
 
-***
+------------------------------------------------------------------------
 
 Using the organized data from intact prophages we then plot the best prediction per bacteria and their associated CDSs.
 
@@ -271,13 +274,12 @@ bubbleplot_plot_summary <- intact_phages_summary_cleaned %>%
 ```
 
 <p>...</p>
-</details> 
+</details>
 
 ![](Figs/bubbleplot-summary-1.png)
 
-## License
+<!-- ## License -->
 
-<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img src="https://i.creativecommons.org/l/by/4.0/88x31.png" alt="Creative Commons License" style="border-width:0"/></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
-
+<!-- <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img src="https://i.creativecommons.org/l/by/4.0/88x31.png" alt="Creative Commons License" style="border-width:0"/></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>. -->
 
 ## References

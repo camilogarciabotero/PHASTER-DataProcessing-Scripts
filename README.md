@@ -1,13 +1,16 @@
 Data procesing on PHASTER output dataset
 ================
 
+    [![DOI](https://zenodo.org/badge/293570188.svg)](https://zenodo.org/badge/latestdoi/293570188)
+
+------------------------------------------------------------------------
+
 This repo hosts the complete PHASTER dataset from the 59 strains’
 genomes analyzed on PHASTER and several scripts developed for its
 processing. Analysis of this processed data is provided in an on
 preparation manuscript. The primary packages used here are in the
 Tidyverse set of libraries, the rmarkdown and knitr packages were used
-to generate this report (Xie 2021; Allaire et al. 2021; Wickham et al.
-2019).
+to generate this report \[@R-knitr; @R-rmarkdown; @tidyverse2019\].
 
 # Data layers for the phylogenetic recosntruction (Fig 2.B-D) of **Bacillus** spp.
 
@@ -15,7 +18,7 @@ to generate this report (Xie 2021; Allaire et al. 2021; Wickham et al.
 
 The first step in this analysis is importing the summarized output that
 was created using the `populate_script()` after selecting each prophage
-prediction using de `datapasta` package (McBain et al. 2021).
+prediction using de `datapasta` package \[@R-datapasta\].
 
 <details open>
 <summary>
@@ -395,12 +398,8 @@ bubbleplot_plot_summary <- intact_phages_summary_cleaned %>%
 
 ![](Figs/bubbleplot-summary-1.png)
 
-## License
-
-<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img src="https://i.creativecommons.org/l/by/4.0/88x31.png" alt="Creative Commons License" style="border-width:0"/></a><br />This
-work is licensed under a
-<a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative
-Commons Attribution 4.0 International License</a>.
+<!-- ## License -->
+<!-- <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img src="https://i.creativecommons.org/l/by/4.0/88x31.png" alt="Creative Commons License" style="border-width:0"/></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>. -->
 
 ## References
 
