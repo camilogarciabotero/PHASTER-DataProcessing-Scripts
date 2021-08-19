@@ -16,7 +16,7 @@ The first step in this analysis is importing the summarized output that
 was created using the `populate_script()` after selecting each prophage
 prediction using de `datapasta` package.
 
-<details opens>
+<details open>
 <summary>
 Predicted prophages retrieved on 2021-02-19
 </summary>
@@ -67,25 +67,8 @@ RM system count import.
 </summary>
 
 ``` r
-(
-  rm_raw <- read_csv("Data/Raw/RMsystems-01.csv")
-)
+rm_raw <- read_csv("Data/Raw/RMsystems-01.csv")
 ```
-
-      # A tibble: 59 × 7
-          ...1 species                      genome     type_i type_ii type_iii type_iv
-         <dbl> <chr>                        <chr>       <dbl>   <dbl>    <dbl>   <dbl>
-       1     1 Bacillus amyloliquefaciens … CP009748.1     NA      NA       NA      NA
-       2     2 Bacillus mycoides ATCC 6462  CP009692.1      0       1        0       0
-       3     3 Bacillus amyloliquefaciens … MOEA01000…     NA      NA       NA      NA
-       4     4 Bacillus anthracis Rock3-42  CM000732.1     NA      NA       NA      NA
-       5     5 Bacillus subtilis subsp. st… JHCA01000…      0       1        0       0
-       6     6 Bacillus tequilensis ATCC B… AYTO01000…      0       1        0       0
-       7     7 Bacillus pumilus 7P          JHUD02000…      0       0        0       0
-       8     8 Bacillus coagulans XZL4      AFWM01000…      2       2        0       1
-       9     9 Bacillus mycoides BDRD-ST196 CM000725.1     NA      NA       NA      NA
-      10    10 Bacillus amyloliquefaciens … QVEJ01000…      0       3        0       0
-      # … with 49 more rows
 
 <p>
 …
@@ -241,8 +224,6 @@ Myoviridae
 </p>
 </details>
 
-------------------------------------------------------------------------
-
 The previous table is then joined to the main dataset and complements
 it. To find the prophage candidates from PHASTER data we evaluated the
 summary information. In this approach the *most common phage* is
@@ -296,6 +277,9 @@ intact_phages_summary_cleaned <- df_summaries %>%
 </details>
 
 ------------------------------------------------------------------------
+
+Using the organized data from intact prophages we then plot the best
+prediction per bacteria and their associated CDSs.
 
 <details close>
 <summary>
