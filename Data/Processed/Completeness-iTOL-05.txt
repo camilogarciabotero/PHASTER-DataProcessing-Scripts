@@ -1,0 +1,74 @@
+DATASET_MULTIBAR					
+SEPARATOR TAB					
+DATASET_LABEL	Completeness-05				
+FIELD_COLORS	rgba(255, 189, 58, 0.75)	rgba(122, 199, 248, 0.82)	rgba(145, 255, 0, 0.505)		
+FIELD_LABELS	Incomplete	Questionable	Intact		
+LEGEND_COLORS	rgba(255, 189, 58, 0.75)	rgba(122, 199, 248, 0.82)	rgba(145, 255, 0, 0.505)		
+WIDTH	3500				
+HEIGHT_FACTOR	0.8				
+DATASET_SCALE	0-0-#000000-3-1-2	2-2-#000000-3-1-2	4-4-#000000-3-1-2	6-6-#000000-3-1-2	8-8-#000000-3-1-2
+DATASET_LABEL	Incomplete	Questionable	Intact		
+LEGEND_TITLE	Candidate prophages (n)				
+LEGEND_SHAPES	1	1	1		
+LEGEND_LABELS	Incomplete	Questionable	Intact		
+DATA					
+					
+Bacillus_subtilis_CP009748	3	4	2		
+Bacillus_mycoides_CP009692	10	2	0		
+Bacillus_amyloliquefaciens_MOEA01000010	4	1	3		
+Bacillus_cereus_CM000732	2	0	0		
+Bacillus_subtilis_JHCA01000001	0	0	1		
+Bacillus_tequilensis_AYTO01000001	4	0	2		
+Bacillus_pumilus_JHUD02000001	1	0	1		
+Bacillus_coagulans_AFWM01000001	2	0	0		
+Bacillus_cereus_CM000725	2	1	1		
+Bacillus_amyloliquefaciens_QVEJ01000001	3	2	0		
+Bacillus_mojavensis_AYTL01000001	3	1	0		
+'EA-CB0015'	3	1	0		
+Bacillus_cereus_CM000729	0	1	1		
+Bacillus_thuringiensis_CM000747	4	0	1		
+Bacillus_coagulans_LQYG01000001	0	0	1		
+Bacillus_atrophaeus_AEFM01000028	5	0	1		
+Bacillus_cereus_CM000722	1	1	0		
+Clostridium_kluyveri_CP000673	2	1	5		
+Bacillus_velezensis_FZB42	2	0	0		
+Bacillus_cereus_KB976672	2	1	2		
+Bacillus_thuringiensis_CM000753	5	0	2		
+Bacillus_thuringiensis_CM000758	8	0	2		
+Bacillus_mycoides_CM000719	2	0	1		
+Bacillus_velezensis_LLZC01000001	5	1	0		
+Bacillus_atrophaeus_LSBB01000001	2	3	0		
+Bacillus_coagulans_ANAQ01000001	1	0	0		
+Bacillus_anthracis_Vollum	2	2	1		
+Bacillus_cereus_ATCC_14579	3	0	3		
+Bacillus_pumilus_MZGC1	3	2	1		
+Bacillus_amyloliquefaciencs_DSM7	2	0	5		
+Bacillus_amyloliquefaciens_CP002927	3	2	2		
+Bacillus_anthracis_AE016879	2	1	2		
+Bacillus_licheniformis_CP017247	1	0	7		
+Bacillus_licheniformis_CP023729	2	0	3		
+Bacillus_subtilis_CP006881	1	0	1		
+Bacillus_subtilis_CP009749	4	0	0		
+Bacillus_subtilis_CP002905	5	0	1		
+Bacillus_subtilis_CP002183	3	0	1		
+Bacillus_cereus_CP001176	1	0	1		
+Bacillus_coagulans_CP009709	3	2	0		
+Bacillus_pumilus_CP011007	2	1	1		
+Bacillus_thuringiensis_CP001907	4	1	3		
+Bacillus_cereus_CP001283	2	1	1		
+Bacillus_cereus_CP001186	4	1	2		
+Bacillus_subtilis_AP011541	7	2	1		
+Bacillus_subtilis_CP020102	2	0	3		
+Bacillus_weihenstephanensis_CP000903	2	1	3		
+Bacillus_anthracis_CP001598	4	1	1		
+Bacillus_thuringiensis_CP001903	3	1	0		
+Bacillus_subtilis_CP009611	4	0	1		
+Bacillus_velezensis_CP006890	3	3	0		
+Bacillus_subtilis_CP029465	3	0	2		
+Bacillus_subtilis_CP004405	0	0	1		
+Bacillus_pumilus_LT906438	2	0	1		
+Bacillus_subtilis_CP002468	2	0	1		
+Bacillus_subtilis_AL009126	2	0	2		
+Bacillus_licheniformis_AE017333	0	1	3		
+Bacillus_atrophaeus_CP007640	3	0	0		
+Bacillus_licheniformis_CP014795	1	2	2		

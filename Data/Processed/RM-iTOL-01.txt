@@ -1,0 +1,70 @@
+DATASET_EXTERNALSHAPE				
+SEPARATOR TAB				
+DATASET_LABEL	RM			
+LEGEND_COLORS	#7F6284	#1A6060	#EADF1A	#5D4AF2
+FIELD_LABELS	Type I	Type II	Type III	Type IV
+FIELD_COLORS	#7F6284	#1A6060	#EADF1A	#5D4AF2
+LEGEND_TITLE	RM-Systems			
+LEGEND_SHAPES	1	1	1	1
+LEGEND_LABELS	Type I	Type II	Type III	Type IV
+DATA				
+				
+Bacillus_subtilis_CP009748	NA	NA	NA	NA
+Bacillus_mycoides_CP009692	0	1	0	0
+Bacillus_amyloliquefaciens_MOEA01000010	NA	NA	NA	NA
+Bacillus_cereus_CM000732	NA	NA	NA	NA
+Bacillus_subtilis_JHCA01000001	0	1	0	0
+Bacillus_tequilensis_AYTO01000001	0	1	0	0
+Bacillus_pumilus_JHUD02000001	0	0	0	0
+Bacillus_coagulans_AFWM01000001	2	2	0	1
+Bacillus_cereus_CM000725	NA	NA	NA	NA
+Bacillus_amyloliquefaciens_QVEJ01000001	0	3	0	0
+Bacillus_mojavensis_AYTL01000001	NA	NA	NA	NA
+'EA-CB0015'	1	0	0	0
+Bacillus_cereus_CM000729	NA	NA	NA	NA
+Bacillus_thuringiensis_CM000747	0	1	0	0
+Bacillus_coagulans_LQYG01000001	2	2	0	0
+Bacillus_atrophaeus_AEFM01000028	0	2	0	0
+Bacillus_cereus_CM000722	NA	NA	NA	NA
+Clostridium_kluyveri_CP000673	NA	NA	NA	NA
+Bacillus_velezensis_FZB42	1	0	0	0
+Bacillus_cereus_KB976672	0	2	0	1
+Bacillus_thuringiensis_CM000753	0	1	0	0
+Bacillus_thuringiensis_CM000758	0	0	0	0
+Bacillus_mycoides_CM000719	1	0	0	0
+Bacillus_velezensis_LLZC01000001	NA	NA	NA	NA
+Bacillus_atrophaeus_LSBB01000001	NA	NA	NA	NA
+Bacillus_coagulans_ANAQ01000001	4	2	2	1
+Bacillus_anthracis_Vollum	0	1	0	0
+Bacillus_cereus_ATCC_14579	1	1	0	0
+Bacillus_pumilus_MZGC1	0	4	1	0
+Bacillus_amyloliquefaciencs_DSM7	NA	NA	NA	NA
+Bacillus_amyloliquefaciens_CP002927	0	4	0	0
+Bacillus_anthracis_AE016879	0	1	0	0
+Bacillus_licheniformis_CP017247	0	1	0	0
+Bacillus_licheniformis_CP023729	0	3	0	0
+Bacillus_subtilis_CP006881	0	3	0	0
+Bacillus_subtilis_CP009749	1	0	0	0
+Bacillus_subtilis_CP002905	1	1	0	1
+Bacillus_subtilis_CP002183	1	2	0	0
+Bacillus_cereus_CP001176	0	0	1	1
+Bacillus_coagulans_CP009709	1	1	1	1
+Bacillus_pumilus_CP011007	1	2	0	1
+Bacillus_thuringiensis_CP001907	0	1	0	1
+Bacillus_cereus_CP001283	1	2	0	0
+Bacillus_cereus_CP001186	0	3	0	1
+Bacillus_subtilis_AP011541	1	0	0	1
+Bacillus_subtilis_CP020102	0	4	0	0
+Bacillus_weihenstephanensis_CP000903	0	3	0	0
+Bacillus_anthracis_CP001598	0	1	0	1
+Bacillus_thuringiensis_CP001903	0	2	0	0
+Bacillus_subtilis_CP009611	1	0	0	1
+Bacillus_velezensis_CP006890	1	0	0	1
+Bacillus_subtilis_CP029465	1	0	0	1
+Bacillus_subtilis_CP004405	0	0	1	1
+Bacillus_pumilus_LT906438	0	3	2	0
+Bacillus_subtilis_CP002468	0	3	0	0
+Bacillus_subtilis_AL009126	0	4	0	0
+Bacillus_licheniformis_AE017333	2	1	0	1
+Bacillus_atrophaeus_CP007640	0	2	0	1
+Bacillus_licheniformis_CP014795	0	1	0	0

@@ -1,0 +1,72 @@
+DATASET_BINARY																						
+SEPARATOR TAB																						
+DATASET_LABEL	Metabolites-04																					
+COLOR	#ff0000																					
+FIELD_SHAPES	2	2	2	2	2	2	2	2	2	2	2	2	2	2	2	2	2	2	2	2	2	2
+STRIP_WIDTH	145																					
+LABEL_SIZE_FACTOR	1																					
+FIELD_LABELS	Fengycins	Iturins	Surfactins	Bacillibactin	Bacilysin	Anabaenopeptin	Rhizocticin A	Macrolactin H	Bacillaene	Difficidin	Zwittermicin A	Subtilin	Mersacidin	Sublancin 168	Lichenicidin 	Subtilosin A	Plantazolicin	SKF	Paeninodin	Subtilomycin	Thiociclin I	Petrobactin
+COLOR_MIN	#a4ffa4																					
+COLOR_MID	#61b368																					
+COLOR_MAX	#007500																					
+DATA																						
+																						
+Bacillus_subtilis_CP006881	1	0	1	1	1	0	0	0	1	0	0	0	0	1	0	1	0	1	0	0	0	0
+Bacillus_subtilis_AL009126	1	0	1	1	1	0	0	0	1	0	0	0	0	1	0	1	0	1	0	0	0	0
+Bacillus_subtilis_CP020102	1	0	1	1	1	0	0	0	1	0	0	0	0	1	0	1	0	1	0	0	0	0
+Bacillus_subtilis_AP011541	0	0	1	1	1	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0
+Bacillus_subtilis_CP002468	1	0	1	1	1	0	0	0	1	0	0	0	0	0	0	1	0	0	0	1	0	0
+Bacillus_subtilis_CP004405	1	0	1	1	1	0	0	0	1	0	0	0	0	0	0	1	0	0	0	0	0	0
+Bacillus_subtilis_JHCA01000001	1	0	1	1	1	1	0	0	1	0	0	0	0	0	0	1	0	0	0	0	0	0
+Bacillus_tequilensis_AYTO01000001	1	1	1	1	1	0	1	0	0	0	0	0	0	0	0	1	0	1	0	0	0	0
+'EA-CB0015'	1	1	1	1	1	0	0	0	0	0	0	0	0	0	0	1	0	1	0	0	0	0
+Bacillus_subtilis_CP002183	0	1	1	1	1	0	1	0	1	0	0	1	0	0	0	0	0	0	0	0	0	0
+Bacillus_subtilis_CP002905	0	1	1	1	1	0	0	0	1	0	0	1	0	0	0	1	0	0	0	0	0	0
+Bacillus_subtilis_CP029465	1	1	1	1	1	0	0	1	1	0	0	0	0	0	0	1	0	0	0	0	0	0
+Bacillus_mojavensis_AYTL01000001	1	0	1	1	1	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0
+Bacillus_atrophaeus_AEFM01000028	1	1	0	1	0	0	0	0	1	0	0	0	0	0	0	1	0	0	0	0	0	0
+Bacillus_atrophaeus_CP007640	1	1	1	1	0	0	0	0	1	0	0	0	0	0	0	1	0	0	0	0	0	0
+Bacillus_atrophaeus_LSBB01000001	1	1	1	1	0	0	0	0	1	0	0	0	0	0	0	1	0	1	0	0	0	0
+Bacillus_subtilis_CP009749	1	1	1	1	1	0	0	1	1	1	0	0	0	0	0	0	0	0	0	0	0	0
+Bacillus_velezensis_CP006890	1	1	1	1	1	0	0	1	1	1	0	0	0	0	0	0	0	0	0	0	0	0
+Bacillus_subtilis_CP009611	1	1	1	1	1	0	0	1	1	1	0	0	0	0	0	0	0	0	0	0	0	0
+Bacillus_velezensis_FZB42	1	1	1	1	1	0	0	1	1	1	0	0	0	0	0	0	1	0	0	0	0	0
+Bacillus_velezensis_LLZC01000001	1	1	1	1	1	0	0	1	1	1	0	0	1	0	0	0	0	0	0	0	0	0
+Bacillus_amyloliquefaciens_CP002927	0	1	1	1	1	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0
+Bacillus_amyloliquefaciens_QVEJ01000001	0	1	1	1	1	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0
+Bacillus_subtilis_CP009748	0	1	1	1	1	0	0	1	1	0	0	0	0	0	0	0	0	0	0	0	0	0
+Bacillus_amyloliquefaciencs_DSM7	0	1	1	1	1	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0
+Bacillus_amyloliquefaciens_MOEA01000010	1	1	1	1	1	0	0	1	1	0	0	0	0	0	0	0	0	0	0	0	0	0
+Bacillus_licheniformis_AE017333	0	0	1	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0
+Bacillus_licheniformis_CP017247	0	0	1	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0
+Bacillus_licheniformis_CP014795	0	0	1	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0
+Bacillus_licheniformis_CP023729	0	0	1	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0
+Bacillus_pumilus_JHUD02000001	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+Bacillus_pumilus_MZGC1	0	0	1	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+Bacillus_pumilus_CP011007	0	0	1	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+Bacillus_pumilus_LT906438	0	0	1	0	1	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0
+Bacillus_cereus_CP001186	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1
+Bacillus_thuringiensis_CM000758	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	1
+Bacillus_thuringiensis_CP001907	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1
+Bacillus_thuringiensis_CM000747	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1
+Bacillus_thuringiensis_CM000753	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1
+Bacillus_cereus_CP001176	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1
+Bacillus_cereus_CM000722	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1
+Bacillus_thuringiensis_CP001903	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1
+Bacillus_cereus_ATCC_14579	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	1
+Bacillus_cereus_CM000729	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1
+Bacillus_anthracis_AE016879	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1
+Bacillus_anthracis_CP001598	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1
+Bacillus_anthracis_Vollum	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1
+Bacillus_cereus_CP001283	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1
+Bacillus_cereus_CM000732	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1
+Bacillus_cereus_CM000725	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1
+Bacillus_weihenstephanensis_CP000903	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	1
+Bacillus_mycoides_CM000719	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	1
+Bacillus_cereus_KB976672	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	1
+Bacillus_mycoides_CP009692	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	1
+Bacillus_coagulans_LQYG01000001	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+Bacillus_coagulans_ANAQ01000001	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+Bacillus_coagulans_AFWM01000001	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+Bacillus_coagulans_CP009709	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+Clostridium_kluyveri_CP000673	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
