@@ -10,7 +10,8 @@ genomes analyzed on PHASTER and several scripts developed for its
 processing. Analysis of this processed data is provided in an on
 preparation manuscript. The primary packages used here are in the
 Tidyverse set of libraries, the rmarkdown and knitr packages were used
-to generate this report \[@R-knitr; @R-rmarkdown; @tidyverse2019\].
+to generate this report (Xie 2021; Allaire et al. 2021; Wickham et al.
+2019).
 
 # Data layers for the phylogenetic recosntruction (Fig 2.B-D) of **Bacillus** spp.
 
@@ -18,7 +19,7 @@ to generate this report \[@R-knitr; @R-rmarkdown; @tidyverse2019\].
 
 The first step in this analysis is importing the summarized output that
 was created using the `populate_script()` after selecting each prophage
-prediction using de `datapasta` package \[@R-datapasta\].
+prediction using de `datapasta` package (McBain et al. 2021).
 
 <details open>
 <summary>
@@ -411,6 +412,13 @@ Allaire, JJ, Yihui Xie, Jonathan McPherson, Javier Luraschi, Kevin
 Ushey, Aron Atkins, Hadley Wickham, Joe Cheng, Winston Chang, and
 Richard Iannone. 2021. *Rmarkdown: Dynamic Documents for r*.
 <https://CRAN.R-project.org/package=rmarkdown>.
+
+</div>
+
+<div id="ref-R-citr" class="csl-entry">
+
+Aust, Frederik. 2019. *Citr: RStudio Add-in to Insert Markdown
+Citations*. <https://github.com/crsh/citr>.
 
 </div>
 

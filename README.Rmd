@@ -15,7 +15,7 @@ knitr::write_bib(renv::dependencies()$Package, file = "packages.bib")
 
 ------------------------------------------------------------------------
 
-This repo hosts the complete PHASTER dataset from the 59 strains' genomes analyzed on PHASTER and several scripts developed for its processing. Analysis of this processed data is provided in an on preparation manuscript. The primary packages used here are in the Tidyverse set of libraries, the rmarkdown and knitr packages were used to generate this report [\@R-knitr; \@R-rmarkdown; \@tidyverse2019].
+This repo hosts the complete PHASTER dataset from the 59 strains' genomes analyzed on PHASTER and several scripts developed for its processing. Analysis of this processed data is provided in an on preparation manuscript. The primary packages used here are in the Tidyverse set of libraries, the rmarkdown and knitr packages were used to generate this report [@R-knitr; @R-rmarkdown; @tidyverse2019].
 
 ```{r libraries, include=FALSE, warning=FALSE, message=FALSE}
 library(readr)
@@ -28,13 +28,14 @@ library(tidyr)
 library(ggplot2)
 library(forcats)
 library(datapasta)
+library(citr)
 ```
 
 # Data layers for the phylogenetic recosntruction (Fig 2.B-D) of **Bacillus** spp.
 
 ## Data importing and processing
 
-The first step in this analysis is importing the summarized output that was created using the `populate_script()` after selecting each prophage prediction using de `datapasta` package [\@R-datapasta].
+The first step in this analysis is importing the summarized output that was created using the `populate_script()` after selecting each prophage prediction using de `datapasta` package [@R-datapasta].
 
 <details open>
 <summary>Predicted prophages retrieved on 2021-02-19</summary>
