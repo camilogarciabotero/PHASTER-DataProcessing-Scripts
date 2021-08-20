@@ -26,7 +26,7 @@ Bacillus_thuringiensis_CM000747	0	1	0	0
 Bacillus_coagulans_LQYG01000001	2	2	0	0
 Bacillus_atrophaeus_AEFM01000028	0	2	0	0
 Bacillus_cereus_CM000722	NA	NA	NA	NA
-Clostridium_kluyveri_CP000673	NA	NA	NA	NA
+Clostridium_kluyveri_CP000673	1	11	1	NA
 Bacillus_velezensis_FZB42	1	0	0	0
 Bacillus_cereus_KB976672	0	2	0	1
 Bacillus_thuringiensis_CM000753	0	1	0	0

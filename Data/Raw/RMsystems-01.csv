@@ -16,7 +16,7 @@
 "15","Bacillus coagulans B4098","LQYG01000001.1",2,2,0,0
 "16","Bacillus atrophaeus ATCC 9372-1","AEFM01000028.1",0,2,0,0
 "17","Bacillus cereus m1550","CM000722.1",NA,NA,NA,NA
-"18","Clostridium kluyveri DSM 555","CP000673.1",NA,NA,NA,NA
+"18","Clostridium kluyveri DSM 555","CP000673.1",1,11,1,NA
 "19","Bacillus velezensis FZB42","CP00560.2",1,0,0,0
 "20","Bacillus mycoides VD146","KB976672.1",0,2,0,1
 "21","Bacillus thuringiensis ATCC 10792","CM000753.1",0,1,0,0
