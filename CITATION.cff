@@ -6,10 +6,13 @@ authors:
   orcid: "https://orcid.org/0000-0002-0426-7007"
 - family-names: "Cuellar-Gaviria"
   given-names: "Tatiana Z."
+  orcid: "https://orcid.org/0000-0002-0822-4784"
 - family-names: "Villegas-Escobar"
   given-names: "Valeska"
+  orcid: "https://orcid.org/0000-0002-9636-3644"
 - family-names: "Ju"
   given-names: "Kou-San"
+  orcid: "https://orcid.org/0000-0003-0438-6740"
 title: "Supplementary code for some figures of the paper about B. tequilensis genome analysis"
 version: 0.0.3
 type: article
